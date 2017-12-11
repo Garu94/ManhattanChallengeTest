@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1535A4C91FDE8D6700A77F9F /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1535A4C81FDE8D6700A77F9F /* Trip.storyboard */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
 		FFEC6B6B1FDC11FE007E8017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEC6B691FDC11FE007E8017 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1535A4C81FDE8D6700A77F9F /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEC6B671FDC11FE007E8017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
+				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
 				FFEC6B6C1FDC11FE007E8017 /* Assets.xcassets */,
 				FFEC6B6E1FDC11FE007E8017 /* LaunchScreen.storyboard */,
 				FFEC6B711FDC11FE007E8017 /* Info.plist */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFEC6B701FDC11FE007E8017 /* LaunchScreen.storyboard in Resources */,
+				1535A4C91FDE8D6700A77F9F /* Trip.storyboard in Resources */,
 				FFEC6B6D1FDC11FE007E8017 /* Assets.xcassets in Resources */,
 				FFEC6B6B1FDC11FE007E8017 /* Main.storyboard in Resources */,
 			);
