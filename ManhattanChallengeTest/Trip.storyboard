@@ -432,14 +432,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzv-n3-R39">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzv-n3-R39">
                                 <rect key="frame" x="127" y="504" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="nfV-mE-FvR"/>
                                     <constraint firstAttribute="height" constant="120" id="wpZ-RW-2CH"/>
                                 </constraints>
-                                <state key="normal" title="add Photo"/>
+                                <state key="normal" image="addPhoto"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -515,6 +514,7 @@
     <resources>
         <image name="$" width="19" height="32"/>
         <image name="Map-Pin" width="28" height="38"/>
+        <image name="addPhoto" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fpU-Gd-Xkn"/>
