@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1535A4C91FDE8D6700A77F9F /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1535A4C81FDE8D6700A77F9F /* Trip.storyboard */; };
+		1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7711FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld */; };
+		1542B7971FDFDD86000169F8 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7951FDFDD86000169F8 /* Trip+CoreDataClass.swift */; };
+		1542B7981FDFDD86000169F8 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7961FDFDD86000169F8 /* Trip+CoreDataProperties.swift */; };
+		1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7991FDFDE76000169F8 /* CoreDataController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
 		FFEC6B6B1FDC11FE007E8017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEC6B691FDC11FE007E8017 /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 
 /* Begin PBXFileReference section */
 		1535A4C81FDE8D6700A77F9F /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
+		1542B7721FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManhattanChallengeTest.xcdatamodel; sourceTree = "<group>"; };
+		1542B7951FDFDD86000169F8 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1542B7961FDFDD86000169F8 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1542B7991FDFDE76000169F8 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEC6B671FDC11FE007E8017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,13 +107,17 @@
 		FFEC6B641FDC11FE007E8017 /* ManhattanChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
+				1542B7951FDFDD86000169F8 /* Trip+CoreDataClass.swift */,
+				1542B7961FDFDD86000169F8 /* Trip+CoreDataProperties.swift */,
 				FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
+				1542B7991FDFDE76000169F8 /* CoreDataController.swift */,
 				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
 				FFEC6B6C1FDC11FE007E8017 /* Assets.xcassets */,
 				FFEC6B6E1FDC11FE007E8017 /* LaunchScreen.storyboard */,
 				FFEC6B711FDC11FE007E8017 /* Info.plist */,
+				1542B7711FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld */,
 			);
 			path = ManhattanChallengeTest;
 			sourceTree = "<group>";
@@ -263,7 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
+				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
+				1542B7971FDFDD86000169F8 /* Trip+CoreDataClass.swift in Sources */,
+				1542B7981FDFDD86000169F8 /* Trip+CoreDataProperties.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3F6492EW5;
+				DEVELOPMENT_TEAM = 4KED73D9JP;
 				INFOPLIST_FILE = ManhattanChallengeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simonegaruglieri.ManhattanChallengeTest;
@@ -446,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3F6492EW5;
+				DEVELOPMENT_TEAM = 4KED73D9JP;
 				INFOPLIST_FILE = ManhattanChallengeTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.simonegaruglieri.ManhattanChallengeTest;
@@ -562,6 +578,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1542B7711FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1542B7721FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodel */,
+			);
+			currentVersion = 1542B7721FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodel */;
+			path = ManhattanChallengeTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FFEC6B5A1FDC11FE007E8017 /* Project object */;
 }
