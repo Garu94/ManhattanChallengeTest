@@ -11,9 +11,14 @@ import UIKit
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
     
+    @IBOutlet weak var optionalNoteField: UITextField!
+    
+    
+    @IBOutlet var cathegoryButtons: [UIButton]!
+    
     var price: Float!
     var cathegory: String!
-    var note: String!
+    var note: String?
     
     
     
@@ -32,7 +37,12 @@ class AddExpenseViewController: UIViewController {
         
         if insertPriceField.isEditing {
             price = Float(textField.text)
-            textField.endEditing(true)
+            insertPriceField.endEditing(true)
+        }
+        
+        if optionalNoteField.isEditing {
+            note = optionalNoteField.text
+            optionalNoteField.endEditing(true)
         }
         
         

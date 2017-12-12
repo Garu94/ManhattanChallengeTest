@@ -517,6 +517,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>
+                        <outlet property="optionalNoteField" destination="9gT-6q-EiC" id="Z6H-dA-6t0"/>
+                        <outletCollection property="cathegoryButtons" destination="1oU-af-pyE" collectionClass="NSMutableArray" id="ZrV-Iq-j4X"/>
+                        <outletCollection property="cathegoryButtons" destination="dpy-4l-qla" collectionClass="NSMutableArray" id="I2Q-b4-eRd"/>
+                        <outletCollection property="cathegoryButtons" destination="PJz-z1-2eq" collectionClass="NSMutableArray" id="NOR-Wd-Uef"/>
+                        <outletCollection property="cathegoryButtons" destination="bhR-CC-4hG" collectionClass="NSMutableArray" id="LbZ-de-UNp"/>
+                        <outletCollection property="cathegoryButtons" destination="cUc-U3-gaU" collectionClass="NSMutableArray" id="qZ2-40-kkT"/>
+                        <outletCollection property="cathegoryButtons" destination="uqu-qE-rRl" collectionClass="NSMutableArray" id="HNr-SG-Dzt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
