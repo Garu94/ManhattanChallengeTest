@@ -38,7 +38,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Gp1-Xi-jlb" kind="show" id="XQE-c6-Ha1"/>
+                                    <segue destination="tEU-aL-zAf" kind="show" id="MKt-J3-vph"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,6 +58,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKR-JE-AXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="-69.715142428785612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mMC-pd-2Hd">
+            <objects>
+                <viewController id="tEU-aL-zAf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DGL-nE-JKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A1-ZP-Aic">
+                                <rect key="frame" x="16" y="81" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You spent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nga-pH-vdG">
+                                <rect key="frame" x="137" y="119" width="150" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="p4R-CC-hll"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgC-xC-Mz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.5999999999999" y="-70.614692653673174"/>
         </scene>
         <!--Add Trip-->
         <scene sceneID="Egw-NG-JKp">
@@ -129,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nut-bN-bW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680.8" y="-70.614692653673174"/>
+            <point key="canvasLocation" x="545" y="-958"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jb5-AX-Co5">
@@ -287,7 +318,7 @@
                     <navigationItem key="navigationItem" title="Title" id="62v-Rp-wbm">
                         <barButtonItem key="leftBarButtonItem" title="My Trips" id="zbc-OK-4s1">
                             <connections>
-                                <segue destination="GDk-PE-krp" kind="show" id="cTo-Xj-bQF"/>
+                                <segue destination="3S3-lw-GSh" kind="show" id="Ou6-06-SGg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -554,22 +585,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1632.8" y="918.89055472263874"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AVG-fl-lgb">
-            <objects>
-                <navigationController id="GDk-PE-krp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3EA-3M-xGZ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3S3-lw-GSh" kind="relationship" relationship="rootViewController" id="0Cr-VI-Vl1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2d-G6-rRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-404" y="-69"/>
         </scene>
     </scenes>
     <resources>
