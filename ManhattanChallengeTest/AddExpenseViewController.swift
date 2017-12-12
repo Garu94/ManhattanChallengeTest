@@ -35,21 +35,31 @@ class AddExpenseViewController: UIViewController {
     }
    
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
-        print("\(newExpense.price)\n\(newExpense.cathegory)\n\(newExpense.note!)")
-
         
         if insertPriceField.isEditing {
-            newExpense.price = Float(insertPriceField.text!)!
             insertPriceField.endEditing(true)
         }
         
         if optionalNoteField.isEditing {
-            newExpense.note = optionalNoteField.text
             optionalNoteField.endEditing(true)
         }
     }
+   
+    //Save new Expense and go back to Home when Done pressed
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        
+        if let price = Float(insertPriceField.text!) {
+            newExpense.price = price
+        }
+        
+        if let text = optionalNoteField.text {
+            newExpense.note = text
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
-    @IBAction func foodButtonPressed(_ sender: UIButton) {
+    @IBAction func cathgeoryButtonPressed(_ sender: UIButton) {
         newExpense.cathegory = sender.titleLabel!.text
     }
     
