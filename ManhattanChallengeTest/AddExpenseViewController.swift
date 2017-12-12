@@ -8,23 +8,21 @@
 
 import UIKit
 
+
+
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
     
     @IBOutlet weak var optionalNoteField: UITextField!
+        
     
-    
-    @IBOutlet var cathegoryButtons: [UIButton]!
-    
-    var price: Float!
-    var cathegory: String!
-    var note: String?
-    
-    
+    var newExpense = Expense(context: CoreDataController.shared.context)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print("\(newExpense.price)\n\(newExpense.cathegory)\n\(newExpense.note!)")
+        
         // Do any additional setup after loading the view.
     }
 
@@ -36,16 +34,19 @@ class AddExpenseViewController: UIViewController {
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         
         if insertPriceField.isEditing {
-            price = Float(textField.text)
+            newExpense.price = Float(insertPriceField.text!)!
             insertPriceField.endEditing(true)
         }
         
         if optionalNoteField.isEditing {
-            note = optionalNoteField.text
+            newExpense.note = optionalNoteField.text
             optionalNoteField.endEditing(true)
         }
-        
-        
     }
+    
+    @IBAction func foodButtonPressed(_ sender: UIButton) {
+        newExpense.cathegory = sender.titleLabel!.text
+    }
+    
     
 }

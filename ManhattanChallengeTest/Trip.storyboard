@@ -174,7 +174,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="height" multiplier="1:1" id="Fqr-bc-B4C"/>
                                 </constraints>
-                                <state key="normal" title="Food"/>
+                                <state key="normal" title="Transports"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="je4-Ye-jGs"/>
                                 </connections>
@@ -196,7 +196,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OsA-QG-ID0" secondAttribute="height" multiplier="1:1" id="1s8-jM-0hv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Food"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="riY-nJ-Ipg"/>
                                 </connections>
@@ -207,7 +207,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hjZ-5w-abe" secondAttribute="height" multiplier="1:1" id="zha-OU-w4Q"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Attractions"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="AY6-wQ-xnd"/>
                                 </connections>
@@ -229,7 +229,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2fr-fF-ggA" secondAttribute="height" multiplier="1:1" id="Dli-2Q-Ljb"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Other"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="E1P-dK-uSs"/>
                                 </connections>
@@ -401,7 +401,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="height" multiplier="1:1" id="w5T-aK-hCD"/>
                                 </constraints>
-                                <state key="normal" title="Food"/>
+                                <state key="normal" title="Transports"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Fmp-0f-KW6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla">
                                 <rect key="frame" x="150" y="200" width="76" height="76"/>
@@ -410,6 +413,9 @@
                                     <constraint firstAttribute="width" secondItem="dpy-4l-qla" secondAttribute="height" multiplier="1:1" id="4xG-P9-lah"/>
                                 </constraints>
                                 <state key="normal" title="Attractions"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="g5a-2P-u1j"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-z1-2eq">
                                 <rect key="frame" x="283" y="200" width="76" height="76"/>
@@ -417,7 +423,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PJz-z1-2eq" secondAttribute="height" multiplier="1:1" id="cM7-Ob-bNo"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Food"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jco-CV-zDO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-CC-4hG">
                                 <rect key="frame" x="16" y="308" width="76" height="76"/>
@@ -425,7 +434,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bhR-CC-4hG" secondAttribute="height" multiplier="1:1" id="Usi-BD-exx"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Accomodations"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="fyv-JV-7Ob"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU">
                                 <rect key="frame" x="150" y="308" width="76" height="76"/>
@@ -433,7 +445,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cUc-U3-gaU" secondAttribute="height" multiplier="1:1" id="xmv-g0-kFH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Entertainment"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="zmy-HG-HmN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-qE-rRl">
                                 <rect key="frame" x="283" y="308" width="76" height="76"/>
@@ -441,7 +456,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uqu-qE-rRl" secondAttribute="height" multiplier="1:1" id="CgQ-YZ-znr"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Others"/>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="cEh-Uc-SNh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a note" borderStyle="roundedRect" placeholder="Add a note" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-6q-EiC">
                                 <rect key="frame" x="16" y="444" width="343" height="30"/>
@@ -518,12 +536,6 @@
                     <connections>
                         <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>
                         <outlet property="optionalNoteField" destination="9gT-6q-EiC" id="Z6H-dA-6t0"/>
-                        <outletCollection property="cathegoryButtons" destination="1oU-af-pyE" collectionClass="NSMutableArray" id="ZrV-Iq-j4X"/>
-                        <outletCollection property="cathegoryButtons" destination="dpy-4l-qla" collectionClass="NSMutableArray" id="I2Q-b4-eRd"/>
-                        <outletCollection property="cathegoryButtons" destination="PJz-z1-2eq" collectionClass="NSMutableArray" id="NOR-Wd-Uef"/>
-                        <outletCollection property="cathegoryButtons" destination="bhR-CC-4hG" collectionClass="NSMutableArray" id="LbZ-de-UNp"/>
-                        <outletCollection property="cathegoryButtons" destination="cUc-U3-gaU" collectionClass="NSMutableArray" id="qZ2-40-kkT"/>
-                        <outletCollection property="cathegoryButtons" destination="uqu-qE-rRl" collectionClass="NSMutableArray" id="HNr-SG-Dzt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
