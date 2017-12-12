@@ -9,7 +9,13 @@
 import UIKit
 
 class AddExpenseViewController: UIViewController {
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var insertPriceField: UITextField!
+    
+    var price: Float!
+    var cathegory: String!
+    var note: String!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +29,12 @@ class AddExpenseViewController: UIViewController {
     }
    
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        
+        if insertPriceField.isEditing {
+            price = Float(textField.text)
+            textField.endEditing(true)
+        }
+        
         
     }
     

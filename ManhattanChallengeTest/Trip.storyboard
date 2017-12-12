@@ -379,7 +379,7 @@
         <!--Add Expense-->
         <scene sceneID="c09-at-rIG">
             <objects>
-                <viewController id="PfV-m3-SdB" customClass="AddExpenseViewController" sceneMemberID="viewController">
+                <viewController id="PfV-m3-SdB" customClass="AddExpenseViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eF-wo-Bhy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -516,7 +516,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="8cr-cd-2zL"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="textField" destination="kMA-sO-g1P" id="gvw-WJ-vsW"/>
+                        <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
