@@ -379,12 +379,12 @@
         <!--Add Expense-->
         <scene sceneID="c09-at-rIG">
             <objects>
-                <viewController id="PfV-m3-SdB" sceneMemberID="viewController">
+                <viewController id="PfV-m3-SdB" customClass="AddExpenseViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7eF-wo-Bhy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" placeholder="Price" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMA-sO-g1P">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Price" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMA-sO-g1P">
                                 <rect key="frame" x="16" y="110" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kMA-sO-g1P" secondAttribute="height" multiplier="343:30" id="3y8-YJ-xJa"/>
@@ -393,7 +393,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE">
                                 <rect key="frame" x="16" y="200" width="76" height="76"/>
@@ -464,6 +464,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dpy-4l-qla" firstAttribute="height" secondItem="1oU-af-pyE" secondAttribute="height" id="3Ki-9o-j2q"/>
                             <constraint firstItem="cUc-U3-gaU" firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="width" id="4rA-Uw-cR8"/>
@@ -506,13 +507,24 @@
                             <constraint firstItem="PJz-z1-2eq" firstAttribute="height" secondItem="1oU-af-pyE" secondAttribute="height" id="zeN-Md-X7H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WrL-wG-00h"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="trO-jP-Ami" appends="YES" id="oEq-JX-ZYs"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add Expense" id="KzQ-zc-UQV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KrN-dH-yZd"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="8cr-cd-2zL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="kMA-sO-g1P" id="gvw-WJ-vsW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="trO-jP-Ami">
+                    <connections>
+                        <action selector="tapGesture:" destination="PfV-m3-SdB" id="sif-YC-SWN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1632.8" y="918.89055472263874"/>
         </scene>
