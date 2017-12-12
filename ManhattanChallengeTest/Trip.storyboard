@@ -427,7 +427,7 @@
                                 </constraints>
                                 <state key="normal" title="Accomodation"/>
                                 <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Fmp-0f-KW6"/>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jhe-EW-8oJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla">
@@ -438,7 +438,7 @@
                                 </constraints>
                                 <state key="normal" title="Transport"/>
                                 <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="g5a-2P-u1j"/>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="LuN-xc-6X3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-z1-2eq">
@@ -449,7 +449,7 @@
                                 </constraints>
                                 <state key="normal" title="Entertainment"/>
                                 <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jco-CV-zDO"/>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="H71-89-77Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-CC-4hG">
@@ -459,9 +459,6 @@
                                     <constraint firstAttribute="width" secondItem="bhR-CC-4hG" secondAttribute="height" multiplier="1:1" id="Usi-BD-exx"/>
                                 </constraints>
                                 <state key="normal" title="Attractions"/>
-                                <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="fyv-JV-7Ob"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU">
                                 <rect key="frame" x="150" y="308" width="76" height="76"/>
@@ -471,7 +468,7 @@
                                 </constraints>
                                 <state key="normal" title="Food"/>
                                 <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="zmy-HG-HmN"/>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Fwd-Lp-uRW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-qE-rRl">
@@ -482,7 +479,7 @@
                                 </constraints>
                                 <state key="normal" title="Other"/>
                                 <connections>
-                                    <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="cEh-Uc-SNh"/>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="ePk-vH-5kt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a note" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-6q-EiC">
@@ -554,8 +551,16 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add Expense" id="KzQ-zc-UQV">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KrN-dH-yZd"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8cr-cd-2zL"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KrN-dH-yZd">
+                            <connections>
+                                <action selector="cancelButton:" destination="PfV-m3-SdB" id="OSh-jy-sW0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="8cr-cd-2zL">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="PfV-m3-SdB" id="ob9-Kb-Bua"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>

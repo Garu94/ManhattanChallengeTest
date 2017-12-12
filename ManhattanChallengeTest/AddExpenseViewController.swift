@@ -8,23 +8,21 @@
 
 import UIKit
 
-
-
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
     
     @IBOutlet weak var optionalNoteField: UITextField!
-        
     
-    var newExpense = Expense(context: CoreDataController.shared.context)
+    var price: Float?
+    var cathegory: String?
+    var note: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newExpense.price = 0.0
-        newExpense.cathegory = ""
-        newExpense.note = ""
         
+        //Pop up price keyboard as view appears
+        insertPriceField.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
     }
@@ -34,34 +32,61 @@ class AddExpenseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
+    //On tap, close keyboards and update var
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        savePriceInVar()
+        saveNoteInVar()
         
+    }
+   
+    
+    //Save new Expense and go back to Home when Done pressed
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        //Close keyboards and update var
+        savePriceInVar()
+        saveNoteInVar()
+        
+        //Save new Expense
+        CoreDataController.shared.addExpense(cathegory: cathegory, note: note, price: price)
+        
+        //Animation Dismiss
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    //When cathegory button is pressed, hide the keyboards and save datas into var
+    @IBAction func cathgeoryButtonPressed(_ sender: UIButton) {
+        savePriceInVar()
+        saveNoteInVar()
+        cathegory = sender.titleLabel!.text
+    }
+    
+    
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    //Clean the code, isolating savePrice and saveNote procedure
+    func savePriceInVar() {
         if insertPriceField.isEditing {
+            if let insertedPrice = insertPriceField.text {
+                price = Float(insertedPrice)
+            }
             insertPriceField.endEditing(true)
         }
-        
+    }
+    
+    func saveNoteInVar() {
         if optionalNoteField.isEditing {
+            if let insertedNote = optionalNoteField.text {
+                note = insertedNote
+            }
             optionalNoteField.endEditing(true)
         }
     }
-   
-    //Save new Expense and go back to Home when Done pressed
-    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
-        
-        if let price = Float(insertPriceField.text!) {
-            newExpense.price = price
-        }
-        
-        if let text = optionalNoteField.text {
-            newExpense.note = text
-        }
-        
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func cathgeoryButtonPressed(_ sender: UIButton) {
-        newExpense.cathegory = sender.titleLabel!.text
-    }
-    
     
 }
