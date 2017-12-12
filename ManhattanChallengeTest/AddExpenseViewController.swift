@@ -18,10 +18,13 @@ class AddExpenseViewController: UIViewController {
     
     var newExpense = Expense(context: CoreDataController.shared.context)
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newExpense.price = 0.0
+        newExpense.cathegory = ""
+        newExpense.note = ""
         
-        print("\(newExpense.price)\n\(newExpense.cathegory)\n\(newExpense.note!)")
         
         // Do any additional setup after loading the view.
     }
@@ -32,6 +35,8 @@ class AddExpenseViewController: UIViewController {
     }
    
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        print("\(newExpense.price)\n\(newExpense.cathegory)\n\(newExpense.note!)")
+
         
         if insertPriceField.isEditing {
             newExpense.price = Float(insertPriceField.text!)!

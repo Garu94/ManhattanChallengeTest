@@ -173,8 +173,10 @@
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="height" multiplier="1:1" id="Fqr-bc-B4C"/>
+                                    <constraint firstAttribute="width" constant="76" id="J7r-bh-Jm5"/>
+                                    <constraint firstAttribute="height" constant="76" id="ZXk-yK-Udx"/>
                                 </constraints>
-                                <state key="normal" title="Transports"/>
+                                <state key="normal" title="Accomodation"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="je4-Ye-jGs"/>
                                 </connections>
@@ -183,9 +185,11 @@
                                 <rect key="frame" x="149.5" y="315" width="76" height="76"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="3rM-mc-26J"/>
+                                    <constraint firstAttribute="height" constant="76" id="lOA-yL-pHN"/>
                                     <constraint firstAttribute="width" secondItem="MXD-Zc-20q" secondAttribute="height" multiplier="1:1" id="oCU-vT-HfE"/>
                                 </constraints>
-                                <state key="normal" title="Attractions"/>
+                                <state key="normal" title="Transport"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="fpU-Gd-Xkn"/>
                                 </connections>
@@ -195,8 +199,10 @@
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OsA-QG-ID0" secondAttribute="height" multiplier="1:1" id="1s8-jM-0hv"/>
+                                    <constraint firstAttribute="width" constant="76" id="Vkv-71-3iU"/>
+                                    <constraint firstAttribute="height" constant="76" id="w4H-JB-0mZ"/>
                                 </constraints>
-                                <state key="normal" title="Food"/>
+                                <state key="normal" title="Entertainment"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="riY-nJ-Ipg"/>
                                 </connections>
@@ -205,6 +211,8 @@
                                 <rect key="frame" x="16" y="423" width="76" height="76"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="E1o-EG-PG3"/>
+                                    <constraint firstAttribute="height" constant="76" id="ZDp-Sc-Z5f"/>
                                     <constraint firstAttribute="width" secondItem="hjZ-5w-abe" secondAttribute="height" multiplier="1:1" id="zha-OU-w4Q"/>
                                 </constraints>
                                 <state key="normal" title="Attractions"/>
@@ -217,8 +225,10 @@
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="I6z-Aa-OzK" secondAttribute="height" multiplier="1:1" id="Vdu-bK-4nK"/>
+                                    <constraint firstAttribute="height" constant="76" id="aTN-hV-FwF"/>
+                                    <constraint firstAttribute="width" constant="76" id="w2d-df-TCa"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Food"/>
                                 <connections>
                                     <segue destination="bML-ve-fcZ" kind="show" id="QFI-lh-Vvz"/>
                                 </connections>
@@ -227,7 +237,9 @@
                                 <rect key="frame" x="283" y="423" width="76" height="76"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="4dD-qI-VIO"/>
                                     <constraint firstAttribute="width" secondItem="2fr-fF-ggA" secondAttribute="height" multiplier="1:1" id="Dli-2Q-Ljb"/>
+                                    <constraint firstAttribute="width" constant="76" id="Ea6-44-9qW"/>
                                 </constraints>
                                 <state key="normal" title="Other"/>
                                 <connections>
@@ -247,8 +259,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2fr-fF-ggA" firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="width" id="4IQ-yx-fj7"/>
-                            <constraint firstItem="hjZ-5w-abe" firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="width" id="4WD-tG-usQ"/>
                             <constraint firstItem="MXD-Zc-20q" firstAttribute="centerY" secondItem="YyE-AY-vcv" secondAttribute="centerY" id="4zH-jP-jLP"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="bottom" secondItem="SST-HM-4mr" secondAttribute="bottom" constant="20" id="6FS-5K-u0w"/>
                             <constraint firstItem="OsA-QG-ID0" firstAttribute="centerY" secondItem="YyE-AY-vcv" secondAttribute="centerY" id="7iP-IQ-DcX"/>
@@ -266,12 +276,10 @@
                             <constraint firstItem="I6z-Aa-OzK" firstAttribute="centerY" secondItem="hjZ-5w-abe" secondAttribute="centerY" id="XAB-cQ-6ss"/>
                             <constraint firstItem="hjZ-5w-abe" firstAttribute="height" secondItem="YyE-AY-vcv" secondAttribute="height" id="ZKl-so-VGF"/>
                             <constraint firstItem="MXD-Zc-20q" firstAttribute="centerX" secondItem="edY-wB-ytk" secondAttribute="centerX" id="daO-2d-x0U"/>
-                            <constraint firstItem="MXD-Zc-20q" firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="width" id="fg6-i7-Hbz"/>
                             <constraint firstItem="MXD-Zc-20q" firstAttribute="top" secondItem="6X8-hm-kUO" secondAttribute="bottom" constant="46" id="lN7-2t-Fpg"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="trailing" secondItem="OsA-QG-ID0" secondAttribute="trailing" constant="16" id="n1s-GI-rht"/>
                             <constraint firstItem="I6z-Aa-OzK" firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="width" id="n3t-ZW-Jfk"/>
                             <constraint firstItem="OsA-QG-ID0" firstAttribute="height" secondItem="YyE-AY-vcv" secondAttribute="height" id="rBn-yv-CrU"/>
-                            <constraint firstItem="OsA-QG-ID0" firstAttribute="width" secondItem="YyE-AY-vcv" secondAttribute="width" id="w3Z-9a-pOL"/>
                             <constraint firstItem="2fr-fF-ggA" firstAttribute="height" secondItem="YyE-AY-vcv" secondAttribute="height" id="yY9-Vm-i6u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Wd-Ao-z51"/>
@@ -401,7 +409,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="height" multiplier="1:1" id="w5T-aK-hCD"/>
                                 </constraints>
-                                <state key="normal" title="Transports"/>
+                                <state key="normal" title="Accomodation"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Fmp-0f-KW6"/>
                                 </connections>
@@ -412,7 +420,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dpy-4l-qla" secondAttribute="height" multiplier="1:1" id="4xG-P9-lah"/>
                                 </constraints>
-                                <state key="normal" title="Attractions"/>
+                                <state key="normal" title="Transport"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="g5a-2P-u1j"/>
                                 </connections>
@@ -423,7 +431,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PJz-z1-2eq" secondAttribute="height" multiplier="1:1" id="cM7-Ob-bNo"/>
                                 </constraints>
-                                <state key="normal" title="Food"/>
+                                <state key="normal" title="Entertainment"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jco-CV-zDO"/>
                                 </connections>
@@ -434,7 +442,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bhR-CC-4hG" secondAttribute="height" multiplier="1:1" id="Usi-BD-exx"/>
                                 </constraints>
-                                <state key="normal" title="Accomodations"/>
+                                <state key="normal" title="Attractions"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="fyv-JV-7Ob"/>
                                 </connections>
@@ -445,7 +453,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cUc-U3-gaU" secondAttribute="height" multiplier="1:1" id="xmv-g0-kFH"/>
                                 </constraints>
-                                <state key="normal" title="Entertainment"/>
+                                <state key="normal" title="Food"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="zmy-HG-HmN"/>
                                 </connections>
@@ -456,7 +464,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uqu-qE-rRl" secondAttribute="height" multiplier="1:1" id="CgQ-YZ-znr"/>
                                 </constraints>
-                                <state key="normal" title="Others"/>
+                                <state key="normal" title="Other"/>
                                 <connections>
                                     <action selector="foodButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="cEh-Uc-SNh"/>
                                 </connections>
