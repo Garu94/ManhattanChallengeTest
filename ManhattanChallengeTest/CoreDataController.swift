@@ -129,7 +129,7 @@ class CoreDataController {
             }
             
             for expense in expenses {
-                print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? "")")
+                print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? ""), trip: \(trip.location ?? "")")
             }
         }
         
