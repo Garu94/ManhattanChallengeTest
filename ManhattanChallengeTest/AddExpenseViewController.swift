@@ -11,12 +11,17 @@ import UIKit
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
     
+    @IBOutlet weak var warningText: UITextView!
+    
     @IBOutlet weak var optionalNoteField: UITextField!
     
     var price: Float?
     var cathegory: String?
     var note: String?
     var trip: Trip!
+    
+    var categoryFlag = false
+    var priceFlag = false
     
     
     override func viewDidLoad() {
@@ -38,6 +43,9 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         
+        if warningText.alpha == 1 {
+            warningText.alpha = 0
+        }
     }
    
     
@@ -47,12 +55,17 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         
-        //Save new Expense, given the Trip
-        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: trip)
-        
-        //Animation Dismiss
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        //First check if at least a category and a price was inserted
+        if !categoryFlag || !priceFlag {
+            warningText.alpha = 1
+        } else {
+            //Save new Expense, given the Trip
+            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: trip)
+            
+            //Animation Dismiss
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     
@@ -61,6 +74,7 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         cathegory = sender.titleLabel!.text
+        categoryFlag = true
     }
     
     
@@ -75,7 +89,20 @@ class AddExpenseViewController: UIViewController {
     func savePriceInVar() {
         if insertPriceField.isEditing {
             if let insertedPrice = insertPriceField.text {
+                var pointCounter = 0
+                priceFlag = true
+                for char in insertedPrice {
+                    if char == "." {
+                        pointCounter += 1
+                    }
+                    if pointCounter > 1 || insertedPrice == "" {
+                        priceFlag = false
+                    }
+                }
+                
                 price = Float(insertedPrice)
+                
+                
             }
             insertPriceField.endEditing(true)
         }

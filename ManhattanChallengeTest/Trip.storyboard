@@ -528,6 +528,13 @@
                                 </constraints>
                                 <state key="normal" image="addPhoto"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="WARNING! Add at least a price and select a category!" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39L-VN-qVG">
+                                <rect key="frame" x="16" y="100" width="343" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -592,6 +599,7 @@
                     <connections>
                         <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>
                         <outlet property="optionalNoteField" destination="9gT-6q-EiC" id="Z6H-dA-6t0"/>
+                        <outlet property="warningText" destination="39L-VN-qVG" id="yqC-UE-CxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,14 +14,14 @@ class TripMainPageViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
+        self.title = CoreDataController.shared.loadTrip(location: "Rome").location
         
-        navigationController?.title = CoreDataController.shared.loadTrip(location: "Rome").location
     }
 
     override func didReceiveMemoryWarning() {
