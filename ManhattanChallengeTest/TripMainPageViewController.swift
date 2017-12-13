@@ -31,13 +31,14 @@ class TripMainPageViewController: UIViewController {
 
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
+        categoryName = sender.titleLabel!.text
         
-        categoryName = sender.titleLabel?.text
+        self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(categoryName)
         
         let tripName = navigationController?.title
         

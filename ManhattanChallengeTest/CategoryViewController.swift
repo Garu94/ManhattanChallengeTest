@@ -16,8 +16,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     var expenses: [Expense] = []
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var expensePriceLabel: UILabel!
-    @IBOutlet weak var expenseOptionalNote: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
     
     override func viewDidLoad() {
@@ -27,6 +25,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
+        print(categoryName)
         
         //Get expenses of the category
         expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
