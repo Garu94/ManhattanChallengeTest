@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TripViewController: UIViewController {
+class TripMainPageViewController: UIViewController {
 
+    var categoryName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +24,23 @@ class TripViewController: UIViewController {
     }
 
     
+    @IBAction func clickOnCategoryButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
+        
+        categoryName = sender.titleLabel?.text
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let tripName = navigationController?.title
+        
+        if let nextViewController = segue.destination as? CategoryViewController {
+            if let name = self.categoryName {
+                nextViewController.categoryName = name
+                nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)
+            }
+        }
         
         if let nextViewController = segue.destination as? AddExpenseViewController {
             nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)

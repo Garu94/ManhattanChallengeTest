@@ -48,7 +48,7 @@ class AddExpenseViewController: UIViewController {
         saveNoteInVar()
         
         //Save new Expense, given the Trip
-        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: trip.location!))
+        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: trip)
         
         //Animation Dismiss
         navigationController?.popViewController(animated: true)

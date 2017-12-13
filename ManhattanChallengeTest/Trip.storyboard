@@ -181,7 +181,7 @@
         <!--Title-->
         <scene sceneID="2wb-jp-Ebc">
             <objects>
-                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHW-Rq-Ou2" customClass="TripMainPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHW-Rq-Ou2" customClass="TripMainPageViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edY-wB-ytk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
                                 </constraints>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <segue destination="PfV-m3-SdB" kind="show" id="7j0-3z-buu"/>
+                                    <segue destination="PfV-m3-SdB" kind="show" identifier="segueToAddExpenseView" id="7j0-3z-buu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-AY-vcv">
@@ -208,6 +208,9 @@
                                     <constraint firstAttribute="height" constant="76" id="ZXk-yK-Udx"/>
                                 </constraints>
                                 <state key="normal" title="Accomodation"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="oma-wo-0CM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-Zc-20q">
                                 <rect key="frame" x="149.5" y="315" width="76" height="76"/>
@@ -218,6 +221,9 @@
                                     <constraint firstAttribute="width" secondItem="MXD-Zc-20q" secondAttribute="height" multiplier="1:1" id="oCU-vT-HfE"/>
                                 </constraints>
                                 <state key="normal" title="Transport"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="BFQ-ZQ-pF8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-QG-ID0">
                                 <rect key="frame" x="283" y="315" width="76" height="76"/>
@@ -228,6 +234,9 @@
                                     <constraint firstAttribute="height" constant="76" id="w4H-JB-0mZ"/>
                                 </constraints>
                                 <state key="normal" title="Entertainment"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="1fT-Zw-pe8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-5w-abe">
                                 <rect key="frame" x="16" y="423" width="76" height="76"/>
@@ -238,6 +247,9 @@
                                     <constraint firstAttribute="width" secondItem="hjZ-5w-abe" secondAttribute="height" multiplier="1:1" id="zha-OU-w4Q"/>
                                 </constraints>
                                 <state key="normal" title="Attractions"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="zkY-ZT-Xbu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6z-Aa-OzK">
                                 <rect key="frame" x="149.5" y="423" width="76" height="76"/>
@@ -248,6 +260,9 @@
                                     <constraint firstAttribute="width" constant="76" id="w2d-df-TCa"/>
                                 </constraints>
                                 <state key="normal" title="Food"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="fb3-v1-Ed1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-fF-ggA">
                                 <rect key="frame" x="283" y="423" width="76" height="76"/>
@@ -258,6 +273,9 @@
                                     <constraint firstAttribute="width" constant="76" id="Ea6-44-9qW"/>
                                 </constraints>
                                 <state key="normal" title="Other"/>
+                                <connections>
+                                    <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="jcg-Fc-J14"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-hm-kUO">
                                 <rect key="frame" x="97.5" y="89" width="180" height="180"/>
@@ -300,12 +318,12 @@
                     <navigationItem key="navigationItem" title="Title" id="62v-Rp-wbm">
                         <barButtonItem key="leftBarButtonItem" title="My Trips" id="zbc-OK-4s1">
                             <connections>
-                                <segue destination="3S3-lw-GSh" kind="show" id="Ou6-06-SGg"/>
+                                <segue destination="3S3-lw-GSh" kind="show" identifier="segueToMyTripsView" id="Ou6-06-SGg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="bML-ve-fcZ" kind="show" id="KC8-wS-Hno"/>
+                        <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlz-Pt-b5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,7 +333,7 @@
         <!--Category-->
         <scene sceneID="CfH-VO-gcW">
             <objects>
-                <viewController id="bML-ve-fcZ" sceneMemberID="viewController">
+                <viewController id="bML-ve-fcZ" customClass="CategoryViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BFH-q5-Nav">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
