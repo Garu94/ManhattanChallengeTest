@@ -38,8 +38,6 @@ class TripMainPageViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(categoryName)
-        
         let tripName = navigationController?.title
         
         if let nextViewController = segue.destination as? CategoryViewController {
