@@ -17,11 +17,11 @@ class CoreDataController {
     private init() {
         let application = UIApplication.shared.delegate as! AppDelegate
         self.context = application.persistentContainer.viewContext
-        /*  I create this fake trip to test the classes
-        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
-        trip.location = "Rome"
-        trip.budget = 400.00
-         */
+//          I create this fake trip to test the classes
+//        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
+//        trip.location = "Rome"
+//        trip.budget = 400.00
+ 
     }
     
     func addTrip(location: String, budget: Float) {
@@ -61,14 +61,14 @@ class CoreDataController {
     
     func loadTrip(location: String) -> Trip {
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
-        tripFetch.predicate = NSPredicate(format: "location == %@", location)
+        tripFetch.predicate = NSPredicate(format: "location = %@", location)
         tripFetch.fetchLimit = 1
         var fetchTrip: [Trip] = []
         do {
             fetchTrip = try context.fetch(tripFetch) as! [Trip]
-        } catch let errore{
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("  Stampo l'errore: \n \(errore) \n")
+        } catch let error {
+            print("[CDC] Problem executing FetchRequest")
+            print("  Print Error: \n \(error) \n")
         }
         return fetchTrip[0]
     }
@@ -87,9 +87,9 @@ class CoreDataController {
                 print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? "")")
             }
             
-        } catch let errore {
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("  Stampo l'errore: \n \(errore) \n")
+        } catch let error {
+            print("[CDC] Problem executing FetchRequest")
+            print("  Print error: \n \(error) \n")
         }
     }
     
@@ -117,17 +117,17 @@ class CoreDataController {
         
         do {
 //          Need to pass to this function the trip you want to look up the expenses
-            let exp = trip.expenses?.allObjects as! [Expense]
+            let expenses = trip.expenses?.allObjects as! [Expense]
             
-            guard exp.count > 0 else {print("[CDC] Non ci sono elementi da leggere "); return}
+            guard expenses.count > 0 else {print("[CDC] Non ci sono elementi da leggere "); return}
             
-            for expen in exp {
-                print("[CDC] Expense: \(expen.price), Cathegory: \(expen.cathegory ?? ""), note: \(expen.note ?? "")")
+            for expense in expenses {
+                print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? "")")
             }
             
-        } catch let errore {
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("Stampo l'errore: \n \(errore) \n")
+        } catch let error {
+            print("[CDC] Problem Executing FetchRequest")
+            print("Print Error: \n \(error) \n")
         }
     }
 }

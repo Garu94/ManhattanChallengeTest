@@ -29,7 +29,7 @@ class AddExpenseViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
    
     //On tap, close keyboards and update var
@@ -48,11 +48,11 @@ class AddExpenseViewController: UIViewController {
         
         //Save new Expense
         CoreDataController.shared.addExpense(cathegory: cathegory, note: note, price: price)
-        //CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: "Rome"))
+//        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: "Rome"))
         
         CoreDataController.shared.loadExpenses()
-        print("")
-        //CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.loadTrip(location: "Rome"))
+        
+//        CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.loadTrip(location: "Rome"))
         
         
         //Animation Dismiss
