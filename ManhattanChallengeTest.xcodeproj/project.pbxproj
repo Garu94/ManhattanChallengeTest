@@ -10,6 +10,7 @@
 		1535A4C91FDE8D6700A77F9F /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1535A4C81FDE8D6700A77F9F /* Trip.storyboard */; };
 		1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7711FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld */; };
 		1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1542B7991FDFDE76000169F8 /* CoreDataController.swift */; };
+		FF714A8A1FE1268900A5DE49 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF714A891FE1268900A5DE49 /* TripMainPageViewController.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		1535A4C81FDE8D6700A77F9F /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		1542B7721FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ManhattanChallengeTest.xcdatamodel; sourceTree = "<group>"; };
 		1542B7991FDFDE76000169F8 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		FF714A891FE1268900A5DE49 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		FFEC6B641FDC11FE007E8017 /* ManhattanChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
+				FF714A891FE1268900A5DE49 /* TripMainPageViewController.swift */,
 				FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
@@ -275,6 +278,7 @@
 				1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
 				FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */,
+				FF714A8A1FE1268900A5DE49 /* TripMainPageViewController.swift in Sources */,
 				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,
 			);

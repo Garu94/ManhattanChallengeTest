@@ -181,7 +181,7 @@
         <!--Title-->
         <scene sceneID="2wb-jp-Ebc">
             <objects>
-                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHW-Rq-Ou2" customClass="TripViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sHW-Rq-Ou2" customClass="TripMainPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="edY-wB-ytk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

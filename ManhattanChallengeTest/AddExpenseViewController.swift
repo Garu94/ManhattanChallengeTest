@@ -16,6 +16,7 @@ class AddExpenseViewController: UIViewController {
     var price: Float?
     var cathegory: String?
     var note: String?
+    var trip: Trip?
     
     
     override func viewDidLoad() {
