@@ -17,7 +17,7 @@ class CoreDataController {
     private init() {
         let application = UIApplication.shared.delegate as! AppDelegate
         self.context = application.persistentContainer.viewContext
-//          I create this fake trip to test the classes
+//        I create this fake trip to test the classes
 //        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
 //        trip.location = "Rome"
 //        trip.budget = 400.00
