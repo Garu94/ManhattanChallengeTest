@@ -16,7 +16,7 @@ class AddExpenseViewController: UIViewController {
     var price: Float?
     var cathegory: String?
     var note: String?
-    var trip: Trip?
+    var trip: Trip!
     
     
     override func viewDidLoad() {
@@ -47,14 +47,8 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         
-        //Save new Expense
-        CoreDataController.shared.addExpense(cathegory: cathegory, note: note, price: price)
-//        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: "Rome"))
-        
-        CoreDataController.shared.loadExpenses()
-        
-//        CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.loadTrip(location: "Rome"))
-        
+        //Save new Expense, given the Trip
+        CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: trip.location!))
         
         //Animation Dismiss
         navigationController?.popViewController(animated: true)
