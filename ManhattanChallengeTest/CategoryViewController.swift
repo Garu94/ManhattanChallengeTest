@@ -18,7 +18,9 @@ class CategoryViewController: UIViewController {
         
         self.title = categoryName
         
-        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: trip)
+        let expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
+        
+        
         
         
         // Do any additional setup after loading the view.
