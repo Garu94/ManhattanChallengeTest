@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="My Trips" id="fEY-6D-kPS">
                         <barButtonItem key="rightBarButtonItem" title="Add Trip" id="FhN-u0-uag">
                             <connections>
-                                <segue destination="lfg-h6-qF8" kind="show" id="hog-qS-07i"/>
+                                <segue destination="lfg-h6-qF8" kind="showDetail" action="showViewController:sender:" id="hog-qS-07i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add budget" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2X2-pe-6tQ">
-                                <rect key="frame" x="69" y="235" width="290" height="30"/>
+                                <rect key="frame" x="69" y="191" width="290" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2X2-pe-6tQ" secondAttribute="height" multiplier="29:3" id="pgn-tb-ymV"/>
                                     <constraint firstAttribute="width" constant="290" id="syo-7u-map"/>
@@ -110,7 +110,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-Pin" translatesAutoresizingMaskIntoConstraints="NO" id="Nv8-fL-ksM">
-                                <rect key="frame" x="16" y="134" width="28" height="38"/>
+                                <rect key="frame" x="16" y="90" width="28" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="0YB-nH-NxQ"/>
                                     <constraint firstAttribute="width" secondItem="Nv8-fL-ksM" secondAttribute="height" multiplier="14:19" id="7Kl-t5-EnG"/>
@@ -118,7 +118,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$" translatesAutoresizingMaskIntoConstraints="NO" id="vZw-5R-qQe">
-                                <rect key="frame" x="16" y="227" width="28" height="38"/>
+                                <rect key="frame" x="16" y="183" width="28" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="1Gk-DI-Xdp"/>
                                     <constraint firstAttribute="width" secondItem="vZw-5R-qQe" secondAttribute="height" multiplier="14:19" id="aaw-SY-heu"/>
@@ -126,7 +126,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add location" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqh-D2-0Dj">
-                                <rect key="frame" x="69" y="142" width="290" height="30"/>
+                                <rect key="frame" x="69" y="98" width="290" height="30"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="290" id="bdz-TN-lxC"/>
@@ -326,7 +326,7 @@
                     <navigationItem key="navigationItem" title="Title" id="62v-Rp-wbm">
                         <barButtonItem key="leftBarButtonItem" title="My Trips" id="zbc-OK-4s1">
                             <connections>
-                                <segue destination="3S3-lw-GSh" kind="show" identifier="segueToMyTripsView" id="Ou6-06-SGg"/>
+                                <segue destination="3S3-lw-GSh" kind="showDetail" identifier="segueToMyTripsView" action="showViewController:sender:" id="Ou6-06-SGg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -452,7 +452,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" textContentType="location"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE">
                                 <rect key="frame" x="16" y="200" width="76" height="76"/>

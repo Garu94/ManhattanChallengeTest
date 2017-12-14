@@ -25,6 +25,8 @@ class MyTripsTableTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         myTrips = CoreDataController.shared.loadAllTheTrips()
         self.tableView.reloadData()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

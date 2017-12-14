@@ -104,6 +104,9 @@ class AddExpenseViewController: UIViewController {
                     }
                 }
                 
+                print(insertedPrice)
+                print(convertedPrice)
+                
                 // Error if too many "." are inserted
                 for char in convertedPrice {
                     if char == "." {
@@ -119,7 +122,7 @@ class AddExpenseViewController: UIViewController {
                     priceFlag = false
                 }
                 
-                price = Float(insertedPrice)
+                price = Float(convertedPrice)
                 
                 
             }

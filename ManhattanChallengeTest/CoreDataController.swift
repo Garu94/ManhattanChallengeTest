@@ -30,6 +30,7 @@ class CoreDataController {
         let newTrip = Trip(entity: entity!, insertInto: self.context)
         newTrip.location = location
         newTrip.budget = budget
+        newTrip.date = Date()
         
         do {
             try self.context.save()
@@ -41,23 +42,23 @@ class CoreDataController {
         
     }
     
-    func addExpense(cathegory: String?, note: String?, price: Float?) {
-        let entity = NSEntityDescription.entity(forEntityName: "Expense", in: self.context)
-        
-        let newExpense = Expense(entity: entity!, insertInto: self.context)
-        newExpense.cathegory = cathegory ?? ""
-        newExpense.price = price ?? 0.0
-        newExpense.note = note ?? ""
-        
-        do {
-            try self.context.save()
-        } catch let error {
-            print("[CDC] Error saving expense: error \(error)")
-        }
-        
-        print("[CDC] expense correctly saved")
-        
-    }
+//    func addExpense(cathegory: String?, note: String?, price: Float?) {
+//        let entity = NSEntityDescription.entity(forEntityName: "Expense", in: self.context)
+//
+//        let newExpense = Expense(entity: entity!, insertInto: self.context)
+//        newExpense.cathegory = cathegory ?? ""
+//        newExpense.price = price ?? 0.0
+//        newExpense.note = note ?? ""
+//
+//        do {
+//            try self.context.save()
+//        } catch let error {
+//            print("[CDC] Error saving expense: error \(error)")
+//        }
+//
+//        print("[CDC] expense correctly saved")
+//
+//    }
     
     func loadTrip(location: String) -> Trip {
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
@@ -103,6 +104,8 @@ class CoreDataController {
         newExpense.cathegory = cathegory ?? ""
         newExpense.price = price ?? 0.0
         newExpense.note = note ?? ""
+        newExpense.date = Date()
+        
         
         do {
             try self.context.save()
@@ -147,6 +150,12 @@ class CoreDataController {
             }
         }
         
+        if fetchedExpenses.count > 1 {
+            fetchedExpenses.sort() {
+                $0.date! > $1.date!
+            }
+        }
+        
         return fetchedExpenses
     }
 
@@ -166,6 +175,13 @@ class CoreDataController {
             print("[CDC] Problema esecuzione FetchRequest")
             print("  Stampo l'errore: \n \(errore) \n")
         }
+        
+        if trips.count > 1 {
+            trips.sort() {
+                $0.date! > $1.date!
+            }
+        }
+        
         return trips
     }
     
