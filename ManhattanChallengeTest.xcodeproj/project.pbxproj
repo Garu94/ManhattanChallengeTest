@@ -13,6 +13,8 @@
 		1C3919B81FE11366001C79AE /* MyTripsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919B71FE11366001C79AE /* MyTripsTableTableViewController.swift */; };
 		1C3919BA1FE12305001C79AE /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919B91FE12305001C79AE /* AddTripViewController.swift */; };
 		1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */; };
+		FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */; };
+		FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		1C3919B71FE11366001C79AE /* MyTripsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsTableTableViewController.swift; sourceTree = "<group>"; };
 		1C3919B91FE12305001C79AE /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		FFEC6B641FDC11FE007E8017 /* ManhattanChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
+				FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */,
+				FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */,
 				1C3919B71FE11366001C79AE /* MyTripsTableTableViewController.swift */,
 				FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */,
 				1C3919B91FE12305001C79AE /* AddTripViewController.swift */,
@@ -281,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */,
 				1C3919BA1FE12305001C79AE /* AddTripViewController.swift in Sources */,
 				1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
@@ -288,6 +295,7 @@
 				1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */,
 				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,
+				FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */,
 				1C3919B81FE11366001C79AE /* MyTripsTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

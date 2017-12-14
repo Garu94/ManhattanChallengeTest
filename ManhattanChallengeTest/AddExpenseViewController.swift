@@ -27,6 +27,8 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        insertPriceField.keyboardType = .decimalPad
+        
         //Pop up price keyboard as view appears
         insertPriceField.becomeFirstResponder()
         
