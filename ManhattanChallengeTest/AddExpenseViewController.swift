@@ -91,13 +91,30 @@ class AddExpenseViewController: UIViewController {
             if let insertedPrice = insertPriceField.text {
                 var pointCounter = 0
                 priceFlag = true
+                var convertedPrice: String = ""
+                
+                //Convert "," to "." for foreigners number pads
                 for char in insertedPrice {
+                    if char != "," {
+                        convertedPrice.append(char)
+                    } else {
+                        convertedPrice.append(".")
+                    }
+                }
+                
+                // Error if too many "." are inserted
+                for char in convertedPrice {
                     if char == "." {
                         pointCounter += 1
                     }
-                    if pointCounter > 1 || insertedPrice == "" {
+                    if pointCounter > 1 {
                         priceFlag = false
                     }
+                }
+                
+                //Error if Price Field is empty
+                if convertedPrice == "" {
+                    priceFlag = false
                 }
                 
                 price = Float(insertedPrice)
