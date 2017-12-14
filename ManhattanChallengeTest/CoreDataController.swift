@@ -17,11 +17,11 @@ class CoreDataController {
     private init() {
         let application = UIApplication.shared.delegate as! AppDelegate
         self.context = application.persistentContainer.viewContext
-        /*  I create this fake trip to test the classes
-        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
-        trip.location = "Rome"
-        trip.budget = 400.00
-         */
+//        I create this fake trip to test the classes
+//        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
+//        trip.location = "Rome"
+//        trip.budget = 400.00
+ 
     }
     
     func addTrip(location: String, budget: Float) {
@@ -61,18 +61,19 @@ class CoreDataController {
     
     func loadTrip(location: String) -> Trip {
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
-        tripFetch.predicate = NSPredicate(format: "location == %@", location)
+        tripFetch.predicate = NSPredicate(format: "location = %@", location)
         tripFetch.fetchLimit = 1
         var fetchTrip: [Trip] = []
         do {
             fetchTrip = try context.fetch(tripFetch) as! [Trip]
-        } catch let errore{
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("  Stampo l'errore: \n \(errore) \n")
+        } catch let error {
+            print("[CDC] Problem executing FetchRequest")
+            print("  Print Error: \n \(error) \n")
         }
         return fetchTrip[0]
     }
     
+    //Load all expenses
     func loadExpenses() {
         print("[CDC] Recovering expenses ")
         
@@ -87,9 +88,9 @@ class CoreDataController {
                 print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? "")")
             }
             
-        } catch let errore {
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("  Stampo l'errore: \n \(errore) \n")
+        } catch let error {
+            print("[CDC] Problem executing FetchRequest")
+            print("  Print error: \n \(error) \n")
         }
     }
     
@@ -111,23 +112,60 @@ class CoreDataController {
         
         print("[CDC] expense correctly saved")
     }
-    
-    func loadExpensesOfATrip(trip: Trip) {
+
+    func loadExpensesOfATrip(trip: Trip) -> [Expense] {
         print("[CDC] Recovering expenses ")
+        
+        var expenses: [Expense] = []
         
         do {
 //          Need to pass to this function the trip you want to look up the expenses
-            let exp = trip.expenses?.allObjects as! [Expense]
+            expenses = trip.expenses?.allObjects as! [Expense]
             
-            guard exp.count > 0 else {print("[CDC] Non ci sono elementi da leggere "); return}
-            
-            for expen in exp {
-                print("[CDC] Expense: \(expen.price), Cathegory: \(expen.cathegory ?? ""), note: \(expen.note ?? "")")
+            guard expenses.count > 0 else {
+                print("[CDC] No elements to read")
+                return []
+                
             }
             
-        } catch let errore {
-            print("[CDC] Problema esecuzione FetchRequest")
-            print("Stampo l'errore: \n \(errore) \n")
+            for expense in expenses {
+                print("[CDC] Expense: \(expense.price), Cathegory: \(expense.cathegory ?? ""), note: \(expense.note ?? ""), trip: \(trip.location ?? "")")
+            }
         }
+        
+        return expenses
     }
+    
+    func loadExpensesOfCategoryGivenTrip(trip: Trip, category: String) -> [Expense] {
+        
+        let expenses = loadExpensesOfATrip(trip: trip)
+        var fetchedExpenses: [Expense] = []
+        
+        for expense in expenses {
+            if expense.cathegory == category {
+                fetchedExpenses.append(expense)
+            }
+        }
+        
+        return fetchedExpenses
+    }
+    
+//    func loadExpensesOfCategoryGivenTrip(location: String, category: String) -> [Expense] {
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
+//        fetchRequest.predicate = NSPredicate(format: "location = %@", location)
+//
+//        var fetchedExpenses: [Expense] = []
+//        var fetchedTrip: [Trip] = []
+//        do {
+//
+//            fetchedTrip = try context.fetch(fetchRequest) as! [Trip]
+//            fetchedExpenses = fetchedTrip[0].expenses! as! [Expense]
+//
+//        } catch let error {
+//            print("[CDC] Problem executing FetchRequest")
+//            print("  Print Error: \n \(error) \n")
+//        }
+//
+//        return fetchedExpenses
+//    }
 }

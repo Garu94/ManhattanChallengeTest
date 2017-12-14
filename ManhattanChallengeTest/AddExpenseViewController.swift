@@ -11,11 +11,17 @@ import UIKit
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
     
+    @IBOutlet weak var warningText: UITextView!
+    
     @IBOutlet weak var optionalNoteField: UITextField!
     
     var price: Float?
     var cathegory: String?
     var note: String?
+    var trip: Trip!
+    
+    var categoryFlag = false
+    var priceFlag = false
     
     
     override func viewDidLoad() {
@@ -29,7 +35,7 @@ class AddExpenseViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
    
     //On tap, close keyboards and update var
@@ -37,6 +43,9 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         
+        if warningText.alpha == 1 {
+            warningText.alpha = 0
+        }
     }
    
     
@@ -46,18 +55,17 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         
-        //Save new Expense
-        CoreDataController.shared.addExpense(cathegory: cathegory, note: note, price: price)
-        //CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: CoreDataController.shared.loadTrip(location: "Rome"))
-        
-        CoreDataController.shared.loadExpenses()
-        print("")
-        //CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.loadTrip(location: "Rome"))
-        
-        
-        //Animation Dismiss
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        //First check if at least a category and a price was inserted
+        if !categoryFlag || !priceFlag {
+            warningText.alpha = 1
+        } else {
+            //Save new Expense, given the Trip
+            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: trip)
+            
+            //Animation Dismiss
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     
@@ -66,6 +74,7 @@ class AddExpenseViewController: UIViewController {
         savePriceInVar()
         saveNoteInVar()
         cathegory = sender.titleLabel!.text
+        categoryFlag = true
     }
     
     
@@ -80,7 +89,37 @@ class AddExpenseViewController: UIViewController {
     func savePriceInVar() {
         if insertPriceField.isEditing {
             if let insertedPrice = insertPriceField.text {
+                var pointCounter = 0
+                priceFlag = true
+                var convertedPrice: String = ""
+                
+                //Convert "," to "." for foreigners number pads
+                for char in insertedPrice {
+                    if char != "," {
+                        convertedPrice.append(char)
+                    } else {
+                        convertedPrice.append(".")
+                    }
+                }
+                
+                // Error if too many "." are inserted
+                for char in convertedPrice {
+                    if char == "." {
+                        pointCounter += 1
+                    }
+                    if pointCounter > 1 {
+                        priceFlag = false
+                    }
+                }
+                
+                //Error if Price Field is empty
+                if convertedPrice == "" {
+                    priceFlag = false
+                }
+                
                 price = Float(insertedPrice)
+                
+                
             }
             insertPriceField.endEditing(true)
         }
