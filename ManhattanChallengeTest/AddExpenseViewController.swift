@@ -10,6 +10,7 @@ import UIKit
 
 class AddExpenseViewController: UIViewController {
     @IBOutlet weak var insertPriceField: UITextField!
+    @IBOutlet weak var addPhoto: UIImageView!
     
     @IBOutlet weak var warningText: UITextView!
     
@@ -50,6 +51,19 @@ class AddExpenseViewController: UIViewController {
         }
     }
    
+    @IBAction func tapImagePhoto(_ sender: UITapGestureRecognizer) {
+        let p = UIImagePickerController()
+        p.sourceType = .camera
+        p.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        present(p, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let foto = info[UIImagePickerControllerOriginalImage] as! UIImage
+        addPhoto.image = foto
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     //Save new Expense and go back to Home when Done pressed
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
