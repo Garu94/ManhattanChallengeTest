@@ -149,23 +149,24 @@ class CoreDataController {
         
         return fetchedExpenses
     }
+
+    func loadAllTheTrips() -> [Trip] {
+        let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
+        var trips = [Trip]()
+        do {
+            trips = try self.context.fetch(fetchRequest)
+            
+            guard trips.count > 0 else {print("[CDC] Non ci sono elementi da leggere "); return[]}
+            
+            for trip in trips {
+                print("[CDC] Trip location: \(trip.location!)")
+            }
+            
+        } catch let errore {
+            print("[CDC] Problema esecuzione FetchRequest")
+            print("  Stampo l'errore: \n \(errore) \n")
+        }
+        return trips
+    }
     
-//    func loadExpensesOfCategoryGivenTrip(location: String, category: String) -> [Expense] {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
-//        fetchRequest.predicate = NSPredicate(format: "location = %@", location)
-//
-//        var fetchedExpenses: [Expense] = []
-//        var fetchedTrip: [Trip] = []
-//        do {
-//
-//            fetchedTrip = try context.fetch(fetchRequest) as! [Trip]
-//            fetchedExpenses = fetchedTrip[0].expenses! as! [Expense]
-//
-//        } catch let error {
-//            print("[CDC] Problem executing FetchRequest")
-//            print("  Print Error: \n \(error) \n")
-//        }
-//
-//        return fetchedExpenses
-//    }
 }

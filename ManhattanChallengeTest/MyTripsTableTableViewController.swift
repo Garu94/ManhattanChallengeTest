@@ -10,8 +10,7 @@ import UIKit
 
 class MyTripsTableTableViewController: UITableViewController {
 
-//    var myTrips = CoreDataController.shared.loadAllTheTrips()
-    var test: Int = 5
+    var myTrips = CoreDataController.shared.loadAllTheTrips()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,7 @@ class MyTripsTableTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        myTrips = CoreDataController.shared.loadAllTheTrips()
+        myTrips = CoreDataController.shared.loadAllTheTrips()
         self.tableView.reloadData()
     }
 
@@ -44,20 +43,16 @@ class MyTripsTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        return myTrips.count
-        return 1
+        return myTrips.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-//        let trip = self.myTrips[indexPath.row]
+        let trip = self.myTrips[indexPath.row]
         
-//        cell.textLabel?.text = trip.location
-          cell.textLabel?.text = "Test. CANCEL"
-        test = 40
-        
+        cell.textLabel?.text = trip.location
 
         return cell
     }
