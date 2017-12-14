@@ -55,7 +55,9 @@ class MyTripsTableTableViewController: UITableViewController {
 //        let trip = self.myTrips[indexPath.row]
         
 //        cell.textLabel?.text = trip.location
-          cell.textLabel?.text = "Test. CANCEL IT!"
+          cell.textLabel?.text = "Test. CANCEL"
+        test = 40
+        
 
         return cell
     }
