@@ -15,13 +15,13 @@
         <!--My Trips-->
         <scene sceneID="tOQ-ia-95b">
             <objects>
-                <tableViewController id="3S3-lw-GSh" sceneMemberID="viewController">
+                <tableViewController id="3S3-lw-GSh" customClass="MyTripsTableTableViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tzr-wh-U77">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="qfG-tG-hm2" rowHeight="55" style="IBUITableViewCellStyleDefault" id="sts-Vx-5XZ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="qfG-tG-hm2" rowHeight="55" style="IBUITableViewCellStyleDefault" id="sts-Vx-5XZ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sts-Vx-5XZ" id="TJF-DJ-mrX">
@@ -93,7 +93,7 @@
         <!--Add Trip-->
         <scene sceneID="Egw-NG-JKp">
             <objects>
-                <viewController id="lfg-h6-qF8" sceneMemberID="viewController">
+                <viewController id="lfg-h6-qF8" customClass="AddTripViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jg1-QP-yxb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,8 +155,16 @@
                         <viewLayoutGuide key="safeArea" id="0Dc-ZO-tfh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Trip" id="k5r-Ac-myx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="j3T-Hx-aAq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="j3T-Hx-aAq">
+                            <connections>
+                                <action selector="saveNewTrip:" destination="lfg-h6-qF8" id="6O0-65-uzz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="budgetTextField" destination="2X2-pe-6tQ" id="z1G-BJ-7PP"/>
+                        <outlet property="locationTextField" destination="oqh-D2-0Dj" id="vgP-6P-m0O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nut-bN-bW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
