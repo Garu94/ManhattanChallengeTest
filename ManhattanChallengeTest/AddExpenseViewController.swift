@@ -23,6 +23,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     var categoryFlag = false
     var priceFlag = false
+    var notePhotoFlag = false
     
     
     let p = UIImagePickerController()
@@ -63,6 +64,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         p.dismiss(animated: true, completion: nil)
         addPhoto.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        notePhotoFlag = true
     }
     
     
@@ -72,12 +74,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         savePriceInVar()
         saveNoteInVar()
         
-        //First check if at least a category and a price was inserted
-        if !categoryFlag || !priceFlag {
+        //First check if at least a category, price and note or photo was inserted
+        if !categoryFlag || !priceFlag || !notePhotoFlag{
             warningText.alpha = 1
         } else {
             //Save new Expense, given the Trip
-            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, trip: trip)
+            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
             
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
@@ -152,6 +154,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             }
             optionalNoteField.endEditing(true)
         }
+        notePhotoFlag = true
     }
     
 }

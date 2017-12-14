@@ -96,7 +96,7 @@ class CoreDataController {
     }
     
     
-    func addExpenseToATrip(cathegory: String?, note: String?, price: Float?, trip: Trip) {
+    func addExpenseToATrip(cathegory: String?, note: String?, price: Float?,photo: UIImage, trip: Trip) {
         let entity = NSEntityDescription.entity(forEntityName: "Expense", in: self.context)
         
         let newExpense = Expense(entity: entity!, insertInto: self.context)
@@ -105,6 +105,7 @@ class CoreDataController {
         newExpense.price = price ?? 0.0
         newExpense.note = note ?? ""
         newExpense.date = Date()
+        newExpense.image = UIImagePNGRepresentation(photo)
         
         
         do {
