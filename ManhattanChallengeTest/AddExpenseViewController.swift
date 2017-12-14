@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddExpenseViewController: UIViewController {
+class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var insertPriceField: UITextField!
     @IBOutlet weak var addPhoto: UIImageView!
     
@@ -24,6 +24,8 @@ class AddExpenseViewController: UIViewController {
     var categoryFlag = false
     var priceFlag = false
     
+    
+    let p = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,16 +54,15 @@ class AddExpenseViewController: UIViewController {
     }
    
     @IBAction func tapImagePhoto(_ sender: UITapGestureRecognizer) {
-        let p = UIImagePickerController()
         p.sourceType = .camera
-        p.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        p.cameraCaptureMode = .photo
+        p.delegate = self
         present(p, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let foto = info[UIImagePickerControllerOriginalImage] as! UIImage
-        addPhoto.image = foto
-        dismiss(animated: true, completion: nil)
+        p.dismiss(animated: true, completion: nil)
+        addPhoto.image = info[UIImagePickerControllerOriginalImage] as! UIImage
     }
     
     
