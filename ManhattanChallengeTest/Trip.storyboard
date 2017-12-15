@@ -454,24 +454,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" textContentType="location"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE">
-                                <rect key="frame" x="16" y="200" width="87.5" height="87.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE">
+                                <rect key="frame" x="16" y="200.5" width="87.5" height="87.5"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="height" multiplier="1:1" id="w5T-aK-hCD"/>
                                 </constraints>
+                                <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" title="Accomodation"/>
                                 <connections>
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jhe-EW-8oJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla">
                                 <rect key="frame" x="144" y="200" width="87.5" height="87.5"/>
                                 <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dpy-4l-qla" secondAttribute="height" multiplier="1:1" id="4xG-P9-lah"/>
                                 </constraints>
-                                <state key="normal" title="Transport"/>
+                                <state key="normal" title="Transport" image="addPhoto"/>
                                 <connections>
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="LuN-xc-6X3"/>
                                 </connections>
@@ -494,6 +495,9 @@
                                     <constraint firstAttribute="width" secondItem="bhR-CC-4hG" secondAttribute="height" multiplier="1:1" id="Usi-BD-exx"/>
                                 </constraints>
                                 <state key="normal" title="Attractions"/>
+                                <connections>
+                                    <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="evV-HO-Y03"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU">
                                 <rect key="frame" x="144" y="319.5" width="87.5" height="87.5"/>
@@ -613,6 +617,13 @@
                         <outlet property="insertPriceField" destination="kMA-sO-g1P" id="REI-M9-94p"/>
                         <outlet property="optionalNoteField" destination="9gT-6q-EiC" id="Z6H-dA-6t0"/>
                         <outlet property="warningText" destination="39L-VN-qVG" id="yqC-UE-CxD"/>
+                        <outletCollection property="buttonsCategory" destination="uqu-qE-rRl" collectionClass="NSMutableArray" id="E81-0y-Dx2"/>
+                        <outletCollection property="buttonsCategory" destination="cUc-U3-gaU" collectionClass="NSMutableArray" id="P4S-dM-hAL"/>
+                        <outletCollection property="buttonsCategory" destination="bhR-CC-4hG" collectionClass="NSMutableArray" id="7kc-1k-Unp"/>
+                        <outletCollection property="buttonsCategory" destination="PJz-z1-2eq" collectionClass="NSMutableArray" id="8tX-UF-GOL"/>
+                        <outletCollection property="buttonsCategory" destination="dpy-4l-qla" collectionClass="NSMutableArray" id="Z2l-Na-m1V"/>
+                        <outletCollection property="buttonsCategory" destination="1oU-af-pyE" collectionClass="NSMutableArray" id="alN-Md-msa"/>
+                        <outletCollection property="buttonsCategory" destination="bhR-CC-4hG" collectionClass="NSMutableArray" id="vaO-70-2ZM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0FI-jM-DAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
