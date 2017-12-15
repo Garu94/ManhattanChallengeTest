@@ -16,6 +16,7 @@
 		1C3919FA1FE407F5001C79AE /* CurrentTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919F91FE407F5001C79AE /* CurrentTrip.swift */; };
 		FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */; };
 		FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */; };
+		FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		1C3919F91FE407F5001C79AE /* CurrentTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTrip.swift; sourceTree = "<group>"; };
 		FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
+		FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */,
 				1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */,
 				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
+				FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
 				FFEC6B6C1FDC11FE007E8017 /* Assets.xcassets */,
@@ -293,6 +296,7 @@
 				FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */,
 				1C3919BA1FE12305001C79AE /* AddTripViewController.swift in Sources */,
 				1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */,
+				FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
 				FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */,
 				1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */,

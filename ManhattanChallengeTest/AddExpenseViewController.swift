@@ -204,9 +204,14 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             }
             optionalNoteField.endEditing(true)
         }
-        self.view.frame.origin.y += 258
         notePhotoFlag = true
     }
     
+    @IBAction func keyboardAppear(_ sender: UITextField) {
+        self.view.frame.origin.y -= 216
+    }
     
+    @IBAction func keyboardDismiss(_ sender: UITextField) {
+        self.view.frame.origin.y += 216
+    }
 }
