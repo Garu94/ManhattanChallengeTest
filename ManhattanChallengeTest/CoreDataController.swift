@@ -60,6 +60,19 @@ class CoreDataController {
 //
 //    }
     
+    func loadCurrentTrip() -> Trip {
+        var trips = [Trip]()
+        let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
+        do {
+            trips = try context.fetch(tripFetch) as! [Trip] }
+        catch let error {
+            print("[CDC] Problem executing FetchRequest")
+            print("  Print Error: \n \(error) \n")
+        }
+        
+        return trips[trips.count - 1]
+    }
+    
     func loadTrip(location: String) -> Trip {
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
         tripFetch.predicate = NSPredicate(format: "location = %@", location)
@@ -93,8 +106,7 @@ class CoreDataController {
             print("[CDC] Problem executing FetchRequest")
             print("  Print error: \n \(error) \n")
         }
-    }
-    
+    }    
     
     func addExpenseToATrip(cathegory: String?, note: String?, price: Float?,photo: UIImage, trip: Trip) {
         let entity = NSEntityDescription.entity(forEntityName: "Expense", in: self.context)
@@ -116,7 +128,14 @@ class CoreDataController {
         
         print("[CDC] expense correctly saved")
     }
-
+    
+    func loadExpensesOfCurrentTrip() -> [Expense] {
+        var trip = loadCurrentTrip()
+        var expenses = loadExpensesOfATrip(trip: trip)
+        return expenses
+    }
+    
+    
     func loadExpensesOfATrip(trip: Trip) -> [Expense] {
         print("[CDC] Recovering expenses ")
         

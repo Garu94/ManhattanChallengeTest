@@ -75,6 +75,21 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         notePhotoFlag = true
     }
     
+        func showAlertPrice(){
+            let alertView = UIAlertController(title: "Price field required", message: "", preferredStyle: .alert)
+            alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            present(alertView, animated: true, completion: nil)
+        }
+    func showAlertCathegory(){
+        let alertView = UIAlertController(title: "Cathegory required", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    func showAlert(){
+        let alertView = UIAlertController(title: "Please insert a expense and a cathegory", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
     
     //Save new Expense and go back to Home when Done pressed
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
@@ -83,8 +98,14 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         saveNoteInVar()
         
         //First check if at least a category, price and note or photo was inserted
-        if !categoryFlag || !priceFlag || !notePhotoFlag{
-            warningText.alpha = 1
+        if !categoryFlag && !priceFlag {
+            showAlert()
+        }
+        if !categoryFlag {
+            showAlertCathegory()
+            
+        } else if !priceFlag {
+            showAlertPrice()
         } else {
             //Save new Expense, given the Trip
             CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
