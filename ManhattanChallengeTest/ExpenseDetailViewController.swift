@@ -11,14 +11,17 @@ import UIKit
 class ExpenseDetailViewController: UIViewController {
 
     var expenses: [Expense]!
-    var selectedIndex = 0
+    var selectedIndex: Int!
     
-    @IBOutlet var noteField: UIView!
+    @IBOutlet weak var noteField: UITextField!
     @IBOutlet weak var priceField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        priceField.text = String(expenses[selectedIndex].price)
+        noteField.text = expenses[selectedIndex].note
         
         
         
