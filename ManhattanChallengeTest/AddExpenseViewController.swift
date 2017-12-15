@@ -10,6 +10,7 @@ import UIKit
 
 class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var insertPriceField: UITextField!
+    @IBOutlet var buttonsCategory: [UIButton]!
     @IBOutlet weak var addPhoto: UIImageView!
     
     @IBOutlet weak var warningText: UITextView!
@@ -30,6 +31,13 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in buttonsCategory {
+            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            button.layer.shadowOffset = CGSize(width: 0, height: 4)
+            button.layer.shadowOpacity = 1.0
+            button.layer.shadowRadius = 2.0
+            button.layer.masksToBounds = false
+        }
         
         insertPriceField.keyboardType = .decimalPad
         
@@ -93,9 +101,30 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         savePriceInVar()
         saveNoteInVar()
         cathegory = sender.titleLabel!.text
+        setShadowButton()
+        removeShadowButton(button: sender)
         categoryFlag = true
     }
     
+    func setShadowButton() {
+        for button in buttonsCategory {
+            UIButton.animate(withDuration: 0.2,
+                             animations: {
+                                button.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                button.layer.shadowOpacity = 1
+            },
+                             completion: nil)
+        }
+    }
+    
+    func removeShadowButton(button: UIButton) {
+        UIButton.animate(withDuration: 0.2,
+                         animations: {
+                            button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                            button.layer.shadowOpacity = 0
+        },
+                         completion: nil)
+    }
     
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
@@ -154,7 +183,9 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             }
             optionalNoteField.endEditing(true)
         }
+        self.view.frame.origin.y += 258
         notePhotoFlag = true
     }
+    
     
 }
