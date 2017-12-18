@@ -10,7 +10,10 @@ import UIKit
 
 class TripDetailViewController: UIViewController {
     
+    //Trip passed from previous View
     var trip: Trip?
+    
+    //Total computed in this view
     var total: Float = 0.0
     
     
@@ -22,12 +25,19 @@ class TripDetailViewController: UIViewController {
 
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: trip!)
         
+        
+//        navigationController?.popViewController(animated: true)
+//        dismiss(animated: true, completion: nil)
+        
+        //Compute total
         for expense in expenses {
             total += expense.price
         }
         
+        //Show total
         totalExpenseLabel.text = ("You spent: \(total)")
         
+        //Change title of NavBar
         navigationController?.title = trip?.location
         
         // Do any additional setup after loading the view.

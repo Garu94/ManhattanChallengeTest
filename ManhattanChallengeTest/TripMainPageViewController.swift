@@ -22,7 +22,6 @@ class TripMainPageViewController: UIViewController {
         budgeLeftLabel.text = String(getCurrentBudget())
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
 
-        print("view will appear")
     }
     
     @IBOutlet weak var titleNavBar: UINavigationItem!
@@ -32,19 +31,15 @@ class TripMainPageViewController: UIViewController {
         
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
-        print(allTrips.isEmpty)
-        
-        if !allTrips.isEmpty {print(CoreDataController.shared.loadCurrentTrip())}
-        
-        CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
+        print(allTrips!.isEmpty)
         
         if allTrips!.isEmpty {
             performSegue(withIdentifier: "firstTripSegue", sender: self)
         }
         
+        CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
-        budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
+        print(CoreDataController.shared.currentTrip)
     }
 
     override func didReceiveMemoryWarning() {

@@ -72,8 +72,8 @@ class CoreDataController {
 //
 //    }
     
-    func loadCurrentTrip() -> Trip {
-        var trips = [Trip]()
+    func loadCurrentTrip() -> Trip? {
+        var trips: [Trip]?
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
         do {
             trips = try context.fetch(tripFetch) as! [Trip] }
@@ -82,7 +82,11 @@ class CoreDataController {
             print("  Print Error: \n \(error) \n")
         }
         
-        return trips[trips.count - 1]
+        if trips!.count == 0 {
+            return nil
+        }
+        
+        return trips![trips!.count - 1]
     }
     
     func loadTrip(location: String) -> Trip {
@@ -143,7 +147,7 @@ class CoreDataController {
     
     func loadExpensesOfCurrentTrip() -> [Expense] {
         let trip = loadCurrentTrip()
-        let expenses = loadExpensesOfATrip(trip: trip)
+        let expenses = loadExpensesOfATrip(trip: trip!)
         return expenses
     }
     
@@ -217,4 +221,38 @@ class CoreDataController {
         return trips
     }
     
+    func deleteTrip(location: String) {
+        let fetchRequest: NSFetchRequest<Trip> = Trip.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "location = %@", location)
+        do{
+            let result = try context.fetch(fetchRequest)
+            for object in result {
+                context.delete(object)
+            }
+        } catch let error {
+            print("[CDC] Problem deleting object")
+            print("  Print Error: \n \(error) \n")
+        }
+        
+        do {
+            try self.context.save()
+        } catch let error {
+            print("[CDC] Error deleting trip: error \(error)")
+        }
+        
+        print("[CDC] expense correctly saved")
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
