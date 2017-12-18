@@ -14,7 +14,7 @@ class TripMainPageViewController: UIViewController {
     
     var allTrips: [Trip]?
     var isFirstTrip = false
-    var currentTrip: Trip?
+//    var currentTrip: Trip?
     
     @IBOutlet weak var budgeLeftLabel: UILabel!
     
@@ -24,15 +24,15 @@ class TripMainPageViewController: UIViewController {
     
     func getCurrentBudget() -> Float {
         var sum: Float = 0.0
-        if currentTrip?.expenses?.count != 0 {
-            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip!) {
+        if CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!).count != 0 {
+            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!) {
                 sum += expense.price
                 print("sum is: \(sum)")
             }
         }
         print(sum)
-        print(currentTrip!.budget - sum)
-        return currentTrip!.budget - sum
+        print(CoreDataController.shared.currentTrip!.budget - sum)
+        return CoreDataController.shared.currentTrip!.budget - sum
     }
 //    var currentBudget: Float {
 //        get {
@@ -52,7 +52,7 @@ class TripMainPageViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = currentTrip?.location ?? ""
+        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
 
         print("view will appear")
     }
@@ -64,7 +64,7 @@ class TripMainPageViewController: UIViewController {
 //        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
 //        self.title = CoreDataController.shared.loadTrip(location: "Rome").location
         budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = currentTrip?.location ?? ""
+        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
     }
 
     override func didReceiveMemoryWarning() {

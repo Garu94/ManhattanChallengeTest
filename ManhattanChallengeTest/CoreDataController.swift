@@ -23,6 +23,10 @@ class CoreDataController {
 //        let trip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
 //        trip.location = "Rome"
 //        trip.budget = 400.00
+//        REMEMBER TO CANCEL THIS:
+        currentTrip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
+        currentTrip?.location = "Firenze"
+        currentTrip?.budget = 400
  
     }
     

@@ -81,12 +81,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             present(alertView, animated: true, completion: nil)
         }
     func showAlertCathegory(){
-        let alertView = UIAlertController(title: "Cathegory required", message: "", preferredStyle: .alert)
+        let alertView = UIAlertController(title: "Category required", message: "", preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertView, animated: true, completion: nil)
     }
     func showAlert(){
-        let alertView = UIAlertController(title: "Please insert a expense and a cathegory", message: "", preferredStyle: .alert)
+        let alertView = UIAlertController(title: "Please insert a expense and a category", message: "", preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         present(alertView, animated: true, completion: nil)
     }
