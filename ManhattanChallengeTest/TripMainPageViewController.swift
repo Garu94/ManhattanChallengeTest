@@ -49,7 +49,11 @@ class TripMainPageViewController: UIViewController {
 
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
-        categoryName = sender.titleLabel!.text
+        print(categoryName)
+        
+        categoryName = sender.restorationIdentifier!
+        
+        print(categoryName)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
@@ -63,6 +67,8 @@ class TripMainPageViewController: UIViewController {
                 nextViewController.categoryName = name
                 nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)
             }
+            print(categoryName)
+            
         }
         
         if let nextViewController = segue.destination as? AddExpenseViewController {

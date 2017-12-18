@@ -16,6 +16,7 @@ class FirstTripViewController: UIViewController {
     var location: String?
     
     var priceFlag = false
+    var locationFlag = false
     
     @IBOutlet weak var budgetTextField: UITextField!
     var budget: Float?
@@ -41,12 +42,27 @@ class FirstTripViewController: UIViewController {
         saveAndCloseBudget()
         saveAndCloseLocation()
 
-        CoreDataController.shared.addTrip(location: location!, budget: budget!)
+        if !locationFlag && !priceFlag {
+            showAlert()
+        }
+        if !locationFlag {
+            showAlertLocation()
+            
+        } else if !priceFlag {
+            showAlertBudget()
+        } else {
+            
+            //Save first trip
+            CoreDataController.shared.addTrip(location: location!, budget: budget!)
+            
+            //Dismiss
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
         
-        print(CoreDataController.shared.currentTrip)
         
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        
+        
     }
     
     
@@ -95,11 +111,31 @@ class FirstTripViewController: UIViewController {
     }
     
     func saveAndCloseLocation() {
-        location = locationTextField.text
-        
         if locationTextField.isEditing {
+            if let insertedLocation = locationTextField.text {
+                location = insertedLocation
+            }
             locationTextField.endEditing(true)
         }
+        locationFlag = true
+        
+    }
+    
+    
+    func showAlertLocation(){
+        let alertView = UIAlertController(title: "Location field required", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    func showAlertBudget(){
+        let alertView = UIAlertController(title: "Budget field required", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    func showAlert(){
+        let alertView = UIAlertController(title: "Please insert a location and a budget", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
     }
     
     /*

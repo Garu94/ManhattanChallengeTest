@@ -201,7 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-AY-vcv" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Accomodation" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-AY-vcv" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="22" y="260" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="50M-XB-gIb"/>
@@ -226,7 +226,7 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="oma-wo-0CM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-Zc-20q" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Transport" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-Zc-20q" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="138" y="260" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="ajm-0j-nar"/>
@@ -251,7 +251,7 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="BFQ-ZQ-pF8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-QG-ID0" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Entertainment" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-QG-ID0" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="254" y="260" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="2mb-7S-ber"/>
@@ -276,7 +276,7 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="1fT-Zw-pe8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-5w-abe" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Attractions" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-5w-abe" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="22" y="413" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="Lr3-nH-GlK"/>
@@ -301,7 +301,7 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="zkY-ZT-Xbu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6z-Aa-OzK" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Food" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6z-Aa-OzK" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="138" y="413" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="ecB-rw-IIy"/>
@@ -326,7 +326,7 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="fb3-v1-Ed1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-fF-ggA" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Other" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-fF-ggA" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="254" y="413" width="99" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="137" id="MiM-q4-E24"/>
@@ -475,12 +475,6 @@
                     <connections>
                         <outlet property="budgeLeftLabel" destination="eCc-A5-XCk" id="6Dg-qg-FdF"/>
                         <outlet property="titleNavBar" destination="62v-Rp-wbm" id="uXV-fA-Nfs"/>
-                        <outletCollection property="categoryButtons" destination="OsA-QG-ID0" collectionClass="NSMutableArray" id="RFC-bO-pQD"/>
-                        <outletCollection property="categoryButtons" destination="2fr-fF-ggA" collectionClass="NSMutableArray" id="6fH-Mc-ysX"/>
-                        <outletCollection property="categoryButtons" destination="I6z-Aa-OzK" collectionClass="NSMutableArray" id="KCS-MZ-xkV"/>
-                        <outletCollection property="categoryButtons" destination="hjZ-5w-abe" collectionClass="NSMutableArray" id="YEB-2l-BIU"/>
-                        <outletCollection property="categoryButtons" destination="MXD-Zc-20q" collectionClass="NSMutableArray" id="hR2-xh-pkS"/>
-                        <outletCollection property="categoryButtons" destination="YyE-AY-vcv" collectionClass="NSMutableArray" id="88S-r3-XUh"/>
                         <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
                         <segue destination="S40-B3-Dn4" kind="show" identifier="firstTripSegue" id="RRh-Mn-FfZ"/>
                     </connections>
@@ -508,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yw-cC-2hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149.59999999999999" y="925.18740629685169"/>
+            <point key="canvasLocation" x="161" y="924"/>
         </scene>
         <!--FirstTripViewController-->
         <scene sceneID="jqP-Fk-ctE">
@@ -806,8 +800,10 @@
                         <viewLayoutGuide key="safeArea" id="weP-9O-Qr0"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="1kc-z2-XlH" id="pQo-EU-sPe"/>
                         <outlet property="noteField" destination="ng0-zN-2uL" id="zA2-Ww-flj"/>
                         <outlet property="priceField" destination="GKh-kN-NiO" id="FdH-gA-Vy8"/>
+                        <outlet property="scrollView" destination="fNL-7v-yyx" id="qkb-uI-shm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzB-Sp-xbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
