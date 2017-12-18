@@ -11,6 +11,7 @@ import UIKit
 class MyTripsTableTableViewController: UITableViewController {
 
     var myTrips = CoreDataController.shared.loadAllTheTrips()
+    var indexOfSelectedTrip = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,16 @@ class MyTripsTableTableViewController: UITableViewController {
         return 300
     }
     
-    override func
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexOfSelectedTrip = indexPath.row
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let nextViewController = segue.destination as? TripDetailViewController {
+            nextViewController.trip = myTrips[indexOfSelectedTrip]
+        }
+    }
     
     
     

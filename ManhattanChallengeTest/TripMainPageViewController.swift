@@ -34,7 +34,9 @@ class TripMainPageViewController: UIViewController {
         
         print(allTrips.isEmpty)
         
-        if !allTrips.isEmpty {print(CoreDataController.shared.currentTrip)}
+        if !allTrips.isEmpty {print(CoreDataController.shared.loadCurrentTrip())}
+        
+        CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
         if allTrips!.isEmpty {
             performSegue(withIdentifier: "firstTripSegue", sender: self)

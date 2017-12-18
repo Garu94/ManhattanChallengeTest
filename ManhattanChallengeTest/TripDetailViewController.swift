@@ -28,6 +28,8 @@ class TripDetailViewController: UIViewController {
         
         totalExpenseLabel.text = ("You spent: \(total)")
         
+        navigationController?.title = trip?.location
+        
         // Do any additional setup after loading the view.
     }
 
