@@ -24,9 +24,9 @@ class CoreDataController {
 //        trip.location = "Rome"
 //        trip.budget = 400.00
 //        REMEMBER TO CANCEL THIS:
-        currentTrip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
-        currentTrip?.location = "Firenze"
-        currentTrip?.budget = 400
+//        currentTrip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
+//        currentTrip?.location = "Firenze"
+//        currentTrip?.budget = 400
  
     }
     
@@ -138,8 +138,8 @@ class CoreDataController {
     }
     
     func loadExpensesOfCurrentTrip() -> [Expense] {
-        var trip = loadCurrentTrip()
-        var expenses = loadExpensesOfATrip(trip: trip)
+        let trip = loadCurrentTrip()
+        let expenses = loadExpensesOfATrip(trip: trip)
         return expenses
     }
     

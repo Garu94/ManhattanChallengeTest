@@ -12,9 +12,13 @@ class FirstTripViewController: UIViewController {
 
     
     
-    @IBOutlet weak var locationTextFierld: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    var location: String?
+    
+    var priceFlag = false
     
     @IBOutlet weak var budgetTextField: UITextField!
+    var price: Float?
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -38,7 +42,52 @@ class FirstTripViewController: UIViewController {
         
     }
     
+    func saveAndCloseBudget() {
+        if budgetTextField.isEditing {
+            if let insertedPrice = budgetTextField.text {
+                var pointCounter = 0
+                priceFlag = true
+                var convertedPrice: String = ""
+                
+                //Convert "," to "." for foreigners number pads
+                for char in insertedPrice {
+                    if char != "," {
+                        convertedPrice.append(char)
+                    } else {
+                        convertedPrice.append(".")
+                    }
+                }
+                
+                // Error if too many "." are inserted
+                for char in convertedPrice {
+                    if char == "." {
+                        pointCounter += 1
+                    }
+                    if pointCounter > 1 {
+                        priceFlag = false
+                    }
+                }
+                
+                //Error if Price Field is empty
+                if convertedPrice == "" {
+                    priceFlag = false
+                }
+                
+                price = Float(convertedPrice)
+                
+                
+            }
+            budgetTextField.endEditing(true)
+        }
+    }
     
+    func saveAndCloseLocation() {
+        if locationTextField.isEditing {
+            location = locationTextField.text
+        }
+        
+        
+    }
     
     /*
     // MARK: - Navigation

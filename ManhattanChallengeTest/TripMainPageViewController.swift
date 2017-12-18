@@ -12,43 +12,11 @@ class TripMainPageViewController: UIViewController {
 
     var categoryName: String?
     
-    var allTrips: [Trip]?
+    var allTrips: [Trip]!
     var isFirstTrip = false
-//    var currentTrip: Trip?
     
     @IBOutlet weak var budgeLeftLabel: UILabel!
     
-//    var currentTrip = CoreDataController.shared.loadCurrentTrip()
-//    var currentExpenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
-    
-    
-    func getCurrentBudget() -> Float {
-        var sum: Float = 0.0
-        if CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!).count != 0 {
-            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!) {
-                sum += expense.price
-                print("sum is: \(sum)")
-            }
-        }
-        print(sum)
-        print(CoreDataController.shared.currentTrip!.budget - sum)
-        return CoreDataController.shared.currentTrip!.budget - sum
-    }
-//    var currentBudget: Float {
-//        get {
-//            print("current budget is: \(currentTrip.budget)")
-//            var sum: Float = 0.0
-//            if currentTrip.expenses?.count != 0 {
-//                for expense in currentExpenses {
-//                    sum += expense.price
-//                    print("sum is: \(sum)")
-//                }
-//            }
-//            print(sum)
-//            print(currentTrip.budget - sum)
-//            return currentTrip.budget - sum
-//        }
-//    }
     
     override func viewWillAppear(_ animated: Bool) {
         budgeLeftLabel.text = String(getCurrentBudget())
@@ -61,8 +29,16 @@ class TripMainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
-//        self.title = CoreDataController.shared.loadTrip(location: "Rome").location
+        
+        allTrips = CoreDataController.shared.loadAllTheTrips()
+        
+        print(allTrips.isEmpty)
+        
+        if allTrips!.isEmpty {
+            performSegue(withIdentifier: "firstTripSegue", sender: self)
+        }
+        
+        
         budgeLeftLabel.text = String(getCurrentBudget())
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
     }
@@ -94,4 +70,37 @@ class TripMainPageViewController: UIViewController {
             nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)
         }
     }
+    
+    func getCurrentBudget() -> Float {
+        var sum: Float = 0.0
+        
+        guard let currentTrip = CoreDataController.shared.currentTrip else {
+            return sum
+        }
+        
+        if CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip).count != 0 {
+            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!) {
+                sum += expense.price
+                print("sum is: \(sum)")
+            }
+        }
+        print(sum)
+        print(currentTrip.budget - sum)
+        return currentTrip.budget - sum
+    }
+    //    var currentBudget: Float {
+    //        get {
+    //            print("current budget is: \(currentTrip.budget)")
+    //            var sum: Float = 0.0
+    //            if currentTrip.expenses?.count != 0 {
+    //                for expense in currentExpenses {
+    //                    sum += expense.price
+    //                    print("sum is: \(sum)")
+    //                }
+    //            }
+    //            print(sum)
+    //            print(currentTrip.budget - sum)
+    //            return currentTrip.budget - sum
+    //        }
+    //    }
 }
