@@ -18,21 +18,21 @@ class TripMainPageViewController: UIViewController {
     
     @IBOutlet weak var budgeLeftLabel: UILabel!
     
-    var currentTrip = CoreDataController.shared.loadCurrentTrip()
-    var currentExpenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
+//    var currentTrip = CoreDataController.shared.loadCurrentTrip()
+//    var currentExpenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
     
     
     func getCurrentBudget() -> Float {
         var sum: Float = 0.0
-        if currentTrip.expenses?.count != 0 {
-            for expense in currentExpenses {
+        if currentTrip?.expenses?.count != 0 {
+            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip!) {
                 sum += expense.price
                 print("sum is: \(sum)")
             }
         }
         print(sum)
-        print(currentTrip.budget - sum)
-        return currentTrip.budget - sum
+        print(currentTrip!.budget - sum)
+        return currentTrip!.budget - sum
     }
 //    var currentBudget: Float {
 //        get {
@@ -51,11 +51,8 @@ class TripMainPageViewController: UIViewController {
 //    }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        currentTrip = CoreDataController.shared.loadCurrentTrip()
-        currentExpenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
         budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = currentTrip.location
+        titleNavBar.title = currentTrip?.location ?? ""
 
         print("view will appear")
     }
@@ -67,7 +64,7 @@ class TripMainPageViewController: UIViewController {
 //        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
 //        self.title = CoreDataController.shared.loadTrip(location: "Rome").location
         budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = currentTrip.location
+        titleNavBar.title = currentTrip?.location ?? ""
     }
 
     override func didReceiveMemoryWarning() {
