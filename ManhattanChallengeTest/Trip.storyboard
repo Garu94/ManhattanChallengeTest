@@ -81,6 +81,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElR-j2-tII">
+                                <rect key="frame" x="73" y="185" width="93" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SetAsCurrent"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="p4R-CC-hll"/>
@@ -332,6 +337,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
+                        <segue destination="tEU-aL-zAf" kind="show" identifier="firstTripSegue" id="H5Y-sS-SFa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlz-Pt-b5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -804,4 +810,7 @@
         <image name="Map-Pin" width="28" height="38"/>
         <image name="addPhoto" width="120" height="120"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="H5Y-sS-SFa"/>
+    </inferredMetricsTieBreakers>
 </document>

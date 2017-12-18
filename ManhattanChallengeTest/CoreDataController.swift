@@ -14,6 +14,8 @@ class CoreDataController {
     static let shared = CoreDataController()
     public var context: NSManagedObjectContext
     
+    var currentTrip: Trip?
+    
     private init() {
         let application = UIApplication.shared.delegate as! AppDelegate
         self.context = application.persistentContainer.viewContext
@@ -37,6 +39,8 @@ class CoreDataController {
         } catch let error {
             print("[CDC] Error saving trip: error \(error)")
         }
+        
+        self.currentTrip = newTrip
         
         print("[CDC] trip correctly saved")
         

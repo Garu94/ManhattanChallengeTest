@@ -71,7 +71,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         p.dismiss(animated: true, completion: nil)
-        addPhoto.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        addPhoto.image = (info[UIImagePickerControllerOriginalImage] as! UIImage)
         notePhotoFlag = true
     }
     
