@@ -11,6 +11,12 @@ import UIKit
 
 class AddTripViewController: UIViewController, UITextFieldDelegate {
     
+    func showAlertLocation(){
+        let alertView = UIAlertController(title: "Please insert a location", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    
     
     @IBAction func saveNewTrip(_ sender: UIBarButtonItem) {
         if let loc = locationTextField.text {
@@ -19,7 +25,11 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         if let budgetString = budgetTextField.text {
             budget = Float(budgetString)
         }
-        
+        if location == "" {
+            showAlertLocation()
+        } else if budget == 0 {
+            showAlertLocation()
+        }
         if location != nil && budget != nil {
             CoreDataController.shared.addTrip(location: location!, budget: budget!)
         }

@@ -14,25 +14,57 @@ class TripMainPageViewController: UIViewController {
     
     var allTrips: [Trip]?
     var isFirstTrip = false
-    var currentTrip: Trip?
+//    var currentTrip: Trip?
+    
+    @IBOutlet weak var budgeLeftLabel: UILabel!
+    
+//    var currentTrip = CoreDataController.shared.loadCurrentTrip()
+//    var currentExpenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
+    
+    
+    func getCurrentBudget() -> Float {
+        var sum: Float = 0.0
+        if CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!).count != 0 {
+            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!) {
+                sum += expense.price
+                print("sum is: \(sum)")
+            }
+        }
+        print(sum)
+        print(CoreDataController.shared.currentTrip!.budget - sum)
+        return CoreDataController.shared.currentTrip!.budget - sum
+    }
+//    var currentBudget: Float {
+//        get {
+//            print("current budget is: \(currentTrip.budget)")
+//            var sum: Float = 0.0
+//            if currentTrip.expenses?.count != 0 {
+//                for expense in currentExpenses {
+//                    sum += expense.price
+//                    print("sum is: \(sum)")
+//                }
+//            }
+//            print(sum)
+//            print(currentTrip.budget - sum)
+//            return currentTrip.budget - sum
+//        }
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        budgeLeftLabel.text = String(getCurrentBudget())
+        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
+
+        print("view will appear")
     }
+    
+    @IBOutlet weak var titleNavBar: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        CoreDataController.shared.addTrip(location: "Rome", budget: 450.0)
 //        self.title = CoreDataController.shared.loadTrip(location: "Rome").location
-        
-        allTrips = CoreDataController.shared.loadAllTheTrips()
-        
-        if !allTrips!.isEmpty {
-            self.performSegue(withIdentifier: "firstTripSegue", sender: self)
-        }
-        
-        currentTrip = CoreDataController.shared.currentTrip
-        
+        budgeLeftLabel.text = String(getCurrentBudget())
+        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +81,7 @@ class TripMainPageViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tripName = navigationController?.title
+        let tripName = titleNavBar.title
         
         if let nextViewController = segue.destination as? CategoryViewController {
             if let name = self.categoryName {
