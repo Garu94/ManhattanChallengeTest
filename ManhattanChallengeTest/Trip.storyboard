@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="-69.715142428785612"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Detail View Controller-->
         <scene sceneID="mMC-pd-2Hd">
             <objects>
-                <viewController id="tEU-aL-zAf" sceneMemberID="viewController">
+                <viewController id="tEU-aL-zAf" customClass="TripDetailViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGL-nE-JKc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,15 +81,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElR-j2-tII">
-                                <rect key="frame" x="73" y="185" width="93" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SetAsCurrent"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="p4R-CC-hll"/>
                     </view>
+                    <connections>
+                        <outlet property="totalExpenseLabel" destination="nga-pH-vdG" id="As7-Pd-c7u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgC-xC-Mz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -811,6 +809,6 @@
         <image name="addPhoto" width="120" height="120"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H5Y-sS-SFa"/>
+        <segue reference="MKt-J3-vph"/>
     </inferredMetricsTieBreakers>
 </document>
