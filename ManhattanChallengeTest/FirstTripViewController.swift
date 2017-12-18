@@ -42,6 +42,10 @@ class FirstTripViewController: UIViewController {
         
     }
     
+    
+    @IBAction func doOnTap(_ sender: UITapGestureRecognizer) {
+    }
+    
     func saveAndCloseBudget() {
         if budgetTextField.isEditing {
             if let insertedPrice = budgetTextField.text {
@@ -85,7 +89,6 @@ class FirstTripViewController: UIViewController {
         if locationTextField.isEditing {
             location = locationTextField.text
         }
-        
         
     }
     

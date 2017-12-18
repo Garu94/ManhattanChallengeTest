@@ -378,7 +378,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="tY3-8B-Fgy"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fxE-9a-tAq" appends="YES" id="bJ5-u2-RSM"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="OVZ-9T-RcG">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="cKz-4C-33V">
@@ -388,11 +392,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="bCR-fe-Ykh"/>
+                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="2PJ-O3-fdu"/>
+                        <outlet property="locationTextField" destination="Tax-73-cfW" id="PTb-Xa-Ngh"/>
                         <outlet property="locationTextFierld" destination="Tax-73-cfW" id="dx5-0w-Chg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fxE-9a-tAq">
+                    <connections>
+                        <action selector="doOnTap:" destination="S40-B3-Dn4" id="IkB-cu-Cxh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-461.60000000000002" y="1762.6686656671666"/>
         </scene>
