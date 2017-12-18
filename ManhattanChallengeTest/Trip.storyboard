@@ -375,10 +375,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="fiw-Rc-gNn"/>
-                        <outlet property="locationTextFierld" destination="Tax-73-cfW" id="g2I-Ny-268"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

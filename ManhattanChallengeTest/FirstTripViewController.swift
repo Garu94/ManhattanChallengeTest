@@ -1,5 +1,5 @@
 //
-//  TripDetailViewController.swift
+//  FirstTripViewController.swift
 //  ManhattanChallengeTest
 //
 //  Created by Simone Garuglieri on 18/12/2017.
@@ -8,25 +8,21 @@
 
 import UIKit
 
-class TripDetailViewController: UIViewController {
-    
-    var trip: Trip?
-    var total: Float = 0.0
+class FirstTripViewController: UIViewController {
+
     
     
-    @IBOutlet weak var totalExpenseLabel: UILabel!
+    @IBOutlet weak var locationTextFierld: UITextField!
     
+    @IBOutlet weak var budgetTextField: UITextField!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: trip!)
-        
-        for expense in expenses {
-            total += expense.price
-        }
-        
-        totalExpenseLabel.text = ("You spent: \(total)")
+    
         
         // Do any additional setup after loading the view.
     }
@@ -37,6 +33,13 @@ class TripDetailViewController: UIViewController {
     }
     
 
+    @IBAction func actionOnDoneButton(_ sender: UIBarButtonItem) {
+        
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
