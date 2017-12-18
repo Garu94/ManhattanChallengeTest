@@ -42,7 +42,9 @@ class FirstTripViewController: UIViewController {
         saveAndCloseLocation()
 
         CoreDataController.shared.addTrip(location: location!, budget: budget!)
-                
+        
+        print(CoreDataController.shared.currentTrip)
+        
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
