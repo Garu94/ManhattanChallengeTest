@@ -18,7 +18,7 @@ class FirstTripViewController: UIViewController {
     var priceFlag = false
     
     @IBOutlet weak var budgetTextField: UITextField!
-    var price: Float?
+    var budget: Float?
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -38,12 +38,19 @@ class FirstTripViewController: UIViewController {
     
 
     @IBAction func actionOnDoneButton(_ sender: UIBarButtonItem) {
-        
-        
+        saveAndCloseBudget()
+        saveAndCloseLocation()
+
+        CoreDataController.shared.addTrip(location: location!, budget: budget!)
+                
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func doOnTap(_ sender: UITapGestureRecognizer) {
+        saveAndCloseBudget()
+        saveAndCloseLocation()
     }
     
     func saveAndCloseBudget() {
@@ -77,7 +84,7 @@ class FirstTripViewController: UIViewController {
                     priceFlag = false
                 }
                 
-                price = Float(convertedPrice)
+                budget = Float(convertedPrice)
                 
                 
             }
@@ -86,10 +93,11 @@ class FirstTripViewController: UIViewController {
     }
     
     func saveAndCloseLocation() {
-        if locationTextField.isEditing {
-            location = locationTextField.text
-        }
+        location = locationTextField.text
         
+        if locationTextField.isEditing {
+            locationTextField.endEditing(true)
+        }
     }
     
     /*

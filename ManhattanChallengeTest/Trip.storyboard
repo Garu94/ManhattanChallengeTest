@@ -394,7 +394,6 @@
                     <connections>
                         <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="2PJ-O3-fdu"/>
                         <outlet property="locationTextField" destination="Tax-73-cfW" id="PTb-Xa-Ngh"/>
-                        <outlet property="locationTextFierld" destination="Tax-73-cfW" id="dx5-0w-Chg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
