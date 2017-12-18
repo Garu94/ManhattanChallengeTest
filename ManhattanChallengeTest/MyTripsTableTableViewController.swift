@@ -11,6 +11,7 @@ import UIKit
 class MyTripsTableTableViewController: UITableViewController {
 
     var myTrips = CoreDataController.shared.loadAllTheTrips()
+    var indexOfSelectedTrip = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,15 +60,39 @@ class MyTripsTableTableViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 300
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            if myTrips.count == 1 {
+                //Show alert
+                    let alertView = UIAlertController(title: "You need to have at least one trip", message: "", preferredStyle: .alert)
+                    alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                    present(alertView, animated: true, completion: nil)
+                    return
+                }
+            
+            tableView.beginUpdates()
+
+            CoreDataController.shared.deleteTrip(location: myTrips[indexPath.row].location!)
+            myTrips.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+            
+        }
     }
     
-    override func
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexOfSelectedTrip = indexPath.row
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let nextViewController = segue.destination as? TripDetailViewController {
+            nextViewController.trip = myTrips[indexOfSelectedTrip]
+        }
+    }
     
     
     
