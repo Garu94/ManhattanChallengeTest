@@ -18,6 +18,7 @@
 		FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */; };
 		FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
+		FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
 		FFEC6B6B1FDC11FE007E8017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEC6B691FDC11FE007E8017 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
 		FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEC6B671FDC11FE007E8017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */,
 				1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */,
 				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
+				FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */,
 				FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
@@ -299,6 +302,7 @@
 				FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
 				FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */,
+				FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */,
 				1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */,
 				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,

@@ -12,6 +12,9 @@ class TripMainPageViewController: UIViewController {
 
     var categoryName: String?
     
+    var allTrips: [Trip]?
+    var isFirstTrip = false
+    var currentTrip: Trip?
     
     @IBOutlet weak var budgeLeftLabel: UILabel!
     

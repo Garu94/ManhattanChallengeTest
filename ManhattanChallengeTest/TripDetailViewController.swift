@@ -1,28 +1,25 @@
 //
-//  ExpenseDetailViewController.swift
+//  TripDetailViewController.swift
 //  ManhattanChallengeTest
 //
-//  Created by Simone Garuglieri on 15/12/2017.
+//  Created by Simone Garuglieri on 18/12/2017.
 //  Copyright © 2017 Simone Garuglieri. All rights reserved.
 //
 
 import UIKit
 
-class ExpenseDetailViewController: UIViewController {
-
-    var expenses: [Expense]!
-    var selectedIndex: Int!
+class TripDetailViewController: UIViewController {
     
-    @IBOutlet weak var noteField: UITextField!
-    @IBOutlet weak var priceField: UITextField!
+    var trip: Trip?
+    var total = 0
+    
+    
+    @IBOutlet weak var totalExpenseLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        priceField.text = String(expenses[selectedIndex].price)
-        noteField.text = expenses[selectedIndex].note
-        
+
         
         
         // Do any additional setup after loading the view.
