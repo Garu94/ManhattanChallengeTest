@@ -57,7 +57,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKR-JE-AXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544.79999999999995" y="-69.715142428785612"/>
+            <point key="canvasLocation" x="1311" y="-94"/>
         </scene>
         <!--Trip Detail View Controller-->
         <scene sceneID="mMC-pd-2Hd">
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgC-xC-Mz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.5999999999999" y="-70.614692653673174"/>
+            <point key="canvasLocation" x="2066" y="-70"/>
         </scene>
         <!--Add Trip-->
         <scene sceneID="Egw-NG-JKp">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nut-bN-bW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="-958"/>
+            <point key="canvasLocation" x="92" y="-71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jb5-AX-Co5">
@@ -335,12 +335,54 @@
                     </navigationItem>
                     <connections>
                         <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
-                        <segue destination="tEU-aL-zAf" kind="show" identifier="firstTripSegue" id="H5Y-sS-SFa"/>
+                        <segue destination="S40-B3-Dn4" kind="show" identifier="firstTripSegue" id="RRh-Mn-FfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlz-Pt-b5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="919"/>
+        </scene>
+        <!--FirstTripViewController-->
+        <scene sceneID="jqP-Fk-ctE">
+            <objects>
+                <viewController title="FirstTripViewController" id="S40-B3-Dn4" customClass="FirstTripViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6UR-tt-aSH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Budget of Trip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-Uy-3wc">
+                                <rect key="frame" x="46" y="223" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-73-cfW">
+                                <rect key="frame" x="46" y="146" width="283" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tY3-8B-Fgy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="OVZ-9T-RcG">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="cKz-4C-33V">
+                            <connections>
+                                <action selector="actionOnDoneButton:" destination="S40-B3-Dn4" id="Rmr-r8-nCK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="fiw-Rc-gNn"/>
+                        <outlet property="locationTextFierld" destination="Tax-73-cfW" id="g2I-Ny-268"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461.60000000000002" y="1762.6686656671666"/>
         </scene>
         <!--Category-->
         <scene sceneID="CfH-VO-gcW">
@@ -808,7 +850,4 @@
         <image name="Map-Pin" width="28" height="38"/>
         <image name="addPhoto" width="120" height="120"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="MKt-J3-vph"/>
-    </inferredMetricsTieBreakers>
 </document>
