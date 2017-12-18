@@ -22,7 +22,7 @@ class ExpenseDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.contentSize = CGSize(width: 375, height: 2300)
+        scrollView.contentSize = CGSize(width: 375, height: 1000)
         
         priceField.text = String(expenses[selectedIndex].price)
         noteField.text = expenses[selectedIndex].note

@@ -69,6 +69,7 @@ class FirstTripViewController: UIViewController {
     @IBAction func doOnTap(_ sender: UITapGestureRecognizer) {
         saveAndCloseBudget()
         saveAndCloseLocation()
+        
     }
     
     func saveAndCloseBudget() {
@@ -98,7 +99,7 @@ class FirstTripViewController: UIViewController {
                 }
                 
                 //Error if Price Field is empty
-                if convertedPrice == "" {
+                if convertedPrice.trimmingCharacters(in: .whitespaces) == "" {
                     priceFlag = false
                 }
                 
@@ -114,10 +115,14 @@ class FirstTripViewController: UIViewController {
         if locationTextField.isEditing {
             if let insertedLocation = locationTextField.text {
                 location = insertedLocation
+                locationFlag = true
             }
             locationTextField.endEditing(true)
         }
-        locationFlag = true
+        
+        if location?.trimmingCharacters(in: .whitespaces) == "" {
+            locationFlag = false
+        }
         
     }
     
