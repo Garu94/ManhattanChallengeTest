@@ -822,7 +822,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" textContentType="location"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Accomodation" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="22" y="196" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -845,7 +845,7 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Jhe-EW-8oJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Transport" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="138" y="196" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Simple Transport Button"/>
@@ -867,7 +867,7 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="LuN-xc-6X3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-z1-2eq" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Entertainment" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-z1-2eq" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="254" y="196" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Simple Entertainment Button"/>
@@ -889,7 +889,7 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="H71-89-77Z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-CC-4hG" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Attractions" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-CC-4hG" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="22" y="330" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Simple Attractions Button"/>
@@ -911,7 +911,7 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="evV-HO-Y03"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Food" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="138" y="330" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Simple Food Button"/>
@@ -933,7 +933,7 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="Fwd-Lp-uRW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-qE-rRl" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Other" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-qE-rRl" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="254" y="330" width="100" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Simple Other Button"/>
@@ -955,29 +955,8 @@
                                     <action selector="cathgeoryButtonPressed:" destination="PfV-m3-SdB" eventType="touchUpInside" id="ePk-vH-5kt"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Add Image" translatesAutoresizingMaskIntoConstraints="NO" id="mVg-Z6-xqR">
-                                <rect key="frame" x="138" y="538" width="100" height="100"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Doa-Pc-G6t" appends="YES" id="z9T-Z7-zBL"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o45-Ya-Wdf">
-                                <rect key="frame" x="22" y="142" width="77" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-gO-KPu">
-                                <rect key="frame" x="22" y="478" width="72" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-6q-EiC">
-                                <rect key="frame" x="84" y="478" width="275" height="24"/>
+                                <rect key="frame" x="79" y="484" width="275" height="24"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="C5d-3u-IJK"/>
@@ -991,15 +970,38 @@
                                     <action selector="keyboardDismiss:" destination="PfV-m3-SdB" eventType="editingDidEnd" id="ipW-H3-ui2"/>
                                 </connections>
                             </textField>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Add Image" translatesAutoresizingMaskIntoConstraints="NO" id="mVg-Z6-xqR">
+                                <rect key="frame" x="138" y="538" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Doa-Pc-G6t" appends="YES" id="z9T-Z7-zBL"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o45-Ya-Wdf">
+                                <rect key="frame" x="22" y="142" width="77" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-gO-KPu">
+                                <rect key="frame" x="22" y="478" width="72" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="WrL-wG-00h" firstAttribute="bottom" secondItem="9gT-6q-EiC" secondAttribute="bottom" constant="165" id="6vc-7o-c9D"/>
+                            <constraint firstItem="WrL-wG-00h" firstAttribute="bottom" secondItem="9gT-6q-EiC" secondAttribute="bottom" constant="159" id="6vc-7o-c9D"/>
+                            <constraint firstItem="o45-Ya-Wdf" firstAttribute="top" secondItem="WrL-wG-00h" secondAttribute="top" constant="26" id="8hw-63-Dlh"/>
                             <constraint firstItem="mVg-Z6-xqR" firstAttribute="centerX" secondItem="WrL-wG-00h" secondAttribute="centerX" id="Eid-hD-6sq"/>
                             <constraint firstItem="mVg-Z6-xqR" firstAttribute="centerY" secondItem="WrL-wG-00h" secondAttribute="centerY" constant="196.5" id="GSX-Jr-hYO"/>
+                            <constraint firstItem="kMA-sO-g1P" firstAttribute="baseline" secondItem="o45-Ya-Wdf" secondAttribute="baseline" id="L5f-gu-tCc"/>
                             <constraint firstItem="kMA-sO-g1P" firstAttribute="top" secondItem="WrL-wG-00h" secondAttribute="top" constant="26" id="pQu-pK-6UI"/>
-                            <constraint firstItem="9gT-6q-EiC" firstAttribute="leading" secondItem="WrL-wG-00h" secondAttribute="leading" constant="84" id="saG-FA-a2O"/>
+                            <constraint firstItem="9gT-6q-EiC" firstAttribute="leading" secondItem="WrL-wG-00h" secondAttribute="leading" constant="79" id="saG-FA-a2O"/>
+                            <constraint firstItem="o45-Ya-Wdf" firstAttribute="leading" secondItem="WrL-wG-00h" secondAttribute="leading" constant="22" id="seJ-UU-HoN"/>
                             <constraint firstItem="kMA-sO-g1P" firstAttribute="leading" secondItem="WrL-wG-00h" secondAttribute="leading" constant="110" id="yIs-VR-dZA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WrL-wG-00h"/>
