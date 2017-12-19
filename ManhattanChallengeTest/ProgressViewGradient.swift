@@ -23,6 +23,18 @@ public class GradientProgressBar : UIProgressView {
         }
     }
     
+    public var gradientColors1: [CGColor] = [#colorLiteral(red: 1, green: 0.4599647522, blue: 0, alpha: 1).cgColor, #colorLiteral(red: 1, green: 0.6670407653, blue: 0.3982836008, alpha: 1).cgColor] {
+        didSet {
+            gradientLayer.colors = gradientColors1
+        }
+    }
+    
+    public var gradientColors2: [CGColor] = [#colorLiteral(red: 0.9647571445, green: 0, blue: 0, alpha: 1).cgColor, #colorLiteral(red: 1, green: 0.4308434129, blue: 0.485834837, alpha: 1).cgColor] {
+        didSet {
+            gradientLayer.colors = gradientColors2
+        }
+    }
+    
 //    public var trackGradientColors: [CGColor] = [#colorLiteral(red: 0.9646214843, green: 0.9647600055, blue: 0.9645912051, alpha: 1).cgColor, #colorLiteral(red: 0.9175666571, green: 0.9176985621, blue: 0.9175377488, alpha: 1).cgColor] {
 //        didSet {
 //            trackGradientLayer.colors = trackGradientColors
@@ -97,7 +109,19 @@ public class GradientProgressBar : UIProgressView {
         self.layer.cornerRadius = cornerRadius
         self.layer.addSublayer(gradientLayer)
         progressTintColor = UIColor.clear
-        gradientLayer.colors = gradientColors
+        
+        if leftPercentage < 0.0 {
+            leftPercentage = 0.0
+        }
+        
+        if  leftPercentage > 0.4 && leftPercentage <= 1.0 {
+            gradientLayer.colors = gradientColors
+        } else if leftPercentage <= 0.4 && leftPercentage > 0.2 {
+            gradientLayer.colors = gradientColors1
+        } else {
+            gradientLayer.colors = gradientColors2
+        }
+        
     }
 //
 //    private func initTrackGradientLayer() -> CAGradientLayer {
