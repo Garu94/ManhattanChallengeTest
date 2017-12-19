@@ -13,6 +13,7 @@ class TripMainPageViewController: UIViewController {
     @IBOutlet weak var progressBar: GradientProgressBar!
     @IBOutlet weak var moneyLeft: UILabel!
     @IBOutlet weak var totalExpenses: UILabel!
+    @IBOutlet weak var totalBudget: UILabel!
     
     var categoryName: String?
     
@@ -38,6 +39,22 @@ class TripMainPageViewController: UIViewController {
         
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
+        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)
+        
+        //Compute total
+        for expense in expenses {
+            total += expense.price
+        }
+        
+        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
+        totalBudget.text = CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!)
+        print("Total: \(total)")
+        totalExpenses.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: total)) spent"
+        
+        var left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
+        
+        moneyLeft.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: left)) left"
+        
         progressBar.leftPercentage = calculatePercentage()
         
         if progressBar.leftPercentage < 0 {
@@ -56,23 +73,6 @@ class TripMainPageViewController: UIViewController {
         super.viewDidLoad()
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
-        
-        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)
-        
-        //Compute total
-        for expense in expenses {
-            total += expense.price
-        }
-        
-        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
-        print("Total: \(total)")
-        var formatFloat = String(format: "%.2f", total)
-        totalExpenses.text = "$\(formatFloat) spent"
-        
-        var left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
-        formatFloat = String(format: "%.2f", left)
-        
-        moneyLeft.text = "$\(formatFloat) left"
         
     }
 

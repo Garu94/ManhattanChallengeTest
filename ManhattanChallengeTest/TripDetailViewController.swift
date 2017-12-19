@@ -52,15 +52,15 @@ class TripDetailViewController: UIViewController {
         }
         
         //Set all the label
-        budgetTrip.text = String(trip!.budget)
-        totalExpenseLabel.text = String(total)
+        budgetTrip.text = CoreDataController.shared.FloatToTwoDigitString(number: trip!.budget)
+        totalExpenseLabel.text = CoreDataController.shared.FloatToTwoDigitString(number: total)
         
         let sub = trip!.budget - total
         if sub < 0 {
             saveSpentLabel.text = "You go over budget of:"
-            budgetResult.text = String(-1*sub)
+            budgetResult.text = CoreDataController.shared.FloatToTwoDigitString(number: -1*sub)
         } else {
-            budgetResult.text = String(sub)
+            budgetResult.text = CoreDataController.shared.FloatToTwoDigitString(number: sub)
         }
         
         // Set the value of the progress bars

@@ -23,6 +23,11 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         self.SetBannerImage()
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -42,9 +47,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             total += expense.price
         }
         
-        totalPriceLabel.text = String(format: "%.f2", total)
-        
-        
+        totalPriceLabel.text = CoreDataController.shared.FloatToTwoDigitString(number: total)
         // Do any additional setup after loading the view.
     }
 
@@ -61,7 +64,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
         let expenseInCell = expenses[indexPath.row]
-        cell?.textLabel?.text = String(format: "%.f2", expenseInCell.price)
+        cell?.textLabel?.text = CoreDataController.shared.FloatToTwoDigitString(number: expenseInCell.price)
         cell?.detailTextLabel?.text = expenseInCell.note
         
         return cell!
@@ -77,6 +80,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         if let nextViewController = segue.destination as? ExpenseDetailViewController {
             nextViewController.expenses = self.expenses
             nextViewController.selectedIndex = self.selectedIndex
+            nextViewController.instanceOfCVC = self
         }
     }
     

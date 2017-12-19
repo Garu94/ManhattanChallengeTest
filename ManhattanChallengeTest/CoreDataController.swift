@@ -27,7 +27,6 @@ class CoreDataController {
 //        currentTrip = Trip(entity: NSEntityDescription.entity(forEntityName: "Trip", in: context)!, insertInto: context)
 //        currentTrip?.location = "Firenze"
 //        currentTrip?.budget = 400
- 
     }
     
     func addTrip(location: String, budget: Float) {
@@ -243,6 +242,14 @@ class CoreDataController {
         print("[CDC] expense correctly saved")
     }
     
+    func FloatToTwoDigitString(number: Float) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        
+        return formatter.string(from: NSNumber(value: number))!
+    }
 }
 
 
