@@ -11,37 +11,9 @@ import UIKit
 
 class AddTripViewController: UIViewController, UITextFieldDelegate {
     
-    func showAlertLocation(){
-        let alertView = UIAlertController(title: "Please insert a location", message: "", preferredStyle: .alert)
-        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        present(alertView, animated: true, completion: nil)
-    }
-    
-    
-    @IBAction func saveNewTrip(_ sender: UIBarButtonItem) {
-        if let loc = locationTextField.text {
-        location = loc
-        }
-        if let budgetString = budgetTextField.text {
-            budget = Float(budgetString)
-        }
-        if location == "" {
-            showAlertLocation()
-        } else if budget == 0 {
-            showAlertLocation()
-        }
-        if location != nil && budget != nil {
-            CoreDataController.shared.addTrip(location: location!, budget: budget!)
-        }
-        
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
-    
-
     @IBOutlet weak var locationTextField: UITextField!{
         didSet {
-                locationTextField.delegate = self
+            locationTextField.delegate = self
         }
     }
     
@@ -53,6 +25,39 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     
     var location: String?
     var budget: Float?
+    
+    var priceFlag = false
+    var locationFlag = false
+    
+    
+    @IBAction func saveNewTrip(_ sender: UIBarButtonItem) {
+        
+        saveAndCloseBudget()
+        saveAndCloseLocation()
+        
+        if !locationFlag && !priceFlag {
+            showAlert()
+        }
+        if !locationFlag {
+            showAlertLocation()
+            
+        } else if !priceFlag {
+            showAlertBudget()
+        } else if !isAlreadyPresent(location: location!) {
+            alertDoubleLocation()
+        } else {
+            
+            //Save first trip
+            CoreDataController.shared.addTrip(location: location!, budget: budget!)
+            
+            //Dismiss
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +76,96 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-   
+    func saveAndCloseLocation() {
+        if let insertedLocation = locationTextField.text {
+            location = insertedLocation
+            locationFlag = true
+        }
+        
+        if location?.trimmingCharacters(in: .whitespaces) == "" {
+            locationFlag = false
+            
+        }
+    }
+    
+    func isAlreadyPresent(location: String) -> Bool {
+        var trips = CoreDataController.shared.loadAllTheTrips()
+        
+        for trip in trips {
+            if trip.location == location {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    
+    
+    
+    func saveAndCloseBudget() {
+        
+            if let insertedPrice = budgetTextField.text {
+                var pointCounter = 0
+                priceFlag = true
+                var convertedPrice: String = ""
+                
+                //Convert "," to "." for foreigners number pads
+                for char in insertedPrice {
+                    if char != "," {
+                        convertedPrice.append(char)
+                    } else {
+                        convertedPrice.append(".")
+                    }
+                }
+                
+                // Error if too many "." are inserted
+                for char in convertedPrice {
+                    if char == "." {
+                        pointCounter += 1
+                    }
+                    if pointCounter > 1 {
+                        priceFlag = false
+                    }
+                }
+                
+                //Error if Price Field is empty
+                if convertedPrice.trimmingCharacters(in: .whitespaces) == "" {
+                    priceFlag = false
+                }
+                
+                budget = Float(convertedPrice)
+                
+                if budget == Float(0) {
+                    priceFlag = false
+                }
+                
+            }
+    }
+    
+    func alertDoubleLocation() {
+        let alertView = UIAlertController(title: "You already have a location with this name, please modify this one", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    func showAlertLocation(){
+        let alertView = UIAlertController(title: "Location field required", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    func showAlertBudget(){
+        let alertView = UIAlertController(title: "Budget field required", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    func showAlert(){
+        let alertView = UIAlertController(title: "Please insert a location and a budget", message: "", preferredStyle: .alert)
+        alertView.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    
     
     /*
     // MARK: - Navigation
