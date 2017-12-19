@@ -63,15 +63,16 @@ class TripDetailViewController: UIViewController {
         }
         
         // Set the value of the progress bars
-        progressBarAccomodation.setProgress(setProgressBars(category: "Accomodation"), animated: true)
-        progressBarTransport.setProgress(setProgressBars(category: "Transport"), animated: true)
-        progressBarEntertainment.setProgress(setProgressBars(category: "Entertainment"), animated: true)
-        progressBarFood.setProgress(setProgressBars(category: "Food"), animated: true)
-        progressBarOther.setProgress(setProgressBars(category: "Other"), animated: true)
-        progressBarAttractions.setProgress(setProgressBars(category: "Attractions"), animated: true)
+        progressBarAccomodation.setProgress(setProgressBars(category: "Accomodation"), animated: false)
+        progressBarTransport.setProgress(setProgressBars(category: "Transport"), animated: false)
+        progressBarEntertainment.setProgress(setProgressBars(category: "Entertainment"), animated: false)
+        progressBarFood.setProgress(setProgressBars(category: "Food"), animated: false)
+        progressBarOther.setProgress(setProgressBars(category: "Other"), animated: false)
+        progressBarAttractions.setProgress(setProgressBars(category: "Attractions"), animated: false)
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         //Change title of NavBar
-        self.navigationItem.title = trip!.location
+        self.title = trip?.location
         
         // Do any additional setup after loading the view.
     }
