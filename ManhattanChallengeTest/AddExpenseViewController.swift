@@ -132,7 +132,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func cathgeoryButtonPressed(_ sender: UIButton) {
         savePriceInVar()
         saveNoteInVar()
-        cathegory = sender.titleLabel!.text
+        cathegory = sender.restorationIdentifier
         setShadowButton()
         removeShadowButton(button: sender)
         categoryFlag = true
