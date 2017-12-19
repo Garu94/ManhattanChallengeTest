@@ -37,6 +37,10 @@ class TripMainPageViewController: UIViewController {
         
         progressBar.leftPercentage = calculatePercentage()
         
+        if progressBar.leftPercentage < 0 {
+            progressBar.leftPercentage = 0.0
+        }
+        
         progressBar.updateGradientLayer()
         
 

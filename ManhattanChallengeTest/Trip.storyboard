@@ -530,20 +530,16 @@
                                     <action selector="clickOnCategoryButton:" destination="sHW-Rq-Ou2" eventType="touchUpInside" id="jcg-Fc-J14"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-A5-XCk">
-                                <rect key="frame" x="22" y="136" width="0.0" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="81" id="bwu-Ls-ioM"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-Me-PhM">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f9O-Me-PhM" customClass="GradientProgressBar" customModule="ManhattanChallengeTest" customModuleProvider="target">
                                 <rect key="frame" x="22" y="168" width="332" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Unb-dD-trb"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total budget: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-bK-KnI">
                                 <rect key="frame" x="22" y="136" width="118" height="24"/>
@@ -644,12 +640,10 @@
                             <constraint firstItem="pRO-kg-oyE" firstAttribute="top" secondItem="f9O-Me-PhM" secondAttribute="bottom" constant="8" id="HAp-qR-RvE"/>
                             <constraint firstItem="2fr-fF-ggA" firstAttribute="leading" secondItem="I6z-Aa-OzK" secondAttribute="trailing" constant="17" id="Itv-CW-bDf"/>
                             <constraint firstItem="AWo-nq-8BK" firstAttribute="top" secondItem="OsA-QG-ID0" secondAttribute="bottom" constant="-31" id="K02-nn-L1W"/>
-                            <constraint firstItem="eCc-A5-XCk" firstAttribute="leading" secondItem="0Wd-Ao-z51" secondAttribute="leading" constant="22" id="K0H-lt-N9L"/>
                             <constraint firstItem="vdL-bK-KnI" firstAttribute="top" secondItem="0Wd-Ao-z51" secondAttribute="top" constant="20" id="LjX-jF-KB1"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="bottom" secondItem="hjZ-5w-abe" secondAttribute="bottom" constant="117" id="MRX-DJ-ohb"/>
                             <constraint firstItem="Fz2-Ek-XEc" firstAttribute="top" secondItem="2fr-fF-ggA" secondAttribute="bottom" constant="-31" id="Pv9-Vk-z01"/>
                             <constraint firstItem="YyE-AY-vcv" firstAttribute="leading" secondItem="0Wd-Ao-z51" secondAttribute="leading" constant="22" id="Qwu-Xe-gWM"/>
-                            <constraint firstItem="YyE-AY-vcv" firstAttribute="top" secondItem="eCc-A5-XCk" secondAttribute="bottom" constant="43" id="SDP-6n-qzR"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="trailing" secondItem="2fr-fF-ggA" secondAttribute="trailing" constant="22" id="Sxx-QP-74Y"/>
                             <constraint firstItem="2fr-fF-ggA" firstAttribute="leading" secondItem="Fz2-Ek-XEc" secondAttribute="leading" constant="-10" id="UEf-JZ-COA"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="bottom" secondItem="2fr-fF-ggA" secondAttribute="bottom" constant="117" id="VaT-Jt-BjD"/>
@@ -658,7 +652,6 @@
                             <constraint firstItem="1c0-C5-mXB" firstAttribute="top" secondItem="I6z-Aa-OzK" secondAttribute="bottom" constant="-31" id="bNP-w3-pYY"/>
                             <constraint firstItem="0Wd-Ao-z51" firstAttribute="trailing" secondItem="RC8-Gd-Dve" secondAttribute="trailing" constant="21" id="cDu-2K-uVr"/>
                             <constraint firstItem="2fr-fF-ggA" firstAttribute="top" secondItem="OsA-QG-ID0" secondAttribute="bottom" constant="16" id="cho-lc-S6A"/>
-                            <constraint firstItem="eCc-A5-XCk" firstAttribute="top" secondItem="0Wd-Ao-z51" secondAttribute="top" constant="20" id="dg3-7O-7BS"/>
                             <constraint firstItem="102-BW-L2N" firstAttribute="top" secondItem="hjZ-5w-abe" secondAttribute="bottom" constant="-31" id="gbb-dI-22j"/>
                             <constraint firstItem="hjZ-5w-abe" firstAttribute="leading" secondItem="0Wd-Ao-z51" secondAttribute="leading" constant="22" id="lcX-6H-aTd"/>
                             <constraint firstItem="hjZ-5w-abe" firstAttribute="leading" secondItem="102-BW-L2N" secondAttribute="leading" constant="-10" id="mqv-Z7-Pnq"/>
@@ -678,7 +671,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="budgeLeftLabel" destination="eCc-A5-XCk" id="6Dg-qg-FdF"/>
+                        <outlet property="progressBar" destination="f9O-Me-PhM" id="5pH-mq-hN7"/>
                         <outlet property="titleNavBar" destination="62v-Rp-wbm" id="uXV-fA-Nfs"/>
                         <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
                         <segue destination="S40-B3-Dn4" kind="show" identifier="firstTripSegue" id="RRh-Mn-FfZ"/>
