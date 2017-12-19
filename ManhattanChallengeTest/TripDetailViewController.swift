@@ -36,6 +36,7 @@ class TripDetailViewController: UIViewController {
         
         for bar in progressBars {
             bar.transform = bar.transform.scaledBy(x: 1, y: 4)
+            bar.layer.cornerRadius = 10.0
         }
         
         
