@@ -14,20 +14,12 @@ class TripMainPageViewController: UIViewController {
     
     var allTrips: [Trip]!
     var isFirstTrip = false
+    var leftPercentage: Float = 0.0
     
     @IBOutlet weak var budgeLeftLabel: UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
-        budgeLeftLabel.text = String(getCurrentBudget())
-        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
-
-    }
-    
-    @IBOutlet weak var titleNavBar: UINavigationItem!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
@@ -39,7 +31,23 @@ class TripMainPageViewController: UIViewController {
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
-        print(CoreDataController.shared.currentTrip)
+        budgeLeftLabel.text = String(getCurrentBudget())
+        titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
+        
+        leftPercentage = calculatePercentage()
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+
+        
+    }
+    
+    @IBOutlet weak var titleNavBar: UINavigationItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +57,9 @@ class TripMainPageViewController: UIViewController {
 
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
-        print(categoryName)
         
         categoryName = sender.restorationIdentifier!
         
-        print(categoryName)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
@@ -67,7 +73,6 @@ class TripMainPageViewController: UIViewController {
                 nextViewController.categoryName = name
                 nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)
             }
-            print(categoryName)
             
         }
         
@@ -93,19 +98,19 @@ class TripMainPageViewController: UIViewController {
         print(currentTrip.budget - sum)
         return currentTrip.budget - sum
     }
-    //    var currentBudget: Float {
-    //        get {
-    //            print("current budget is: \(currentTrip.budget)")
-    //            var sum: Float = 0.0
-    //            if currentTrip.expenses?.count != 0 {
-    //                for expense in currentExpenses {
-    //                    sum += expense.price
-    //                    print("sum is: \(sum)")
-    //                }
-    //            }
-    //            print(sum)
-    //            print(currentTrip.budget - sum)
-    //            return currentTrip.budget - sum
-    //        }
-    //    }
+    
+    func calculatePercentage() -> Float {
+        
+        
+        guard let trip = CoreDataController.shared.currentTrip else {
+            return 0.0
+        }
+        
+        let leftPercentage: Float = getCurrentBudget()/trip.budget
+        
+        print(leftPercentage)
+        
+        return leftPercentage
+        
+    }
 }
