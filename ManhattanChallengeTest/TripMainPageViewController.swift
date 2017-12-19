@@ -21,7 +21,11 @@ class TripMainPageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         budgeLeftLabel.text = String(getCurrentBudget())
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 
+//        navigationController?.navigationBar.backgroundColor = .black
+        
     }
     
     @IBOutlet weak var titleNavBar: UINavigationItem!
@@ -39,7 +43,6 @@ class TripMainPageViewController: UIViewController {
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
-        print(CoreDataController.shared.currentTrip)
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,11 +52,9 @@ class TripMainPageViewController: UIViewController {
 
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
-        print(categoryName)
         
         categoryName = sender.restorationIdentifier!
         
-        print(categoryName)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
@@ -67,7 +68,6 @@ class TripMainPageViewController: UIViewController {
                 nextViewController.categoryName = name
                 nextViewController.trip = CoreDataController.shared.loadTrip(location: tripName!)
             }
-            print(categoryName)
             
         }
         
