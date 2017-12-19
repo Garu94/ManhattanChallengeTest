@@ -10,17 +10,19 @@ import UIKit
 
 class TripMainPageViewController: UIViewController {
 
+    @IBOutlet weak var progressBar: GradientProgressBar!
     var categoryName: String?
     
     var allTrips: [Trip]!
     var isFirstTrip = false
     var leftPercentage: Float = 0.0
     
-    @IBOutlet weak var budgeLeftLabel: UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
         print(allTrips!.isEmpty)
@@ -31,12 +33,12 @@ class TripMainPageViewController: UIViewController {
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
-        budgeLeftLabel.text = String(getCurrentBudget())
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
-        leftPercentage = calculatePercentage()
+        progressBar.leftPercentage = calculatePercentage()
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        progressBar.updateGradientLayer()
+        
 
         
     }

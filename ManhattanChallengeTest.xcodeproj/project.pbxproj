@@ -17,6 +17,7 @@
 		FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */; };
 		FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */; };
 		FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */; };
+		FF40EFB41FE9387A008012B6 /* ProgressViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
 		FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */; };
 		FFDDBBD01FE7D39D000D75DB /* FirstTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */; };
@@ -57,6 +58,7 @@
 		FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
 		FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
+		FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewGradient.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTripViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		FFEC6B641FDC11FE007E8017 /* ManhattanChallengeTest */ = {
 			isa = PBXGroup;
 			children = (
+				FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */,
 				FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */,
 				FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */,
 				1C91624D1FE80F180013FAF8 /* UIButton+shadow.swift */,
@@ -309,6 +312,7 @@
 				FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */,
 				1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */,
 				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
+				FF40EFB41FE9387A008012B6 /* ProgressViewGradient.swift in Sources */,
 				FFDDBBD01FE7D39D000D75DB /* FirstTripViewController.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,
 				FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */,
