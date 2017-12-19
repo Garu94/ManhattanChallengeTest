@@ -11,11 +11,16 @@ import UIKit
 class TripMainPageViewController: UIViewController {
 
     @IBOutlet weak var progressBar: GradientProgressBar!
+    @IBOutlet weak var moneyLeft: UILabel!
+    @IBOutlet weak var totalExpenses: UILabel!
+    
     var categoryName: String?
     
     var allTrips: [Trip]!
     var isFirstTrip = false
     var leftPercentage: Float = 0.0
+//  Total of the expense
+    var total: Float = 0.0
     
     
     
@@ -30,8 +35,6 @@ class TripMainPageViewController: UIViewController {
         if allTrips!.isEmpty {
             performSegue(withIdentifier: "firstTripSegue", sender: self)
         }
-        
-        CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
@@ -52,7 +55,24 @@ class TripMainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
+        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)
+        
+        //Compute total
+        for expense in expenses {
+            total += expense.price
+        }
+        
+        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
+        print("Total: \(total)")
+        var formatFloat = String(format: "%.2f", total)
+        totalExpenses.text = "$\(formatFloat) spent"
+        
+        var left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
+        formatFloat = String(format: "%.2f", left)
+        
+        moneyLeft.text = "$\(formatFloat) left"
         
     }
 

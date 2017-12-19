@@ -19,6 +19,11 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalPriceLabel: UILabel!
+    @IBOutlet weak var bannerImage: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.SetBannerImage()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +42,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             total += expense.price
         }
         
-        totalPriceLabel.text = String(total)
+        totalPriceLabel.text = String(format: "%.f2", total)
         
         
         // Do any additional setup after loading the view.
@@ -56,7 +61,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
         let expenseInCell = expenses[indexPath.row]
-        cell?.textLabel?.text = String(expenseInCell.price)
+        cell?.textLabel?.text = String(format: "%.f2", expenseInCell.price)
         cell?.detailTextLabel?.text = expenseInCell.note
         
         return cell!
@@ -72,6 +77,25 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         if let nextViewController = segue.destination as? ExpenseDetailViewController {
             nextViewController.expenses = self.expenses
             nextViewController.selectedIndex = self.selectedIndex
+        }
+    }
+    
+    func SetBannerImage() {
+        switch categoryName {
+        case "Accomodation":
+            bannerImage.image = #imageLiteral(resourceName: "accomodationBanner")
+        case "Transport":
+            bannerImage.image = #imageLiteral(resourceName: "transportBanner")
+        case "Food":
+            bannerImage.image = #imageLiteral(resourceName: "foodBanner")
+        case "Entertainment":
+            bannerImage.image = #imageLiteral(resourceName: "entertainmentBanner")
+        case "Attractions":
+            bannerImage.image = #imageLiteral(resourceName: "attractionsBanner")
+        case "Other":
+            bannerImage.image = #imageLiteral(resourceName: "otherBanner")
+        default:
+            break
         }
     }
 
