@@ -46,7 +46,7 @@ class TripMainPageViewController: UIViewController {
         
         progressBar.updateGradientLayer()
         
-
+//        progressBar.animate(duration: 10)
         
     }
     

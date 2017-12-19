@@ -110,17 +110,6 @@ public class GradientProgressBar : UIProgressView {
         self.layer.addSublayer(gradientLayer)
         progressTintColor = UIColor.clear
         
-        if leftPercentage < 0.0 {
-            leftPercentage = 0.0
-        }
-        
-        if  leftPercentage > 0.4 && leftPercentage <= 1.0 {
-            gradientLayer.colors = gradientColors
-        } else if leftPercentage <= 0.4 && leftPercentage > 0.2 {
-            gradientLayer.colors = gradientColors1
-        } else {
-            gradientLayer.colors = gradientColors2
-        }
         
     }
 //
@@ -149,9 +138,34 @@ public class GradientProgressBar : UIProgressView {
     }
     
     public func updateGradientLayer() {
+       
+        
         gradientLayer.frame = sizeByPercentage(originalRect: bounds, width: CGFloat(leftPercentage))
         gradientLayer.cornerRadius = cornerRadius
+        
+        if leftPercentage < 0.0 {
+            leftPercentage = 0.0
+        }
+        
+        if  leftPercentage > 0.4 && leftPercentage <= 1.0 {
+            gradientLayer.colors = gradientColors
+        } else if leftPercentage <= 0.4 && leftPercentage > 0.2 {
+            gradientLayer.colors = gradientColors1
+        } else {
+            gradientLayer.colors = gradientColors2
+        }
+                
     }
+    
+//    public func animate(duration: Double) {
+//        
+//        gradientLayer.frame = sizeByPercentage(originalRect: bounds, width: CGFloat(0))
+//        
+//        
+//        UIView.animate(withDuration: duration, delay: 0.0, options: .curveLinear, animations: {
+//            self.gradientLayer.frame = self.sizeByPercentage(originalRect: self.bounds, width: CGFloat(self.leftPercentage))
+//        }, completion: nil)
+//    }
     
     public func sizeByPercentage(originalRect: CGRect, width: CGFloat) -> CGRect {
         let newSize = CGSize(width: originalRect.width * width, height: originalRect.height)
