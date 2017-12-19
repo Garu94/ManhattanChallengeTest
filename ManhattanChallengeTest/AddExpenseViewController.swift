@@ -13,7 +13,6 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var buttonsCategory: [UIButton]!
     @IBOutlet weak var addPhoto: UIImageView!
     
-    @IBOutlet weak var warningText: UITextView!
     
     @IBOutlet weak var optionalNoteField: UITextField!
     
@@ -31,22 +30,37 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for button in buttonsCategory {
-            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-            button.layer.shadowOffset = CGSize(width: 0, height: 4)
-            button.layer.shadowOpacity = 1.0
-            button.layer.shadowRadius = 2.0
-            button.layer.masksToBounds = false
-        }
+//        for button in buttonsCategory {
+//            button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+//            button.layer.shadowOffset = CGSize(width: 0, height: 4)
+//            button.layer.shadowOpacity = 1.0
+//            button.layer.shadowRadius = 2.0
+//            button.layer.masksToBounds = false
+//        }
+//        addPhoto.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+//        addPhoto.layer.shadowOffset = CGSize(width: 0, height: 4)
+//        addPhoto.layer.shadowOpacity = 1.0
+//        addPhoto.layer.shadowRadius = 2.0
+//        addPhoto.layer.masksToBounds = false
         
-        insertPriceField.keyboardType = .decimalPad
-        
+        designTextField(textField: insertPriceField)
+        designTextField(textField: optionalNoteField)
         //Pop up price keyboard as view appears
+        
         insertPriceField.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
     }
 
+    
+    func designTextField(textField: UITextField){
+        textField.layer.cornerRadius = 12.0
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        textField.layer.masksToBounds = true
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -56,10 +70,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         savePriceInVar()
         saveNoteInVar()
-        
-        if warningText.alpha == 1 {
-            warningText.alpha = 0
-        }
+
     }
    
     @IBAction func tapImagePhoto(_ sender: UITapGestureRecognizer) {
@@ -121,7 +132,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBAction func cathgeoryButtonPressed(_ sender: UIButton) {
         savePriceInVar()
         saveNoteInVar()
-        cathegory = sender.titleLabel!.text
+        cathegory = sender.restorationIdentifier
         setShadowButton()
         removeShadowButton(button: sender)
         categoryFlag = true
