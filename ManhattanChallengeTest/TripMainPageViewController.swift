@@ -63,22 +63,22 @@ class TripMainPageViewController: UIViewController {
 //        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
         totalBudget.text = CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!)
         print("Total: \(total)")
-        totalExpenses.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: total)) spent"
+        totalExpenses.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: total))"
         
         let left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
         
-        moneyLeft.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: left)) left"
+        moneyLeft.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: left))"
         
         progressBar.leftPercentage = calculatePercentage()
+        
+        totalBudget.text = "$ \(CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!))"
         
         if progressBar.leftPercentage < 0 {
             progressBar.leftPercentage = 0.0
         }
         
         progressBar.updateGradientLayer()
-        
-//        progressBar.animate(duration: 10)
-        
+
     }
     
     @IBOutlet weak var titleNavBar: UINavigationItem!
