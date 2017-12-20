@@ -673,11 +673,7 @@
                         <viewLayoutGuide key="safeArea" id="0Wd-Ao-z51"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="always" id="62v-Rp-wbm">
-                        <barButtonItem key="leftBarButtonItem" title="My Trips" id="zbc-OK-4s1">
-                            <connections>
-                                <segue destination="3S3-lw-GSh" kind="showDetail" identifier="segueToMyTripsView" action="showViewController:sender:" id="Ou6-06-SGg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="My Trips" id="zbc-OK-4s1"/>
                     </navigationItem>
                     <connections>
                         <outlet property="moneyLeft" destination="pRO-kg-oyE" id="DrI-Sf-3Up"/>
