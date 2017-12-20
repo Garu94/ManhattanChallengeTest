@@ -120,11 +120,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             showAlertPrice()
         } else {
             //Save new Expense, given the Trip
-            print(addPhoto.image?.size)
-            
             CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
-            
-            
             
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
@@ -219,11 +215,13 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     func saveNoteInVar() {
         if optionalNoteField.isEditing {
-            if let insertedNote = optionalNoteField.text {
-                note = insertedNote
-            }
             optionalNoteField.endEditing(true)
         }
+        
+        if let insertedNote = optionalNoteField.text {
+            note = insertedNote
+        }
+        
         notePhotoFlag = true
     }
     
