@@ -87,11 +87,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
                 print("[CDC] Error deleting expense: error \(error)")
             }
             
+            total -= expenses[indexPath.row].price
             expenses.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
-            total -= expenses[indexPath.row].price
             tableView.endUpdates()
+            totalPriceLabel.setNeedsDisplay()
         }
     }
     
