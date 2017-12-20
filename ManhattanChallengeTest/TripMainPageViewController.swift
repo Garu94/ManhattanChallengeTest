@@ -10,6 +10,8 @@ import UIKit
 
 class TripMainPageViewController: UIViewController {
 
+    @IBOutlet var categoryButtons: [DesignableButton]!
+    
     @IBOutlet weak var progressBar: GradientProgressBar!
     @IBOutlet weak var moneyLeft: UILabel!
     @IBOutlet weak var totalExpenses: UILabel!
@@ -78,6 +80,15 @@ class TripMainPageViewController: UIViewController {
         }
         
         progressBar.updateGradientLayer()
+        
+        for button in categoryButtons {
+            button.layer.shadowColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+             button.layer.shadowOffset.height = 7
+            button.layer.shadowOpacity = 25
+            button.layer.shadowRadius = 13
+            button.layer.masksToBounds = false
+            button.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
 
     }
     
@@ -88,18 +99,30 @@ class TripMainPageViewController: UIViewController {
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    func animationbutton(button: UIButton){
+        UIButton.animate(withDuration: 0.4,
+                         animations: {
+                            button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                            button.layer.shadowOpacity = 0
+        },
+                         completion: nil)
+        
+    }
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
         
         categoryName = sender.restorationIdentifier!
-        
+        animationbutton(button: sender)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
