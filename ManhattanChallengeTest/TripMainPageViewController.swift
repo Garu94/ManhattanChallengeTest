@@ -15,6 +15,10 @@ class TripMainPageViewController: UIViewController {
     @IBOutlet weak var totalExpenses: UILabel!
     @IBOutlet weak var totalBudget: UILabel!
     
+    @IBOutlet var categoryPriceLabels: [UILabel]!
+    
+    
+    
     var categoryName: String?
     
     var allTrips: [Trip]!
