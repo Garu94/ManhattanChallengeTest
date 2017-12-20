@@ -13,6 +13,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var buttonsCategory: [UIButton]!
     @IBOutlet weak var addPhoto: UIImageView!
     
+    @IBOutlet weak var navBar: UINavigationItem!
     
     @IBOutlet weak var optionalNoteField: UITextField!
     
@@ -223,8 +224,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func keyboardAppear(_ sender: UITextField) {
-        self.view.frame.origin.y -= 216
-    }
+        }
     
     @IBAction func keyboardDismiss(_ sender: UITextField) {
         self.view.frame.origin.y += 216

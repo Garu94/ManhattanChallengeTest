@@ -238,6 +238,31 @@ class CoreDataController {
         print("[CDC] expense correctly saved")
     }
     
+    
+    func editExpense(date: Date, cathegory: String?, note: String?, price: Float?, photo: UIImage) {
+        
+        let fetchRequest: NSFetchRequest<Expense> = Expense.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "date = %@", date as CVarArg)
+        
+        do {
+             var result = try context.fetch(fetchRequest)
+            
+            result[0].price = price ?? 0.0
+            result[0].cathegory = cathegory ?? ""
+            result[0].note = note ?? ""
+            result[0].image = UIImagePNGRepresentation(photo)
+            
+            print(result[0])
+            
+            try self.context.save()
+            
+        } catch let error {
+            print("[CDC] Error editing trip: error \(error)")
+        }
+
+        
+    }
+    
     func FloatToTwoDigitString(number: Float) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
