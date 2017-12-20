@@ -304,7 +304,7 @@
                                 <color key="backgroundColor" red="0.94510430097579956" green="0.94508665800094604" blue="0.94509869813919067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="next" textContentType="address-level2"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="next" smartInsertDeleteType="no" textContentType="address-level2"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-MN-mwT">
                                 <rect key="frame" x="22" y="142" width="102" height="21"/>
@@ -700,73 +700,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Budget of Trip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-Uy-3wc">
-                                <rect key="frame" x="69" y="349" width="290" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="WGw-Uy-3wc" secondAttribute="height" multiplier="29:3" id="fZv-JI-Mlw"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WGw-Uy-3wc">
+                                <rect key="frame" x="158" y="349" width="196" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94510430097579956" green="0.94508665800094604" blue="0.94509869813919067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-73-cfW">
-                                <rect key="frame" x="69" y="287" width="290" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Tax-73-cfW" secondAttribute="height" multiplier="29:3" id="hoD-BN-rtF"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tax-73-cfW">
+                                <rect key="frame" x="112" y="287" width="242" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94510430097579956" green="0.94508665800094604" blue="0.94509869813919067" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" smartInsertDeleteType="no"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Map-Pin" translatesAutoresizingMaskIntoConstraints="NO" id="kjf-wQ-Gjt">
-                                <rect key="frame" x="16" y="283" width="28" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$" translatesAutoresizingMaskIntoConstraints="NO" id="W7D-fj-qMO">
-                                <rect key="frame" x="16" y="345" width="28" height="38"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your first Trip to start enjoying the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIZ-gg-oM0">
                                 <rect key="frame" x="16" y="116" width="343" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UIZ-gg-oM0" secondAttribute="height" multiplier="343:116" id="0WR-RS-3BW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-H6-4Hn">
+                                <rect key="frame" x="16" y="292" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Budget:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiY-Ux-oqC">
+                                <rect key="frame" x="16" y="354" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-6f-pfk" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
+                                <rect key="frame" x="144" y="397" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.84706449510000004" green="0.84704864030000004" blue="0.84705942869999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="start:" destination="S40-B3-Dn4" eventType="touchUpInside" id="GqJ-0X-PZn"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Intro Message" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-Qj-44i">
+                                <rect key="frame" x="16" y="134" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="UIZ-gg-oM0" firstAttribute="top" secondItem="tY3-8B-Fgy" secondAttribute="top" id="3JS-1t-TRH"/>
-                            <constraint firstItem="WGw-Uy-3wc" firstAttribute="top" secondItem="Tax-73-cfW" secondAttribute="bottom" constant="32" id="D5F-Ch-vK7"/>
-                            <constraint firstItem="Tax-73-cfW" firstAttribute="leading" secondItem="kjf-wQ-Gjt" secondAttribute="trailing" constant="25" id="FAE-nN-Qsb"/>
                             <constraint firstItem="tY3-8B-Fgy" firstAttribute="trailing" secondItem="UIZ-gg-oM0" secondAttribute="trailing" constant="16" id="Gza-Tl-AfD"/>
-                            <constraint firstItem="W7D-fj-qMO" firstAttribute="centerY" secondItem="WGw-Uy-3wc" secondAttribute="centerY" id="LPb-3U-b0G"/>
-                            <constraint firstItem="W7D-fj-qMO" firstAttribute="height" secondItem="kjf-wQ-Gjt" secondAttribute="height" id="LcW-iv-iwq"/>
-                            <constraint firstItem="tY3-8B-Fgy" firstAttribute="trailing" secondItem="Tax-73-cfW" secondAttribute="trailing" constant="16" id="Nrr-Zl-k6P"/>
                             <constraint firstItem="UIZ-gg-oM0" firstAttribute="leading" secondItem="tY3-8B-Fgy" secondAttribute="leading" constant="16" id="c7u-nB-Xh6"/>
-                            <constraint firstItem="W7D-fj-qMO" firstAttribute="leading" secondItem="tY3-8B-Fgy" secondAttribute="leading" constant="16" id="ePm-xc-r35"/>
-                            <constraint firstItem="kjf-wQ-Gjt" firstAttribute="leading" secondItem="tY3-8B-Fgy" secondAttribute="leading" constant="16" id="fy3-05-GYV"/>
-                            <constraint firstItem="kjf-wQ-Gjt" firstAttribute="centerY" secondItem="Tax-73-cfW" secondAttribute="centerY" id="hms-cV-Bao"/>
-                            <constraint firstItem="Tax-73-cfW" firstAttribute="top" secondItem="UIZ-gg-oM0" secondAttribute="bottom" constant="55" id="qHv-0R-Fgz"/>
-                            <constraint firstItem="tY3-8B-Fgy" firstAttribute="trailing" secondItem="WGw-Uy-3wc" secondAttribute="trailing" constant="16" id="yvY-pf-iav"/>
-                            <constraint firstItem="W7D-fj-qMO" firstAttribute="width" secondItem="kjf-wQ-Gjt" secondAttribute="width" id="zCl-Ub-S3A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tY3-8B-Fgy"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fxE-9a-tAq" appends="YES" id="bJ5-u2-RSM"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="OVZ-9T-RcG">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="cKz-4C-33V">
-                            <connections>
-                                <action selector="actionOnDoneButton:" destination="S40-B3-Dn4" id="Rmr-r8-nCK"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="OVZ-9T-RcG">
+                        <barButtonItem key="rightBarButtonItem" id="cKz-4C-33V"/>
                     </navigationItem>
                     <connections>
                         <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="2PJ-O3-fdu"/>
+                        <outlet property="firstTripLabel" destination="UIZ-gg-oM0" id="q7O-qk-Qz5"/>
                         <outlet property="locationTextField" destination="Tax-73-cfW" id="PTb-Xa-Ngh"/>
+                        <outlet property="startButton" destination="MeK-6f-pfk" id="HFq-YI-ztb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1043,7 +1066,7 @@
                                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" smartInsertDeleteType="no"/>
                                                 <connections>
                                                     <action selector="keyboardAppear:" destination="PfV-m3-SdB" eventType="editingDidBegin" id="pEv-uN-sFo"/>
                                                     <action selector="keyboardDismiss:" destination="PfV-m3-SdB" eventType="editingDidEnd" id="rh9-9C-FJ2"/>
@@ -1392,7 +1415,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="$" width="19" height="32"/>
         <image name="Add Expense Button-1" width="60" height="62"/>
         <image name="Add Image" width="112" height="112"/>
         <image name="Detail Accomodation Button" width="100" height="137"/>
@@ -1402,7 +1424,7 @@
         <image name="Detail Other Button" width="100" height="137"/>
         <image name="Detail Transport Button" width="100" height="137"/>
         <image name="Expenses Banner" width="332" height="52"/>
-        <image name="Map-Pin" width="28" height="38"/>
+        <image name="Intro Message" width="332" height="127"/>
         <image name="Simple Accomodation Button" width="100" height="118"/>
         <image name="Simple Attractions Button" width="100" height="118"/>
         <image name="Simple Entertainment Button" width="100" height="118"/>
