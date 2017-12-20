@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/MyTripsTableTableViewController.swift"
-            timestampString = "535298779.501559"
+            timestampString = "535460911.268945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "MyTripsTableTableViewController"
-            landmarkType = "3">
+            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/AddExpenseViewController.swift"
-            timestampString = "535456775.422489"
+            timestampString = "535460911.269034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "177"

@@ -31,6 +31,17 @@ class TripDetailViewController: UIViewController {
     
     @IBOutlet var progressBars: [UIProgressView]!
     
+    override func viewWillAppear(_ animated: Bool) {
+        disableButtons()
+    }
+    
+    func disableButtons() {
+        navigationItem.leftBarButtonItem?.isEnabled = false
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        navigationItem.leftBarButtonItem?.isEnabled = true
+        navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
