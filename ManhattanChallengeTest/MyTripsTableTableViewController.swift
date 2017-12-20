@@ -75,6 +75,13 @@ class MyTripsTableTableViewController: UITableViewController {
             tableView.beginUpdates()
 
             CoreDataController.shared.deleteTrip(location: myTrips[indexPath.row].location!)
+            
+            do {
+                try CoreDataController.shared.context.save()
+            } catch let error {
+                print("[CDC] Error deleting trip: error \(error)")
+            }
+            
             myTrips.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .fade)

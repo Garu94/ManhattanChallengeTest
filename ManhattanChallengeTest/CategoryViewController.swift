@@ -75,6 +75,26 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         performSegue(withIdentifier: "segue", sender: self)
     }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            
+            CoreDataController.shared.currentTrip?.removeFromExpenses(expenses[indexPath.row])
+            
+            do {
+                try CoreDataController.shared.context.save()
+            } catch let error {
+                print("[CDC] Error deleting expense: error \(error)")
+            }
+            
+            expenses.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            total -= expenses[indexPath.row].price
+            tableView.endUpdates()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if let nextViewController = segue.destination as? ExpenseDetailViewController {
