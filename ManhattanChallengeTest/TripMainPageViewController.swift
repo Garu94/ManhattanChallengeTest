@@ -16,7 +16,7 @@ class TripMainPageViewController: UIViewController {
     @IBOutlet weak var totalBudget: UILabel!
     
     @IBOutlet var categoryPriceLabels: [UILabel]!
-    
+    let categoryNames = ["Accomodation", "Transport", "Entertainment", "Attractions", "Food", "Other"]
     
     
     var categoryName: String?
@@ -35,6 +35,9 @@ class TripMainPageViewController: UIViewController {
                 
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
+        
+        
+        
         print(allTrips!.isEmpty)
         
         if allTrips!.isEmpty {
@@ -45,17 +48,19 @@ class TripMainPageViewController: UIViewController {
         
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)
         
+        
+        
         //Compute total
         for expense in expenses {
             total += expense.price
         }
         
-        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
+//        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
         totalBudget.text = CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!)
         print("Total: \(total)")
         totalExpenses.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: total)) spent"
         
-        var left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
+        let left: Float = (CoreDataController.shared.currentTrip?.budget)! - total
         
         moneyLeft.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: left)) left"
         
@@ -142,5 +147,14 @@ class TripMainPageViewController: UIViewController {
         
         return leftPercentage
         
+    }
+    
+    func calculateCategoryPrice(category: String) -> Float {
+        var categoryTotal: Float = 0.0
+        
+        
+        
+        
+        return categoryTotal
     }
 }
