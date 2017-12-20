@@ -76,7 +76,7 @@ class TripMainPageViewController: UIViewController {
         
         progressBar.leftPercentage = calculatePercentage()
         
-        totalBudget.text = "$ \(CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!))"
+        totalBudget.text = "$\(CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!))"
         
         if progressBar.leftPercentage < 0 {
             progressBar.leftPercentage = 0.0

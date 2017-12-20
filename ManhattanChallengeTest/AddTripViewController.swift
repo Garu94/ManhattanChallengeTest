@@ -66,7 +66,8 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
+        designTextField(textField: locationTextField)
+        designTextField(textField: budgetTextField)
         // Do any additional setup after loading the view.
     }
 
@@ -169,7 +170,13 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         present(alertView, animated: true, completion: nil)
     }
     
-    
+    func designTextField(textField: UITextField){
+        textField.layer.cornerRadius = 12.0
+        textField.layer.borderWidth = 0.5
+        textField.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        textField.layer.masksToBounds = true
+        
+    }
     
     /*
     // MARK: - Navigation
