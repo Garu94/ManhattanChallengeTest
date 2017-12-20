@@ -16,7 +16,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var navBar: UINavigationItem!
     
     @IBOutlet weak var optionalNoteField: UITextField!
-    
+        
     var price: Float?
     var cathegory: String?
     var note: String?
@@ -120,7 +120,11 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             showAlertPrice()
         } else {
             //Save new Expense, given the Trip
+            print(addPhoto.image?.size)
+            
             CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
+            
+            
             
             //Animation Dismiss
             navigationController?.popViewController(animated: true)

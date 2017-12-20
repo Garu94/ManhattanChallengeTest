@@ -46,12 +46,12 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         cathegory = expenses[selectedIndex].cathegory
         price = expenses[selectedIndex].price
         note = expenses[selectedIndex].note
-//
-//        if let myImageData = expenses[selectedIndex].image {
-////            let img = UIImage(cgImage: UIImage(data: myImageData, scale: 1.0) as! CGImage, scale: 1, orientation: UIImageOrientation.right)
-//            imageView.image = img
-//
-//        }
+        
+        
+        if let myImageData = expenses[selectedIndex].image {
+            imageView.image = UIImage(data: myImageData)
+            imageView.transform = imageView.transform.rotated(by: .pi/2)
+        }
         
         setShadowButton()
         removeShadowButton(category: expenses[selectedIndex].cathegory!)
@@ -241,7 +241,9 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         }
         notePhotoFlag = true
     }
-
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -253,3 +255,6 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     */
 
 }
+
+
+
