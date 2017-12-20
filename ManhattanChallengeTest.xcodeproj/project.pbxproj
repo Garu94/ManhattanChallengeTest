@@ -127,6 +127,7 @@
 			children = (
 				FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */,
 				FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */,
+				FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */,
 				FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */,
 				1C91624D1FE80F180013FAF8 /* UIButton+shadow.swift */,
 				1C3919B71FE11366001C79AE /* MyTripsTableTableViewController.swift */,
@@ -138,7 +139,6 @@
 				1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */,
 				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
 				FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */,
-				FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
 				FFEC6B6C1FDC11FE007E8017 /* Assets.xcassets */,

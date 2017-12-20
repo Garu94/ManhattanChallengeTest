@@ -43,12 +43,16 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         
         priceField.text = String(expenses[selectedIndex].price)
         noteField.text = expenses[selectedIndex].note
+        cathegory = expenses[selectedIndex].cathegory
+        price = expenses[selectedIndex].price
+        note = expenses[selectedIndex].note
         
         if let myImageData = expenses[selectedIndex].image {
             let img = UIImage(cgImage: UIImage(data: myImageData, scale: 1.0) as! CGImage, scale: 1, orientation: UIImageOrientation.right)
             imageView.image = img
             
         }
+        
         setShadowButton()
         removeShadowButton(category: expenses[selectedIndex].cathegory!)
         
@@ -113,18 +117,21 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             showAlertPrice()
         } else {
             //Save new Expense, given the Trip
-            expenses[selectedIndex].cathegory = cathegory
-            expenses[selectedIndex].price = Float(priceField.text!)!
-            expenses[selectedIndex].note = note
-            expenses[selectedIndex].image = NSData(data: UIImagePNGRepresentation(imageView.image!)!) as Data
+//            expenses[selectedIndex].cathegory = cathegory
+//            expenses[selectedIndex].price = Float(priceField.text!)!
+//            expenses[selectedIndex].note = note
+//            expenses[selectedIndex].image = NSData(data: UIImagePNGRepresentation(imageView.image!)!) as Data
             
-            do {
-                try CoreDataController.shared.context.save()
-            } catch let error {
-                print("[CDC] Error saving modified trip: error \(error)")
-            }
+            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: imageView.image!)
             
-            instanceOfCVC.expenses.remove(at: selectedIndex)
+            
+            
+//            do {
+//                try CoreDataController.shared.context.save()
+//            } catch let error {
+//                print("[CDC] Error saving modified trip: error \(error)")
+//            }
+            
             
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
