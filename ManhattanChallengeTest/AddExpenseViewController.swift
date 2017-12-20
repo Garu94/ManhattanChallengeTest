@@ -156,6 +156,9 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
                             button.layer.shadowOpacity = 0
         },
                          completion: nil)
+        button.layer.cornerRadius = 5
+        button.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        button.layer.borderWidth = 0.5
     }
     
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
