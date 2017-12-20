@@ -35,11 +35,6 @@ class TripMainPageViewController: UIViewController {
                 
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
-        
-        
-        
-        print(allTrips!.isEmpty)
-        
         if allTrips!.isEmpty {
             performSegue(withIdentifier: "firstTripSegue", sender: self)
         }
@@ -49,11 +44,21 @@ class TripMainPageViewController: UIViewController {
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)
         
         
-        
         //Compute total
         for expense in expenses {
             total += expense.price
         }
+        
+        // Change text of category Labels
+        
+        for category in categoryNames {
+            for label in categoryPriceLabels {
+                if label.restorationIdentifier == (category + "Price") {
+                    label.text = calculateCategoryPriceAndConvertToString(category: category)
+                }
+            }
+        }
+        
         
 //        print("Budget: \(CoreDataController.shared.currentTrip?.budget)")
         totalBudget.text = CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!)
@@ -149,12 +154,18 @@ class TripMainPageViewController: UIViewController {
         
     }
     
-    func calculateCategoryPrice(category: String) -> Float {
+    func calculateCategoryPriceAndConvertToString(category: String) -> String {
+        
         var categoryTotal: Float = 0.0
         
+        let categoryExpenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: CoreDataController.shared.currentTrip!, category: category)
         
+        for expense in categoryExpenses {
+            categoryTotal += expense.price
+        }
         
+        let returnString = "$" + String(format: "%.2f", categoryTotal)
         
-        return categoryTotal
+        return returnString
     }
 }
