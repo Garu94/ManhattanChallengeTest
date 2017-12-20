@@ -47,7 +47,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             total += expense.price
         }
         
-        totalPriceLabel.text = CoreDataController.shared.FloatToTwoDigitString(number: total)
+        totalPriceLabel.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: total)
         // Do any additional setup after loading the view.
     }
 
@@ -64,7 +64,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
         let expenseInCell = expenses[indexPath.row]
-        cell?.textLabel?.text = CoreDataController.shared.FloatToTwoDigitString(number: expenseInCell.price)
+        cell?.textLabel?.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: expenseInCell.price)
         cell?.detailTextLabel?.text = expenseInCell.note
         
         return cell!
