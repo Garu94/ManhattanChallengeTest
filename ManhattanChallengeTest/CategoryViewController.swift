@@ -89,7 +89,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             
             total -= expenses[indexPath.row].price
             expenses.remove(at: indexPath.row)
-            
+            totalPriceLabel.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: total)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
             totalPriceLabel.setNeedsDisplay()
