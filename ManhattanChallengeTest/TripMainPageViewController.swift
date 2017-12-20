@@ -71,14 +71,14 @@ class TripMainPageViewController: UIViewController {
         
         progressBar.leftPercentage = calculatePercentage()
         
+        totalBudget.text = "$ \(CoreDataController.shared.FloatToTwoDigitString(number: (CoreDataController.shared.currentTrip?.budget)!))"
+        
         if progressBar.leftPercentage < 0 {
             progressBar.leftPercentage = 0.0
         }
         
         progressBar.updateGradientLayer()
-        
-//        progressBar.animate(duration: 10)
-        
+
     }
     
     @IBOutlet weak var titleNavBar: UINavigationItem!
