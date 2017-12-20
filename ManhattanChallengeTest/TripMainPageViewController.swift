@@ -164,7 +164,7 @@ class TripMainPageViewController: UIViewController {
             categoryTotal += expense.price
         }
         
-        let returnString = String(format: "%.2f", categoryTotal)
+        let returnString = "$" + String(format: "%.2f", categoryTotal)
         
         return returnString
     }
