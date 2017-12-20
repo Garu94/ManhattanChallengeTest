@@ -89,6 +89,9 @@ class TripMainPageViewController: UIViewController {
             button.layer.masksToBounds = false
             button.transform = CGAffineTransform(scaleX: 1, y: 1)
             }
+        
+        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
 
     }
     
@@ -191,4 +194,10 @@ class TripMainPageViewController: UIViewController {
         
         return returnString
     }
+    
+    @IBAction func goToMyTrips(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "segueToMyTripsView", sender: self)
+    }
+    
+    
 }

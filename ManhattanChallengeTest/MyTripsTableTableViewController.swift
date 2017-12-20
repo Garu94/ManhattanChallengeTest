@@ -27,7 +27,8 @@ class MyTripsTableTableViewController: UITableViewController {
         myTrips = CoreDataController.shared.loadAllTheTrips()
         self.tableView.reloadData()
         
-        
+        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
     }
 
     override func didReceiveMemoryWarning() {
