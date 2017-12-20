@@ -41,6 +41,8 @@ class TripMainPageViewController: UIViewController {
             performSegue(withIdentifier: "firstTripSegue", sender: self)
         }
         
+        total = 0.0
+        
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!)

@@ -36,6 +36,9 @@ class MyTripsTableTableViewController: UITableViewController {
             dismiss(animated: false, completion: nil)
         }
         
+        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
+        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -46,12 +46,12 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         cathegory = expenses[selectedIndex].cathegory
         price = expenses[selectedIndex].price
         note = expenses[selectedIndex].note
-        
-        if let myImageData = expenses[selectedIndex].image {
-            let img = UIImage(cgImage: UIImage(data: myImageData, scale: 1.0) as! CGImage, scale: 1, orientation: UIImageOrientation.right)
-            imageView.image = img
-            
-        }
+//
+//        if let myImageData = expenses[selectedIndex].image {
+////            let img = UIImage(cgImage: UIImage(data: myImageData, scale: 1.0) as! CGImage, scale: 1, orientation: UIImageOrientation.right)
+//            imageView.image = img
+//
+//        }
         
         setShadowButton()
         removeShadowButton(category: expenses[selectedIndex].cathegory!)
