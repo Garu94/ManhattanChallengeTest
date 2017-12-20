@@ -44,11 +44,7 @@ class CoreDataController {
         }
         
         self.currentTrip = newTrip
-        
-        print(CoreDataController.shared.currentTrip)
 
-        
-        
         print("[CDC] trip correctly saved")
         
     }
