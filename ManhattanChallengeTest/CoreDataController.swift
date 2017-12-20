@@ -15,6 +15,7 @@ class CoreDataController {
     public var context: NSManagedObjectContext
     
     var currentTrip: Trip?
+    var isTripAdded: Bool = false
     
     private init() {
         let application = UIApplication.shared.delegate as! AppDelegate

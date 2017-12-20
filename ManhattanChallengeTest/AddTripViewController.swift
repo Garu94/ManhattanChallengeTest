@@ -11,6 +11,8 @@ import UIKit
 
 class AddTripViewController: UIViewController, UITextFieldDelegate {
     
+    var isDonePressed = false
+    
     @IBOutlet weak var locationTextField: UITextField!{
         didSet {
             locationTextField.delegate = self
@@ -50,9 +52,11 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
             //Save first trip
             CoreDataController.shared.addTrip(location: location!, budget: budget!)
             
+            CoreDataController.shared.isTripAdded = true
+            
             //Dismiss
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
+            navigationController?.popViewController(animated: false)
+            dismiss(animated: false, completion: nil)
         }
     }
     

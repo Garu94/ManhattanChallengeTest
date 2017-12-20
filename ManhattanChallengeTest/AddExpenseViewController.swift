@@ -224,6 +224,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func keyboardAppear(_ sender: UITextField) {
+        self.view.frame.origin.y -= 216
         }
     
     @IBAction func keyboardDismiss(_ sender: UITextField) {

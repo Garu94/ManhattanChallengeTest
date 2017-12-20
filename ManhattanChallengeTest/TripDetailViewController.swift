@@ -10,6 +10,7 @@ import UIKit
 
 class TripDetailViewController: UIViewController {
     
+    
     //Trip passed from previous View
     var trip: Trip?
     
@@ -33,6 +34,7 @@ class TripDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         disableButtons()
+        
     }
     
     func disableButtons() {

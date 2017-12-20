@@ -10,6 +10,8 @@ import UIKit
 
 class MyTripsTableTableViewController: UITableViewController {
 
+    var isTripAdded: Bool?
+    
     var myTrips = CoreDataController.shared.loadAllTheTrips()
     var indexOfSelectedTrip = 0
     
@@ -27,6 +29,12 @@ class MyTripsTableTableViewController: UITableViewController {
         myTrips = CoreDataController.shared.loadAllTheTrips()
         self.tableView.reloadData()
         
+        if CoreDataController.shared.isTripAdded {
+            CoreDataController.shared.isTripAdded = false
+            
+            navigationController?.popViewController(animated: false)
+            dismiss(animated: false, completion: nil)
+        }
         
     }
 
