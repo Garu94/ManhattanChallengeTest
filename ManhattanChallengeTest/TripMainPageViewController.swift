@@ -88,6 +88,8 @@ class TripMainPageViewController: UIViewController {
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,11 +97,18 @@ class TripMainPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func animationbutton(button: UIButton){
+        UIButton.animate(withDuration: 0.4,
+                         animations: {
+                            button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+                            button.layer.shadowOpacity = 0
+        },
+                         completion: nil)    }
     
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
         
         categoryName = sender.restorationIdentifier!
-        
+        animationbutton(button: sender)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
