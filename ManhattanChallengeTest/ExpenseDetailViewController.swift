@@ -48,7 +48,9 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         note = expenses[selectedIndex].note
         
         if let myImageData = expenses[selectedIndex].image {
-            imageView.image = UIImage(data: myImageData, scale: 1.0)
+            let img = UIImage(cgImage: UIImage(data: myImageData, scale: 1.0) as! CGImage, scale: 1, orientation: UIImageOrientation.right)
+            imageView.image = img
+            
         }
         
         setShadowButton()
