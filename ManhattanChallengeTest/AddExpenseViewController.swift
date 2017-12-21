@@ -44,6 +44,13 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
 //        addPhoto.layer.shadowRadius = 2.0
 //        addPhoto.layer.masksToBounds = false
         
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        
+        statusBar.backgroundColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        
         designTextField(textField: insertPriceField)
         designTextField(textField: optionalNoteField)
         //Pop up price keyboard as view appears

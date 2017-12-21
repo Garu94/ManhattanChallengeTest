@@ -47,7 +47,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
             total += expense.price
         }
         
-        totalPriceLabel.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: total)
+        totalPriceLabel.text =  totalPriceLabel.text! + " $" + CoreDataController.shared.FloatToTwoDigitString(number: total)
         // Do any additional setup after loading the view.
     }
 

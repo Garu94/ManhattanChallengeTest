@@ -179,7 +179,7 @@
                                     <constraint firstAttribute="width" constant="163" id="uLy-BP-3Ye"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryReview" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-2f-UFN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Category Review" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-2f-UFN">
                                 <rect key="frame" x="18" y="322" width="215" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="UYO-LT-3rP"/>
@@ -816,7 +816,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Expenses:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlC-4b-7yD">
-                                <rect key="frame" x="31.5" y="296" width="161.5" height="26.5"/>
+                                <rect key="frame" x="43" y="296" width="305" height="27"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -871,10 +871,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YhV-GC-Kle" firstAttribute="baseline" secondItem="RlC-4b-7yD" secondAttribute="baseline" id="4tv-ws-oR3"/>
+                            <constraint firstItem="RlC-4b-7yD" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="43" id="8cO-CP-P49"/>
                             <constraint firstItem="mJC-Jv-dtC" firstAttribute="trailing" secondItem="gRe-5e-rRR" secondAttribute="trailing" constant="21" id="9ug-HI-Sux"/>
-                            <constraint firstItem="gRe-5e-rRR" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="-171" id="DBN-xH-TcJ"/>
+                            <constraint firstItem="gRe-5e-rRR" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="-326" id="DBN-xH-TcJ"/>
                             <constraint firstItem="RlC-4b-7yD" firstAttribute="top" secondItem="gRe-5e-rRR" secondAttribute="bottom" constant="-38" id="JOf-W1-xxr"/>
-                            <constraint firstItem="YhV-GC-Kle" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="6" id="Q2x-Gn-KQ9"/>
+                            <constraint firstItem="YhV-GC-Kle" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="-149" id="Q2x-Gn-KQ9"/>
                             <constraint firstItem="gRe-5e-rRR" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="22" id="dtt-8a-8CA"/>
                             <constraint firstItem="gRe-5e-rRR" firstAttribute="top" secondItem="mJC-Jv-dtC" secondAttribute="top" constant="166" id="gfZ-xC-MfY"/>
                         </constraints>
@@ -884,7 +885,7 @@
                     <connections>
                         <outlet property="bannerImage" destination="4V2-CH-FLL" id="WBc-Dv-nKS"/>
                         <outlet property="tableView" destination="2Sw-Va-d0k" id="WnW-Zb-X6R"/>
-                        <outlet property="totalPriceLabel" destination="YhV-GC-Kle" id="WUv-7M-OMI"/>
+                        <outlet property="totalPriceLabel" destination="RlC-4b-7yD" id="Ft2-L5-LSr"/>
                         <segue destination="Cny-52-nzM" kind="show" identifier="segue" id="t96-A7-6rj"/>
                     </connections>
                 </viewController>
@@ -1298,7 +1299,7 @@
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Image" translatesAutoresizingMaskIntoConstraints="NO" id="mVg-Z6-xqR">
-                                <rect key="frame" x="132" y="538" width="112" height="112"/>
+                                <rect key="frame" x="60" y="538" width="255" height="112"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Doa-Pc-G6t" appends="YES" id="z9T-Z7-zBL"/>
@@ -1348,12 +1349,15 @@
                             <constraint firstItem="1oU-af-pyE" firstAttribute="top" secondItem="kMA-sO-g1P" secondAttribute="bottom" constant="30" id="Q9A-e6-aoo"/>
                             <constraint firstItem="uqu-qE-rRl" firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="width" id="S9h-Py-Bku"/>
                             <constraint firstItem="dpy-4l-qla" firstAttribute="leading" secondItem="1oU-af-pyE" secondAttribute="trailing" constant="16" id="SbC-QB-yw1"/>
+                            <constraint firstItem="WrL-wG-00h" firstAttribute="bottom" secondItem="mVg-Z6-xqR" secondAttribute="bottom" constant="17" id="UsP-hy-5Kt"/>
                             <constraint firstItem="bhR-CC-4hG" firstAttribute="height" secondItem="1oU-af-pyE" secondAttribute="height" id="WAQ-sJ-0oV"/>
                             <constraint firstItem="9gT-6q-EiC" firstAttribute="centerY" secondItem="6ef-gO-KPu" secondAttribute="centerY" id="YKd-Kv-7hO"/>
                             <constraint firstItem="cUc-U3-gaU" firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="width" id="Z3J-MD-cpQ"/>
                             <constraint firstItem="WrL-wG-00h" firstAttribute="trailing" secondItem="uqu-qE-rRl" secondAttribute="trailing" constant="21" id="ai5-CI-MkT"/>
                             <constraint firstItem="bhR-CC-4hG" firstAttribute="width" secondItem="1oU-af-pyE" secondAttribute="width" id="cTZ-tX-R5w"/>
                             <constraint firstItem="PJz-z1-2eq" firstAttribute="height" secondItem="1oU-af-pyE" secondAttribute="height" id="hxC-mn-iAK"/>
+                            <constraint firstItem="mVg-Z6-xqR" firstAttribute="leading" secondItem="WrL-wG-00h" secondAttribute="leading" constant="60" id="k9B-Ti-1d2"/>
+                            <constraint firstItem="WrL-wG-00h" firstAttribute="trailing" secondItem="mVg-Z6-xqR" secondAttribute="trailing" constant="60" id="kNr-xH-iQd"/>
                             <constraint firstItem="cUc-U3-gaU" firstAttribute="baseline" secondItem="bhR-CC-4hG" secondAttribute="baseline" id="ktA-d2-Eyq"/>
                             <constraint firstItem="mVg-Z6-xqR" firstAttribute="top" secondItem="9gT-6q-EiC" secondAttribute="bottom" constant="36" id="m5V-eN-Oel"/>
                             <constraint firstItem="kMA-sO-g1P" firstAttribute="top" secondItem="WrL-wG-00h" secondAttribute="top" constant="26" id="pQu-pK-6UI"/>
@@ -1417,6 +1421,7 @@
     <resources>
         <image name="Add Expense Button-1" width="60" height="62"/>
         <image name="Add Image" width="112" height="112"/>
+        <image name="Category Review" width="215" height="52"/>
         <image name="Detail Accomodation Button" width="100" height="137"/>
         <image name="Detail Attractions Button" width="100" height="137"/>
         <image name="Detail Entertainment Button" width="100" height="137"/>
@@ -1431,7 +1436,6 @@
         <image name="Simple Food Button" width="100" height="118"/>
         <image name="Simple Other Button" width="100" height="118"/>
         <image name="Simple Transport Button" width="100" height="118"/>
-        <image name="categoryReview" width="215" height="52"/>
         <image name="myTripsBanner" width="375" height="155"/>
         <image name="tripReview" width="163" height="52"/>
     </resources>

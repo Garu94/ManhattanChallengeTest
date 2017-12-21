@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.078978"
+            timestampString = "535510962.136393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "saveAndCloseLocation()"
+            landmarkName = "saveAndCloseBudget()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.079035"
+            timestampString = "535510962.136824"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "designTextField(textField:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.079076"
+            timestampString = "535510962.137152"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "actionOnDoneButton(_:)"
+            landmarkName = "start(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079116"
+            timestampString = "535507737.892668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.079156"
+            timestampString = "535510962.137498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "actionOnDoneButton(_:)"
+            landmarkName = "start(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.079192"
+            timestampString = "535510962.137809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "actionOnDoneButton(_:)"
+            landmarkName = "start(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -106,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.079228"
+            timestampString = "535510962.138089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "FirstTripViewController"
-            landmarkType = "3">
+            landmarkName = "start(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079263"
+            timestampString = "535507737.892791"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "deleteTrip(location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079299"
+            timestampString = "535507737.892853"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "deleteTrip(location:)"
             landmarkType = "7">
             <Locations>
@@ -201,7 +201,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.62332"
+            timestampString = "535509296.895385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -217,7 +217,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.623624"
+            timestampString = "535509296.895483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "92"
@@ -233,7 +233,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.623831"
+            timestampString = "535509296.895536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -249,7 +249,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.624033"
+            timestampString = "535509296.895582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -265,7 +265,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.624228"
+            timestampString = "535509296.895627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -281,11 +281,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079398"
+            timestampString = "535507737.892983"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "loadExpensesOfATrip(trip:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -297,11 +297,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079437"
+            timestampString = "535507737.893042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "loadExpensesOfATrip(trip:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -313,13 +313,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079475"
+            timestampString = "535507737.893099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "loadExpensesOfATrip(trip:)"
-            landmarkType = "7">
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "CoreDataController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -329,12 +329,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/CoreDataController.swift"
-            timestampString = "535479721.079512"
+            timestampString = "535507737.893154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "loadExpensesOfATrip(trip:)"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "loadExpensesOfCategoryGivenTrip(trip:category:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -345,7 +345,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/TripMainPageViewController.swift"
-            timestampString = "535475175.624592"
+            timestampString = "535509296.895722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -361,11 +361,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/AddExpenseViewController.swift"
-            timestampString = "535479721.079565"
+            timestampString = "535513020.982073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "doneButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -377,7 +377,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/ExpenseDetailViewController.swift"
-            timestampString = "535479721.080064"
+            timestampString = "535513020.982193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -393,11 +393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/ExpenseDetailViewController.swift"
-            timestampString = "535479721.080144"
+            timestampString = "535513020.982294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
             landmarkName = "saveNoteInVar()"
             landmarkType = "7">
          </BreakpointContent>
@@ -409,12 +409,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/FirstTripViewController.swift"
-            timestampString = "535479721.080197"
+            timestampString = "535510962.138769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "actionOnDoneButton(_:)"
+            landmarkName = "start(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ManhattanChallengeTest/AddTripViewController.swift"
+            timestampString = "535513020.982452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "saveNewTrip(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ManhattanChallengeTest/CoreDataController.swift"
+            timestampString = "535507737.893785"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "addTrip(location:budget:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

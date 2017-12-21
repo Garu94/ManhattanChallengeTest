@@ -48,8 +48,11 @@ class TripDetailViewController: UIViewController {
         super.viewDidLoad()
         
         for bar in progressBars {
-            bar.transform = bar.transform.scaledBy(x: 1, y: 4)
-            bar.layer.cornerRadius = 10.0
+            bar.transform = bar.transform.scaledBy(x: 1, y: 4.0)
+            bar.clipsToBounds = true
+            bar.layer.cornerRadius = 12.0
+            bar.layer.masksToBounds = true
+            bar.layer.cornerRadius = bar.frame.size.height / 2.0
         }
         
         
