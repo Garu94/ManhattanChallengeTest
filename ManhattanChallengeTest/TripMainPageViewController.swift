@@ -37,21 +37,19 @@ class TripMainPageViewController: UIViewController {
                 
         allTrips = CoreDataController.shared.loadAllTheTrips()
         
-        guard let currentTrip = CoreDataController.shared.currentTrip else {
-            performSegue(withIdentifier: "firstTripSegue", sender: self)
-            return
-        }
+        let currentTrip = CoreDataController.shared.currentTrip
         
         total = 0.0
         
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
-        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip)
+        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip!)
         
         
         //Compute total
         for expense in expenses {
             total += expense.price
+            print(total)
         }
         
         // Change text of category Labels

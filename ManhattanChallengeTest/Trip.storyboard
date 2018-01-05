@@ -375,7 +375,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Accomodation" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyE-AY-vcv" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="20" y="258.5" width="100" height="137"/>
+                                <rect key="frame" x="20.5" y="258.5" width="100" height="137"/>
                                 <state key="normal" image="Detail Accomodation Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -396,7 +396,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Transport" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXD-Zc-20q" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="137" y="258.5" width="100" height="137"/>
+                                <rect key="frame" x="137.5" y="258.5" width="100" height="137"/>
                                 <state key="normal" image="Detail Transport Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -417,7 +417,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Entertainment" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-QG-ID0" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="254" y="258.5" width="99" height="137"/>
+                                <rect key="frame" x="254.5" y="258.5" width="98.5" height="137"/>
                                 <state key="normal" image="Detail Entertainment Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -438,7 +438,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Attractions" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjZ-5w-abe" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="20" y="411.5" width="100" height="137"/>
+                                <rect key="frame" x="20.5" y="411.5" width="100" height="137"/>
                                 <state key="normal" image="Detail Attractions Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -459,7 +459,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Food" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6z-Aa-OzK" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="137" y="411.5" width="100" height="137"/>
+                                <rect key="frame" x="137.5" y="411.5" width="100" height="137"/>
                                 <state key="normal" image="Detail Food Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -480,7 +480,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Other" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-fF-ggA" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="254" y="411.5" width="99" height="137"/>
+                                <rect key="frame" x="254.5" y="411.5" width="98.5" height="137"/>
                                 <state key="normal" image="Detail Other Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -518,7 +518,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SST-HM-4mr" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="157" y="585.5" width="60" height="62"/>
+                                <rect key="frame" x="157" y="585.5" width="61" height="62"/>
                                 <state key="normal" title="+" image="Add Expense Button-1"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -539,37 +539,37 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AccomodationPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCW-tf-v50">
-                                <rect key="frame" x="30" y="364.5" width="37.5" height="17"/>
+                                <rect key="frame" x="30.5" y="364.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="TransportPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zb-l4-m9h">
-                                <rect key="frame" x="147" y="364.5" width="37.5" height="17"/>
+                                <rect key="frame" x="147.5" y="364.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="EntertainmentPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWo-nq-8BK">
-                                <rect key="frame" x="264" y="364.5" width="37.5" height="17"/>
+                                <rect key="frame" x="264.5" y="364.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="AttractionsPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="102-BW-L2N">
-                                <rect key="frame" x="30" y="517.5" width="37.5" height="17"/>
+                                <rect key="frame" x="30.5" y="517.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FoodPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c0-C5-mXB">
-                                <rect key="frame" x="147" y="517.5" width="37.5" height="17"/>
+                                <rect key="frame" x="147.5" y="517.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="OtherPrice" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz2-Ek-XEc">
-                                <rect key="frame" x="264" y="517.5" width="37.5" height="17"/>
+                                <rect key="frame" x="264.5" y="517.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -684,7 +684,6 @@
                         <outletCollection property="categoryButtons" destination="I6z-Aa-OzK" collectionClass="NSMutableArray" id="DJO-tQ-UWV"/>
                         <outletCollection property="categoryButtons" destination="2fr-fF-ggA" collectionClass="NSMutableArray" id="HwQ-7L-l9X"/>
                         <segue destination="bML-ve-fcZ" kind="show" identifier="segueToCategoryView" id="KC8-wS-Hno"/>
-                        <segue destination="S40-B3-Dn4" kind="show" identifier="firstTripSegue" id="RRh-Mn-FfZ"/>
                         <segue destination="3S3-lw-GSh" kind="show" identifier="segueToMyTripsView" id="X6H-7l-CVU"/>
                     </connections>
                 </viewController>
@@ -695,7 +694,7 @@
         <!--FirstTripViewController-->
         <scene sceneID="jqP-Fk-ctE">
             <objects>
-                <viewController title="FirstTripViewController" id="S40-B3-Dn4" customClass="FirstTripViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="FirstTripViewController" id="S40-B3-Dn4" customClass="LoginViewController" customModule="ManhattanChallengeTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6UR-tt-aSH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,7 +716,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" smartInsertDeleteType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your first Trip to start enjoying the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIZ-gg-oM0">
-                                <rect key="frame" x="16" y="116" width="343" height="116"/>
+                                <rect key="frame" x="16" y="20" width="343" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UIZ-gg-oM0" secondAttribute="height" multiplier="343:116" id="0WR-RS-3BW"/>
                                 </constraints>
@@ -762,7 +761,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="start:" destination="S40-B3-Dn4" eventType="touchUpInside" id="GqJ-0X-PZn"/>
+                                    <action selector="save:" destination="S40-B3-Dn4" eventType="touchUpInside" id="AFU-R0-DEr"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Intro Message" translatesAutoresizingMaskIntoConstraints="NO" id="8w3-Qj-44i">
@@ -786,10 +785,9 @@
                         <barButtonItem key="rightBarButtonItem" id="cKz-4C-33V"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="2PJ-O3-fdu"/>
-                        <outlet property="firstTripLabel" destination="UIZ-gg-oM0" id="q7O-qk-Qz5"/>
-                        <outlet property="locationTextField" destination="Tax-73-cfW" id="PTb-Xa-Ngh"/>
-                        <outlet property="startButton" destination="MeK-6f-pfk" id="HFq-YI-ztb"/>
+                        <outlet property="budgetTextField" destination="WGw-Uy-3wc" id="mYL-3J-XTf"/>
+                        <outlet property="locationTextField" destination="Tax-73-cfW" id="Ndf-a9-qER"/>
+                        <outlet property="startButton" destination="MeK-6f-pfk" id="Hmt-Ee-QeW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9JA-IV-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -799,7 +797,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-461.60000000000002" y="1762.6686656671666"/>
+            <point key="canvasLocation" x="-2262" y="162"/>
         </scene>
         <!--Category-->
         <scene sceneID="CfH-VO-gcW">
