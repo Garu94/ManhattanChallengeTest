@@ -48,11 +48,9 @@ class TripDetailViewController: UIViewController {
         super.viewDidLoad()
         
         for bar in progressBars {
-            bar.transform = bar.transform.scaledBy(x: 1, y: 4.0)
+            bar.layer.cornerRadius = 3
             bar.clipsToBounds = true
-            bar.layer.cornerRadius = 12.0
             bar.layer.masksToBounds = true
-            bar.layer.cornerRadius = bar.frame.size.height / 2.0
         }
     
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: trip!)
