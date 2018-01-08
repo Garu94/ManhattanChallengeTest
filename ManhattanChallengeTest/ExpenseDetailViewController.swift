@@ -42,7 +42,11 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         super.viewDidLoad()
         
         if expenses[selectedIndex].image != nil {
-            scrollView
+            scrollView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+        } else {
+            print(expenses[selectedIndex].image)
+            scrollView.heightAnchor.constraint(equalToConstant: 687).isActive = true
+            print(scrollView.frame.height)
         }
         
 //        scrollView.contentSize = CGSize(width: 375, height: 1000)

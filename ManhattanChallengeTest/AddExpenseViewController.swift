@@ -121,11 +121,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         } else {
             //Save new Expense, given the Trip
             CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: nil, trip: trip)
-            
+        }
+        
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
-        }
+        
     }
     
     
