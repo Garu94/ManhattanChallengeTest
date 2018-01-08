@@ -82,6 +82,11 @@ class MyTripsTableTableViewController: UITableViewController {
                     present(alertView, animated: true, completion: nil)
                     return
                 }
+            if indexPath.row == 0 {
+                CoreDataController.shared.currentTrip = myTrips[indexPath.row + 1]
+                print("my current trip now is \(CoreDataController.shared.currentTrip?.location)")
+                
+            }
             
             tableView.beginUpdates()
 
