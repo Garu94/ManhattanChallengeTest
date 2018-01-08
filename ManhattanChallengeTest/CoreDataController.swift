@@ -246,7 +246,7 @@ class CoreDataController {
     }
     
     
-    func editExpense(date: Date, cathegory: String?, note: String?, price: Float?, photo: UIImage) {
+    func editExpense(date: Date, cathegory: String?, note: String?, price: Float?, photo: UIImage?) {
         
         let fetchRequest: NSFetchRequest<Expense> = Expense.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "date = %@", date as CVarArg)
@@ -257,7 +257,12 @@ class CoreDataController {
             result[0].price = price ?? 0.0
             result[0].cathegory = cathegory ?? ""
             result[0].note = note ?? ""
-            result[0].image = UIImagePNGRepresentation(photo)
+            
+            if let photoTaken = photo {
+                result[0].image = UIImagePNGRepresentation(photoTaken)
+            } else {
+                result[0].image = nil
+            }
             
             print(result[0])
             

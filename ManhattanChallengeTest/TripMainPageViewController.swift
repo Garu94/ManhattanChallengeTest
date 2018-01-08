@@ -57,7 +57,7 @@ class TripMainPageViewController: UIViewController {
         for category in categoryNames {
             for label in categoryPriceLabels {
                 if label.restorationIdentifier == (category + "Price") {
-                    label.text = calculateCategoryPriceAndConvertToString(category: category)
+                    label.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: calculateCategoryPrice(category: category))
                 }
             }
         }
@@ -181,7 +181,7 @@ class TripMainPageViewController: UIViewController {
         
     }
     
-    func calculateCategoryPriceAndConvertToString(category: String) -> String {
+    func calculateCategoryPrice(category: String) -> Float {
         
         var categoryTotal: Float = 0.0
         
@@ -191,9 +191,7 @@ class TripMainPageViewController: UIViewController {
             categoryTotal += expense.price
         }
         
-        let returnString = "$" + String(format: "%.2f", categoryTotal)
-        
-        return returnString
+        return categoryTotal
     }
     
     @IBAction func goToMyTrips(_ sender: UIBarButtonItem) {

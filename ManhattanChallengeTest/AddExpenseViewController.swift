@@ -8,6 +8,22 @@
 
 import UIKit
 
+extension String {
+    var floatValue: Float {
+        let nf = NumberFormatter()
+        nf.decimalSeparator = "."
+        if let result = nf.number(from: self) {
+            return result.floatValue
+        } else {
+            nf.decimalSeparator = ","
+            if let result = nf.number(from: self) {
+                return result.floatValue
+            }
+        }
+        return 0
+    }
+}
+
 class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var insertPriceField: UITextField!
     @IBOutlet var buttonsCategory: [UIButton]!
@@ -15,7 +31,15 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var navBar: UINavigationItem!
     
-    @IBOutlet weak var optionalNoteField: UITextField!
+    @IBOutlet weak var optionalNoteField: UITextField! {
+        didSet {
+            optionalNoteField.autocorrectionType = .no
+            if #available(iOS 11, *) {
+                // Disables the password autoFill accessory view.
+                optionalNoteField.textContentType = UITextContentType("")
+            }
+        }
+    }
         
     var price: Float?
     var cathegory: String?
@@ -121,11 +145,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         } else {
             //Save new Expense, given the Trip
             CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: nil, trip: trip)
-            
+        }
+        
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
-        }
+        
     }
     
     
@@ -173,45 +198,69 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     //Clean the code, isolating savePrice and saveNote procedure
     func savePriceInVar() {
         if insertPriceField.isEditing {
+            
             if let insertedPrice = insertPriceField.text {
-                var pointCounter = 0
                 priceFlag = true
-                var convertedPrice: String = ""
+                price = insertedPrice.floatValue
                 
-                //Convert "," to "." for foreigners number pads
-                for char in insertedPrice {
-                    if char != "," {
-                        convertedPrice.append(char)
-                    } else {
-                        convertedPrice.append(".")
-                    }
-                }
-                
-                print(insertedPrice)
-                print(convertedPrice)
-                
-                // Error if too many "." are inserted
-                for char in convertedPrice {
-                    if char == "." {
-                        pointCounter += 1
-                    }
-                    if pointCounter > 1 {
-                        priceFlag = false
-                    }
-                }
-                
-                //Error if Price Field is empty
-                if convertedPrice == "" {
+                if price == 0.0 {
                     priceFlag = false
                 }
-                
-                price = Float(convertedPrice)
-                
-                
             }
+            
+//            if let insertedPrice = insertPriceField.text {
+//                var pointCounter = 0
+//                priceFlag = true
+//                var convertedPrice: String = ""
+//
+//                //Convert "," to "." for foreigners number pads
+//                for char in insertedPrice {
+//                    if char != "," {
+//                        convertedPrice.append(char)
+//                    } else {
+//                        convertedPrice.append(".")
+//                    }
+//                }
+//
+//                print(insertedPrice)
+//                print(convertedPrice)
+//
+//                // Error if too many "." are inserted
+//                for char in convertedPrice {
+//                    if char == "." {
+//                        pointCounter += 1
+//                    }
+//                    if pointCounter > 1 {
+//                        priceFlag = false
+//                    }
+//                }
+//
+//                //Error if Price Field is empty
+//                if convertedPrice == "" {
+//                    priceFlag = false
+//                }
+//
+//                price = Float(convertedPrice)
+//
+//
+//            }
             insertPriceField.endEditing(true)
         }
     }
+    
+    func moveViewUp() {
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
+    func moveViewDown() {
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
     
     func saveNoteInVar() {
         if optionalNoteField.isEditing {
@@ -225,10 +274,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func keyboardAppear(_ sender: UITextField) {
+        moveViewUp()
         self.view.frame.origin.y -= 216
         }
     
     @IBAction func keyboardDismiss(_ sender: UITextField) {
+        moveViewDown()
         self.view.frame.origin.y += 216
     }
 }

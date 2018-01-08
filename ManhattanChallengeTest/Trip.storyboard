@@ -1195,7 +1195,7 @@
                         <outlet property="imageView" destination="1kc-z2-XlH" id="pQo-EU-sPe"/>
                         <outlet property="noteField" destination="Z6i-48-tPq" id="8jX-ME-SFA"/>
                         <outlet property="priceField" destination="zmU-gd-9oR" id="Cp6-h5-sIs"/>
-                        <outlet property="scrollView" destination="fNL-7v-yyx" id="qkb-uI-shm"/>
+                        <outlet property="scrollView" destination="fNL-7v-yyx" id="dCE-PB-4XB"/>
                         <outletCollection property="buttonsCategory" destination="ACi-E0-shJ" collectionClass="NSMutableArray" id="0Wf-i2-vFk"/>
                         <outletCollection property="buttonsCategory" destination="JJ8-Sc-Zlz" collectionClass="NSMutableArray" id="oF3-LD-2k1"/>
                         <outletCollection property="buttonsCategory" destination="sDT-ko-Aqo" collectionClass="NSMutableArray" id="l7v-1g-CUr"/>
@@ -1365,7 +1365,7 @@
                                 </connections>
                             </button>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Image" translatesAutoresizingMaskIntoConstraints="NO" id="mVg-Z6-xqR">
-                                <rect key="frame" x="133.5" y="541" width="109" height="109"/>
+                                <rect key="frame" x="133" y="541" width="109" height="109"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Doa-Pc-G6t" appends="YES" id="z9T-Z7-zBL"/>

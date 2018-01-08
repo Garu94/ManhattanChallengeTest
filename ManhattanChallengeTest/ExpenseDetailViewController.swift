@@ -11,13 +11,23 @@ import UIKit
 
 class ExpenseDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
     var instanceOfCVC: CategoryViewController!
     
     var expenses: [Expense]!
     var selectedIndex: Int!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var noteField: UITextField!
+    @IBOutlet weak var noteField: UITextField! {
+        didSet {
+            noteField.autocorrectionType = .no
+            if #available(iOS 11, *) {
+                // Disables the password autoFill accessory view.
+                noteField.textContentType = UITextContentType("")
+            }
+        }
+    }
+    
     @IBOutlet weak var priceField: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -32,7 +42,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     
     var categoryFlag = true
     var priceFlag = true
-    var notePhotoFlag = true
+    var photoFlag = false
     
     
     let p = UIImagePickerController()
@@ -40,9 +50,18 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.contentSize = CGSize(width: 375, height: 1000)
+        if expenses[selectedIndex].image != nil {
+            scrollView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+        } else {
+            scrollView.bottomAnchor.constraint(equalTo: noteField.bottomAnchor, constant: 100).isActive = true
+        }
         
-        priceField.text = String(expenses[selectedIndex].price)
+//        scrollView.contentSize = CGSize(width: 375, height: 1000)
+        
+//        priceField.text = String(expenses[selectedIndex].price)
+        
+        priceField.text = CoreDataController.shared.FloatToTwoDigitString(number: expenses[selectedIndex].price)
+        
         noteField.text = expenses[selectedIndex].note
         cathegory = expenses[selectedIndex].cathegory
         price = expenses[selectedIndex].price
@@ -82,7 +101,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         p.dismiss(animated: true, completion: nil)
         imageView.image = (info[UIImagePickerControllerOriginalImage] as! UIImage)
-        notePhotoFlag = true
+        photoFlag = true
     }
     
     func showAlertPrice(){
@@ -116,16 +135,13 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             
         } else if !priceFlag {
             showAlertPrice()
-        } else {
-            //Save new Expense, given the Trip
-//            expenses[selectedIndex].cathegory = cathegory
-//            expenses[selectedIndex].price = Float(priceField.text!)!
-//            expenses[selectedIndex].note = note
-//            expenses[selectedIndex].image = NSData(data: UIImagePNGRepresentation(imageView.image!)!) as Data
-            
+        } else if photoFlag {
             CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: imageView.image!)
+        } else {
             
             
+            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: nil)
+        }
             
 //            do {
 //                try CoreDataController.shared.context.save()
@@ -138,7 +154,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             navigationController?.popViewController(animated: true)
             instanceOfCVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
-        }
+        
     }
     
     
@@ -200,42 +216,52 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     //Clean the code, isolating savePrice and saveNote procedure
     func savePriceInVar() {
         if priceField.isEditing {
+            
             if let insertedPrice = priceField.text {
-                var pointCounter = 0
                 priceFlag = true
-                var convertedPrice: String = ""
+                price = insertedPrice.floatValue
                 
-                //Convert "," to "." for foreigners number pads
-                for char in insertedPrice {
-                    if char != "," {
-                        convertedPrice.append(char)
-                    } else {
-                        convertedPrice.append(".")
-                    }
-                }
-                
-                print(insertedPrice)
-                print(convertedPrice)
-                
-                // Error if too many "." are inserted
-                for char in convertedPrice {
-                    if char == "." {
-                        pointCounter += 1
-                    }
-                    if pointCounter > 1 {
-                        priceFlag = false
-                    }
-                }
-                
-                //Error if Price Field is empty
-                if convertedPrice == "" {
+                if price == 0.0 {
                     priceFlag = false
                 }
-                
-                price = Float(convertedPrice)
-                
-                
             }
+//
+//            if let insertedPrice = priceField.text {
+//                var pointCounter = 0
+//                priceFlag = true
+//                var convertedPrice: String = ""
+//
+//                //Convert "," to "." for foreigners number pads
+//                for char in insertedPrice {
+//                    if char != "," {
+//                        convertedPrice.append(char)
+//                    } else {
+//                        convertedPrice.append(".")
+//                    }
+//                }
+//
+//                print(insertedPrice)
+//                print(convertedPrice)
+//
+//                // Error if too many "." are inserted
+//                for char in convertedPrice {
+//                    if char == "." {
+//                        pointCounter += 1
+//                    }
+//                    if pointCounter > 1 {
+//                        priceFlag = false
+//                    }
+//                }
+//
+//                //Error if Price Field is empty
+//                if convertedPrice == "" {
+//                    priceFlag = false
+//                }
+//
+//                price = Float(convertedPrice)
+//
+//
+//            }
             priceField.endEditing(true)
         }
     }
@@ -247,7 +273,6 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             }
             noteField.endEditing(true)
         }
-        notePhotoFlag = true
     }
     
     
