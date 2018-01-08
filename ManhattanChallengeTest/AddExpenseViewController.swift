@@ -248,6 +248,20 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         }
     }
     
+    func moveViewUp() {
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
+    func moveViewDown() {
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
     func saveNoteInVar() {
         if optionalNoteField.isEditing {
             optionalNoteField.endEditing(true)
@@ -260,10 +274,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func keyboardAppear(_ sender: UITextField) {
+        moveViewUp()
         self.view.frame.origin.y -= 216
         }
     
     @IBAction func keyboardDismiss(_ sender: UITextField) {
+        moveViewDown()
         self.view.frame.origin.y += 216
     }
 }
