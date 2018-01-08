@@ -18,6 +18,13 @@ class MyTripsTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        
+        statusBar.backgroundColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,9 +42,6 @@ class MyTripsTableTableViewController: UITableViewController {
             navigationController?.popViewController(animated: false)
             dismiss(animated: false, completion: nil)
         }
-        
-        self.navigationController?.navigationBar.tintAdjustmentMode = .normal
-        self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
         
     }
 
