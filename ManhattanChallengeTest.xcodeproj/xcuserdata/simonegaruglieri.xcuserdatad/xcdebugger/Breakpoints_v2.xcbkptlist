@@ -361,13 +361,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/AddExpenseViewController.swift"
-            timestampString = "535513020.982073"
+            timestampString = "537095330.393061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "doneButtonPressed(_:)"
-            landmarkType = "7">
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "AddExpenseViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -447,6 +447,38 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "addTrip(location:budget:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ManhattanChallengeTest/MyTripsTableTableViewController.swift"
+            timestampString = "537095330.393172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ManhattanChallengeTest/MyTripsTableTableViewController.swift"
+            timestampString = "537095330.393519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "tableView(_:willSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
