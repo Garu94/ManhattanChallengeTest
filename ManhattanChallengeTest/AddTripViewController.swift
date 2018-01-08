@@ -17,6 +17,10 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         didSet {
             locationTextField.delegate = self
             locationTextField.autocorrectionType = .no
+            if #available(iOS 11, *) {
+                // Disables the password autoFill accessory view.
+                locationTextField.textContentType = UITextContentType("")
+            }
         }
     }
     
