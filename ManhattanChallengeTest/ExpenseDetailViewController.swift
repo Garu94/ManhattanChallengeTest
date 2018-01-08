@@ -18,7 +18,11 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     var selectedIndex: Int!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var noteField: UITextField!
+    @IBOutlet weak var noteField: UITextField! {
+        didSet {
+            noteField.autocorrectionType = .no
+        }
+    }
     @IBOutlet weak var priceField: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!

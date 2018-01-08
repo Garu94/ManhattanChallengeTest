@@ -15,7 +15,11 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var navBar: UINavigationItem!
     
-    @IBOutlet weak var optionalNoteField: UITextField!
+    @IBOutlet weak var optionalNoteField: UITextField! {
+        didSet {
+            optionalNoteField.autocorrectionType = .no
+        }
+    }
         
     var price: Float?
     var cathegory: String?
