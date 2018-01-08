@@ -51,8 +51,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         statusBar.backgroundColor = .white
         self.navigationController?.navigationBar.backgroundColor = .white
         
-        designTextField(textField: insertPriceField)
-        designTextField(textField: optionalNoteField)
+        
         //Pop up price keyboard as view appears
         
         insertPriceField.becomeFirstResponder()
