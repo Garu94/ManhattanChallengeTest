@@ -829,13 +829,11 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V2-CH-FLL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4V2-CH-FLL">
                                 <rect key="frame" x="22" y="126" width="332" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-Va-d0k">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Sw-Va-d0k">
                                 <rect key="frame" x="0.0" y="353" width="375" height="314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Lmn-kG-Cit">
                                     <rect key="frame" x="0.0" y="72" width="375" height="44"/>
@@ -869,23 +867,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhV-GC-Kle">
-                                <rect key="frame" x="199" y="322.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsD-xt-Y8t">
+                                <rect key="frame" x="211" y="296" width="137" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YhV-GC-Kle" firstAttribute="baseline" secondItem="RlC-4b-7yD" secondAttribute="baseline" id="4tv-ws-oR3"/>
+                            <constraint firstItem="VsD-xt-Y8t" firstAttribute="bottom" secondItem="RlC-4b-7yD" secondAttribute="bottom" id="8Gd-vF-j2z"/>
+                            <constraint firstItem="2Sw-Va-d0k" firstAttribute="centerX" secondItem="BFH-q5-Nav" secondAttribute="centerX" id="8Oj-Vt-pE5"/>
                             <constraint firstItem="RlC-4b-7yD" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="43" id="8cO-CP-P49"/>
                             <constraint firstItem="mJC-Jv-dtC" firstAttribute="trailing" secondItem="gRe-5e-rRR" secondAttribute="trailing" constant="21" id="9ug-HI-Sux"/>
                             <constraint firstItem="gRe-5e-rRR" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="-326" id="DBN-xH-TcJ"/>
+                            <constraint firstItem="VsD-xt-Y8t" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="211" id="Eaj-i4-Aqm"/>
+                            <constraint firstItem="4V2-CH-FLL" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="22" id="Hfi-qX-lXx"/>
+                            <constraint firstItem="2Sw-Va-d0k" firstAttribute="leading" secondItem="BFH-q5-Nav" secondAttribute="leading" id="IDH-qV-R5X"/>
                             <constraint firstItem="RlC-4b-7yD" firstAttribute="top" secondItem="gRe-5e-rRR" secondAttribute="bottom" constant="-38" id="JOf-W1-xxr"/>
-                            <constraint firstItem="YhV-GC-Kle" firstAttribute="leading" secondItem="RlC-4b-7yD" secondAttribute="trailing" constant="-149" id="Q2x-Gn-KQ9"/>
+                            <constraint firstItem="2Sw-Va-d0k" firstAttribute="top" secondItem="VsD-xt-Y8t" secondAttribute="bottom" constant="30" id="abi-o6-9Pi"/>
+                            <constraint firstItem="VsD-xt-Y8t" firstAttribute="top" secondItem="RlC-4b-7yD" secondAttribute="top" id="cGa-YS-ASP"/>
                             <constraint firstItem="gRe-5e-rRR" firstAttribute="leading" secondItem="mJC-Jv-dtC" secondAttribute="leading" constant="22" id="dtt-8a-8CA"/>
                             <constraint firstItem="gRe-5e-rRR" firstAttribute="top" secondItem="mJC-Jv-dtC" secondAttribute="top" constant="166" id="gfZ-xC-MfY"/>
+                            <constraint firstItem="VsD-xt-Y8t" firstAttribute="top" secondItem="4V2-CH-FLL" secondAttribute="bottom" constant="33" id="h4i-5r-6Zx"/>
+                            <constraint firstItem="mJC-Jv-dtC" firstAttribute="trailing" secondItem="VsD-xt-Y8t" secondAttribute="trailing" constant="27" id="hV7-Ub-cBH"/>
+                            <constraint firstItem="4V2-CH-FLL" firstAttribute="centerX" secondItem="BFH-q5-Nav" secondAttribute="centerX" id="hpn-VZ-kHU"/>
+                            <constraint firstItem="mJC-Jv-dtC" firstAttribute="trailing" secondItem="4V2-CH-FLL" secondAttribute="trailing" constant="21" id="jFE-Zv-KHO"/>
+                            <constraint firstItem="4V2-CH-FLL" firstAttribute="top" secondItem="mJC-Jv-dtC" secondAttribute="top" constant="10" id="qPC-Id-mP4"/>
+                            <constraint firstItem="4V2-CH-FLL" firstAttribute="centerX" secondItem="2Sw-Va-d0k" secondAttribute="centerX" id="skm-aE-F70"/>
+                            <constraint firstItem="2Sw-Va-d0k" firstAttribute="bottom" secondItem="mJC-Jv-dtC" secondAttribute="bottom" id="twu-zf-fgU"/>
+                            <constraint firstItem="mJC-Jv-dtC" firstAttribute="trailing" secondItem="VsD-xt-Y8t" secondAttribute="trailing" constant="27" id="vVk-FH-bgo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mJC-Jv-dtC"/>
                     </view>
@@ -893,7 +904,7 @@
                     <connections>
                         <outlet property="bannerImage" destination="4V2-CH-FLL" id="WBc-Dv-nKS"/>
                         <outlet property="tableView" destination="2Sw-Va-d0k" id="WnW-Zb-X6R"/>
-                        <outlet property="totalPriceLabel" destination="RlC-4b-7yD" id="Ft2-L5-LSr"/>
+                        <outlet property="totalPriceLabel" destination="VsD-xt-Y8t" id="6l1-bD-MR2"/>
                         <segue destination="Cny-52-nzM" kind="show" identifier="segue" id="t96-A7-6rj"/>
                     </connections>
                 </viewController>
