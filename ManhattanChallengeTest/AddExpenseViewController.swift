@@ -38,11 +38,12 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
 //            button.layer.shadowRadius = 2.0
 //            button.layer.masksToBounds = false
 //        }
-//        addPhoto.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-//        addPhoto.layer.shadowOffset = CGSize(width: 0, height: 4)
-//        addPhoto.layer.shadowOpacity = 1.0
-//        addPhoto.layer.shadowRadius = 2.0
-//        addPhoto.layer.masksToBounds = false
+        addPhoto.layer.shadowColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+        addPhoto.layer.shadowOffset.height = 7
+        addPhoto.layer.shadowOpacity = 25
+        addPhoto.layer.shadowRadius = 13
+        addPhoto.layer.masksToBounds = false
+        addPhoto.transform = CGAffineTransform(scaleX: 1, y: 1)
         
         guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
             return

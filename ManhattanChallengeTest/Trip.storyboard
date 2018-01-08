@@ -1191,7 +1191,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" textContentType="location"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Accomodation" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oU-af-pyE" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="22" y="196" width="100" height="118"/>
+                                <rect key="frame" x="22" y="196" width="100" height="119.5"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
                                 <state key="normal" image="Simple Accomodation Button"/>
                                 <userDefinedRuntimeAttributes>
@@ -1213,7 +1213,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Transport" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpy-4l-qla" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="138" y="196" width="100" height="118"/>
+                                <rect key="frame" x="138" y="196" width="100" height="119.5"/>
                                 <state key="normal" image="Simple Transport Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1234,7 +1234,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Entertainment" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-z1-2eq" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="254" y="196" width="100" height="118"/>
+                                <rect key="frame" x="254" y="196" width="100" height="119.5"/>
                                 <state key="normal" image="Simple Entertainment Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1255,7 +1255,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Attractions" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhR-CC-4hG" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="22" y="330" width="100" height="118"/>
+                                <rect key="frame" x="22" y="331.5" width="100" height="119.5"/>
                                 <state key="normal" image="Simple Attractions Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1276,7 +1276,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Food" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUc-U3-gaU" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="138" y="330" width="100" height="118"/>
+                                <rect key="frame" x="138" y="331.5" width="100" height="119.5"/>
                                 <state key="normal" image="Simple Food Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1297,7 +1297,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Other" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-qE-rRl" customClass="DesignableButton" customModule="ManhattanChallengeTest" customModuleProvider="target">
-                                <rect key="frame" x="254" y="330" width="100" height="118"/>
+                                <rect key="frame" x="254" y="331.5" width="100" height="119.5"/>
                                 <state key="normal" image="Simple Other Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -1331,13 +1331,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ef-gO-KPu">
-                                <rect key="frame" x="22" y="478" width="49" height="24"/>
+                                <rect key="frame" x="22" y="481" width="49" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gT-6q-EiC">
-                                <rect key="frame" x="110" y="478" width="244" height="24"/>
+                                <rect key="frame" x="110" y="481" width="244" height="24"/>
                                 <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -1436,7 +1436,7 @@
     </scenes>
     <resources>
         <image name="Add Expense Button-1" width="60" height="62"/>
-        <image name="Add Image" width="112" height="112"/>
+        <image name="Add Image" width="109" height="109"/>
         <image name="Category Review" width="215" height="52"/>
         <image name="Detail Accomodation Button" width="100" height="137"/>
         <image name="Detail Attractions Button" width="100" height="137"/>
