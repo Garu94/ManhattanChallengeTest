@@ -11,6 +11,7 @@ import UIKit
 
 class ExpenseDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    
     var instanceOfCVC: CategoryViewController!
     
     var expenses: [Expense]!
@@ -32,7 +33,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     
     var categoryFlag = true
     var priceFlag = true
-    var notePhotoFlag = true
+    var photoFlag = false
     
     
     let p = UIImagePickerController()
@@ -40,7 +41,11 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.contentSize = CGSize(width: 375, height: 1000)
+        if expenses[selectedIndex].image != nil {
+            scrollView
+        }
+        
+//        scrollView.contentSize = CGSize(width: 375, height: 1000)
         
         priceField.text = String(expenses[selectedIndex].price)
         noteField.text = expenses[selectedIndex].note
@@ -82,7 +87,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         p.dismiss(animated: true, completion: nil)
         imageView.image = (info[UIImagePickerControllerOriginalImage] as! UIImage)
-        notePhotoFlag = true
+        photoFlag = true
     }
     
     func showAlertPrice(){
@@ -116,16 +121,13 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             
         } else if !priceFlag {
             showAlertPrice()
-        } else {
-            //Save new Expense, given the Trip
-//            expenses[selectedIndex].cathegory = cathegory
-//            expenses[selectedIndex].price = Float(priceField.text!)!
-//            expenses[selectedIndex].note = note
-//            expenses[selectedIndex].image = NSData(data: UIImagePNGRepresentation(imageView.image!)!) as Data
-            
+        } else if photoFlag {
             CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: imageView.image!)
+        } else {
             
             
+            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: nil)
+        }
             
 //            do {
 //                try CoreDataController.shared.context.save()
@@ -138,7 +140,7 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             navigationController?.popViewController(animated: true)
             instanceOfCVC.tableView.reloadData()
             dismiss(animated: true, completion: nil)
-        }
+        
     }
     
     
@@ -247,7 +249,6 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
             }
             noteField.endEditing(true)
         }
-        notePhotoFlag = true
     }
     
     
