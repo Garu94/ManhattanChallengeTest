@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ManhattanChallengeTest/AddExpenseViewController.swift"
-            timestampString = "535475408.788167"
+            timestampString = "536770297.604159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "AddExpenseViewController"
-            landmarkType = "3">
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "savePriceInVar()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

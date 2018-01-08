@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if !(UserDefaults.standard.value(forKey: "isLoggedIn") != nil){
+            let storyboard = UIStoryboard(name: "Trip", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier:"LoginVC") as! LoginViewController
+            self.window?.rootViewController = loginVC
+            
+        }
+//        // Override point for customization after application launch.
         return true
     }
 

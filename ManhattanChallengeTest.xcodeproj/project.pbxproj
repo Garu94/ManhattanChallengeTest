@@ -14,13 +14,15 @@
 		1C3919BA1FE12305001C79AE /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919B91FE12305001C79AE /* AddTripViewController.swift */; };
 		1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */; };
 		1C91624E1FE80F180013FAF8 /* UIButton+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C91624D1FE80F180013FAF8 /* UIButton+shadow.swift */; };
+		1CCB46E61FFE4C5F00BEDFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB46E51FFE4C5F00BEDFC9 /* LoginViewController.swift */; };
+		1CCB46E81FFE528E00BEDFC9 /* TextField + design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB46E71FFE528E00BEDFC9 /* TextField + design.swift */; };
+		1CCB46EA1FFE570700BEDFC9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCB46E91FFE570700BEDFC9 /* Alert.swift */; };
 		FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */; };
 		FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */; };
 		FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */; };
 		FF40EFB41FE9387A008012B6 /* ProgressViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */; };
 		FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */; };
 		FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */; };
-		FFDDBBD01FE7D39D000D75DB /* FirstTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */; };
 		FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */; };
 		FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC6B671FDC11FE007E8017 /* ViewController.swift */; };
 		FFEC6B6B1FDC11FE007E8017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFEC6B691FDC11FE007E8017 /* Main.storyboard */; };
@@ -55,13 +57,15 @@
 		1C3919B91FE12305001C79AE /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		1C91624D1FE80F180013FAF8 /* UIButton+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+shadow.swift"; sourceTree = "<group>"; };
+		1CCB46E51FFE4C5F00BEDFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1CCB46E71FFE528E00BEDFC9 /* TextField + design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField + design.swift"; sourceTree = "<group>"; };
+		1CCB46E91FFE570700BEDFC9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FF388ECE1FE277E300D039A0 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		FF388ECF1FE277E300D039A0 /* TripMainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMainPageViewController.swift; sourceTree = "<group>"; };
 		FF388ED51FE3D13300D039A0 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		FF40EFB31FE9387A008012B6 /* ProgressViewGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewGradient.swift; sourceTree = "<group>"; };
 		FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		FFDDBBCD1FE7B23F000D75DB /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
-		FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTripViewController.swift; sourceTree = "<group>"; };
 		FFEC6B621FDC11FE007E8017 /* ManhattanChallengeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanChallengeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFEC6B651FDC11FE007E8017 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFEC6B671FDC11FE007E8017 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +142,9 @@
 				FFB47FFB1FDFE3370034E5CB /* AddExpenseViewController.swift */,
 				1C3919BB1FE12BE4001C79AE /* UIViewController+Keyboard.swift */,
 				1535A4C81FDE8D6700A77F9F /* Trip.storyboard */,
-				FFDDBBCF1FE7D39D000D75DB /* FirstTripViewController.swift */,
+				1CCB46E71FFE528E00BEDFC9 /* TextField + design.swift */,
+				1CCB46E91FFE570700BEDFC9 /* Alert.swift */,
+				1CCB46E51FFE4C5F00BEDFC9 /* LoginViewController.swift */,
 				FFEC6B671FDC11FE007E8017 /* ViewController.swift */,
 				FFEC6B691FDC11FE007E8017 /* Main.storyboard */,
 				FFEC6B6C1FDC11FE007E8017 /* Assets.xcassets */,
@@ -302,18 +308,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCB46EA1FFE570700BEDFC9 /* Alert.swift in Sources */,
 				FF388ED21FE277E300D039A0 /* CategoryViewController.swift in Sources */,
 				1C91624E1FE80F180013FAF8 /* UIButton+shadow.swift in Sources */,
 				1C3919BA1FE12305001C79AE /* AddTripViewController.swift in Sources */,
 				1542B7731FDFC9B7000169F8 /* ManhattanChallengeTest.xcdatamodeld in Sources */,
 				FF388ED61FE3D13300D039A0 /* ExpenseDetailViewController.swift in Sources */,
+				1CCB46E81FFE528E00BEDFC9 /* TextField + design.swift in Sources */,
 				FFEC6B681FDC11FE007E8017 /* ViewController.swift in Sources */,
 				FFB47FFC1FDFE3370034E5CB /* AddExpenseViewController.swift in Sources */,
 				FFDDBBCE1FE7B23F000D75DB /* TripDetailViewController.swift in Sources */,
 				1C3919BC1FE12BE4001C79AE /* UIViewController+Keyboard.swift in Sources */,
 				1542B79A1FDFDE76000169F8 /* CoreDataController.swift in Sources */,
 				FF40EFB41FE9387A008012B6 /* ProgressViewGradient.swift in Sources */,
-				FFDDBBD01FE7D39D000D75DB /* FirstTripViewController.swift in Sources */,
+				1CCB46E61FFE4C5F00BEDFC9 /* LoginViewController.swift in Sources */,
 				FFEC6B661FDC11FE007E8017 /* AppDelegate.swift in Sources */,
 				FF388ED31FE277E300D039A0 /* TripMainPageViewController.swift in Sources */,
 				1C3919B81FE11366001C79AE /* MyTripsTableTableViewController.swift in Sources */,

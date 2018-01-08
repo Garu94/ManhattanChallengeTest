@@ -59,15 +59,6 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         
         // Do any additional setup after loading the view.
     }
-
-    
-    func designTextField(textField: UITextField){
-        textField.layer.cornerRadius = 12.0
-        textField.layer.borderWidth = 0.5
-        textField.layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
-        textField.layer.masksToBounds = true
-        
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
