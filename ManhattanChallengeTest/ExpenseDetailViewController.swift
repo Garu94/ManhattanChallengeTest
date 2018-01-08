@@ -21,8 +21,13 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     @IBOutlet weak var noteField: UITextField! {
         didSet {
             noteField.autocorrectionType = .no
+            if #available(iOS 11, *) {
+                // Disables the password autoFill accessory view.
+                noteField.textContentType = UITextContentType("")
+            }
         }
     }
+    
     @IBOutlet weak var priceField: UITextField!
     
     @IBOutlet weak var imageView: UIImageView!

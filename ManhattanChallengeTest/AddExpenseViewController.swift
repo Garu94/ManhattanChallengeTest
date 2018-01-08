@@ -18,6 +18,10 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var optionalNoteField: UITextField! {
         didSet {
             optionalNoteField.autocorrectionType = .no
+            if #available(iOS 11, *) {
+                // Disables the password autoFill accessory view.
+                optionalNoteField.textContentType = UITextContentType("")
+            }
         }
     }
         
