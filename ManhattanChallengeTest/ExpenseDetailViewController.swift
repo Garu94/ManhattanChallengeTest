@@ -9,6 +9,7 @@
 
 import UIKit
 
+
 class ExpenseDetailViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     
@@ -61,12 +62,13 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
 //        priceField.text = String(expenses[selectedIndex].price)
         
         priceField.text = CoreDataController.shared.FloatToTwoDigitString(number: expenses[selectedIndex].price)
+        price = expenses[selectedIndex].price
+
         
         noteField.text = expenses[selectedIndex].note
         cathegory = expenses[selectedIndex].cathegory
         price = expenses[selectedIndex].price
         note = expenses[selectedIndex].note
-        
         
         if let myImageData = expenses[selectedIndex].image {
             imageView.image = UIImage(data: myImageData)
@@ -136,11 +138,11 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         } else if !priceFlag {
             showAlertPrice()
         } else if photoFlag {
-            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: imageView.image!)
+            
+            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: priceField.text?.floatValue, photo: imageView.image!)
         } else {
-            
-            
-            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: nil)
+           
+            CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: priceField.text?.floatValue, photo: nil)
         }
             
 //            do {

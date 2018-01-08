@@ -24,6 +24,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         self.SetBannerImage()
         tableView.reloadData()
+        print("CIAONE")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +34,9 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.reloadData()
+        
         self.title = categoryName
         
         tableView.delegate = self
