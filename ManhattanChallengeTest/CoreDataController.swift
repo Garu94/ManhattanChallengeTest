@@ -81,6 +81,7 @@ class CoreDataController {
         if trips!.count == 0 {
             return nil
         }
+        print(trips!.count)
         
         return trips![trips!.count - 1]
     }

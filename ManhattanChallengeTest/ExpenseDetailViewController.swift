@@ -61,6 +61,9 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
 //        priceField.text = String(expenses[selectedIndex].price)
         
         priceField.text = CoreDataController.shared.FloatToTwoDigitString(number: expenses[selectedIndex].price)
+        print(priceField.text)
+        print(Float(priceField.text!))
+        
         
         noteField.text = expenses[selectedIndex].note
         cathegory = expenses[selectedIndex].cathegory
@@ -138,7 +141,9 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         } else if photoFlag {
             CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: imageView.image!)
         } else {
+            print(price)
             
+            print(Float(priceField.text!))
             
             CoreDataController.shared.editExpense(date: expenses[selectedIndex].date!, cathegory: cathegory, note: note, price: Float(priceField.text!)!, photo: nil)
         }

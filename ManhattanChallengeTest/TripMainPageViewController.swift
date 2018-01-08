@@ -43,7 +43,7 @@ class TripMainPageViewController: UIViewController {
         
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""
         
-        let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip!)
+        let expenses = CoreDataController.shared.loadExpensesOfCurrentTrip()
         
         
         //Compute total
@@ -155,8 +155,8 @@ class TripMainPageViewController: UIViewController {
             return sum
         }
         
-        if CoreDataController.shared.loadExpensesOfATrip(trip: currentTrip).count != 0 {
-            for expense in CoreDataController.shared.loadExpensesOfATrip(trip: CoreDataController.shared.currentTrip!) {
+        if CoreDataController.shared.loadExpensesOfCurrentTrip().count != 0 {
+            for expense in CoreDataController.shared.loadExpensesOfCurrentTrip() {
                 sum += expense.price
                 print("sum is: \(sum)")
             }
