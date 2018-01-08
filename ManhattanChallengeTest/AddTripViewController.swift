@@ -16,6 +16,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var locationTextField: UITextField!{
         didSet {
             locationTextField.delegate = self
+            locationTextField.autocorrectionType = .no
         }
     }
     

@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = loginVC
             
         }
+//            UITextField.appearance().layer.cornerRadius = 12.0
+//            UITextField.appearance().layer.borderWidth = 0.5
+//            UITextField.appearance().layer.borderColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+//            UITextField.appearance().layer.masksToBounds = true
 //        // Override point for customization after application launch.
         return true
     }
