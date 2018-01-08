@@ -24,7 +24,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     var categoryFlag = false
     var priceFlag = false
-    var notePhotoFlag = false
+    var photoFlag = false
     
     
     let p = UIImagePickerController()
@@ -81,7 +81,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         p.dismiss(animated: true, completion: nil)
         addPhoto.image = (info[UIImagePickerControllerOriginalImage] as! UIImage)
-        notePhotoFlag = true
+        photoFlag = true
     }
     
         func showAlertPrice(){
@@ -115,9 +115,11 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             
         } else if !priceFlag {
             showAlertPrice()
+        } else if photoFlag {
+            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
         } else {
             //Save new Expense, given the Trip
-            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: addPhoto.image!, trip: trip)
+            CoreDataController.shared.addExpenseToATrip(cathegory: cathegory, note: note, price: price, photo: nil, trip: trip)
             
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
@@ -219,7 +221,6 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
             note = insertedNote
         }
         
-        notePhotoFlag = true
     }
     
     @IBAction func keyboardAppear(_ sender: UITextField) {
