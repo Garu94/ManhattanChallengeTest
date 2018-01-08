@@ -8,6 +8,22 @@
 
 import UIKit
 
+extension String {
+    var floatValue: Float {
+        let nf = NumberFormatter()
+        nf.decimalSeparator = "."
+        if let result = nf.number(from: self) {
+            return result.floatValue
+        } else {
+            nf.decimalSeparator = ","
+            if let result = nf.number(from: self) {
+                return result.floatValue
+            }
+        }
+        return 0
+    }
+}
+
 class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var insertPriceField: UITextField!
     @IBOutlet var buttonsCategory: [UIButton]!
@@ -182,42 +198,52 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     //Clean the code, isolating savePrice and saveNote procedure
     func savePriceInVar() {
         if insertPriceField.isEditing {
+            
             if let insertedPrice = insertPriceField.text {
-                var pointCounter = 0
                 priceFlag = true
-                var convertedPrice: String = ""
+                price = insertedPrice.floatValue
                 
-                //Convert "," to "." for foreigners number pads
-                for char in insertedPrice {
-                    if char != "," {
-                        convertedPrice.append(char)
-                    } else {
-                        convertedPrice.append(".")
-                    }
-                }
-                
-                print(insertedPrice)
-                print(convertedPrice)
-                
-                // Error if too many "." are inserted
-                for char in convertedPrice {
-                    if char == "." {
-                        pointCounter += 1
-                    }
-                    if pointCounter > 1 {
-                        priceFlag = false
-                    }
-                }
-                
-                //Error if Price Field is empty
-                if convertedPrice == "" {
+                if price == 0.0 {
                     priceFlag = false
                 }
-                
-                price = Float(convertedPrice)
-                
-                
             }
+            
+//            if let insertedPrice = insertPriceField.text {
+//                var pointCounter = 0
+//                priceFlag = true
+//                var convertedPrice: String = ""
+//
+//                //Convert "," to "." for foreigners number pads
+//                for char in insertedPrice {
+//                    if char != "," {
+//                        convertedPrice.append(char)
+//                    } else {
+//                        convertedPrice.append(".")
+//                    }
+//                }
+//
+//                print(insertedPrice)
+//                print(convertedPrice)
+//
+//                // Error if too many "." are inserted
+//                for char in convertedPrice {
+//                    if char == "." {
+//                        pointCounter += 1
+//                    }
+//                    if pointCounter > 1 {
+//                        priceFlag = false
+//                    }
+//                }
+//
+//                //Error if Price Field is empty
+//                if convertedPrice == "" {
+//                    priceFlag = false
+//                }
+//
+//                price = Float(convertedPrice)
+//
+//
+//            }
             insertPriceField.endEditing(true)
         }
     }

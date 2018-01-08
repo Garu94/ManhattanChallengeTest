@@ -58,7 +58,10 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         
 //        scrollView.contentSize = CGSize(width: 375, height: 1000)
         
-        priceField.text = String(expenses[selectedIndex].price)
+//        priceField.text = String(expenses[selectedIndex].price)
+        
+        priceField.text = CoreDataController.shared.FloatToTwoDigitString(number: expenses[selectedIndex].price)
+        
         noteField.text = expenses[selectedIndex].note
         cathegory = expenses[selectedIndex].cathegory
         price = expenses[selectedIndex].price
@@ -213,42 +216,52 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     //Clean the code, isolating savePrice and saveNote procedure
     func savePriceInVar() {
         if priceField.isEditing {
+            
             if let insertedPrice = priceField.text {
-                var pointCounter = 0
                 priceFlag = true
-                var convertedPrice: String = ""
+                price = insertedPrice.floatValue
                 
-                //Convert "," to "." for foreigners number pads
-                for char in insertedPrice {
-                    if char != "," {
-                        convertedPrice.append(char)
-                    } else {
-                        convertedPrice.append(".")
-                    }
-                }
-                
-                print(insertedPrice)
-                print(convertedPrice)
-                
-                // Error if too many "." are inserted
-                for char in convertedPrice {
-                    if char == "." {
-                        pointCounter += 1
-                    }
-                    if pointCounter > 1 {
-                        priceFlag = false
-                    }
-                }
-                
-                //Error if Price Field is empty
-                if convertedPrice == "" {
+                if price == 0.0 {
                     priceFlag = false
                 }
-                
-                price = Float(convertedPrice)
-                
-                
             }
+//
+//            if let insertedPrice = priceField.text {
+//                var pointCounter = 0
+//                priceFlag = true
+//                var convertedPrice: String = ""
+//
+//                //Convert "," to "." for foreigners number pads
+//                for char in insertedPrice {
+//                    if char != "," {
+//                        convertedPrice.append(char)
+//                    } else {
+//                        convertedPrice.append(".")
+//                    }
+//                }
+//
+//                print(insertedPrice)
+//                print(convertedPrice)
+//
+//                // Error if too many "." are inserted
+//                for char in convertedPrice {
+//                    if char == "." {
+//                        pointCounter += 1
+//                    }
+//                    if pointCounter > 1 {
+//                        priceFlag = false
+//                    }
+//                }
+//
+//                //Error if Price Field is empty
+//                if convertedPrice == "" {
+//                    priceFlag = false
+//                }
+//
+//                price = Float(convertedPrice)
+//
+//
+//            }
             priceField.endEditing(true)
         }
     }
