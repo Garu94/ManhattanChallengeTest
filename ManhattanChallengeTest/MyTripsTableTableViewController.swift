@@ -101,12 +101,19 @@ class MyTripsTableTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         indexOfSelectedTrip = indexPath.row
+        
+        print(indexOfSelectedTrip)
+        
+        return indexPath
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(myTrips[indexOfSelectedTrip])
         
+        print(indexOfSelectedTrip)
         if let nextViewController = segue.destination as? TripDetailViewController {
             nextViewController.trip = myTrips[indexOfSelectedTrip]
         }

@@ -54,8 +54,7 @@ class TripDetailViewController: UIViewController {
             bar.layer.masksToBounds = true
             bar.layer.cornerRadius = bar.frame.size.height / 2.0
         }
-        
-        
+    
         let expenses = CoreDataController.shared.loadExpensesOfATrip(trip: trip!)
         
         
