@@ -24,8 +24,18 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         self.SetBannerImage()
         tableView.reloadData()
-        print("CIAONE")
         
+         //Get expenses of the category
+        expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
+        total = 0.0
+         //Calculate total expenses of the category
+        for expense in expenses {
+            total += expense.price
+        }
+        
+        totalPriceLabel.text =  " $" + CoreDataController.shared.FloatToTwoDigitString(number: total)
+        
+        self.reloadInputViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,15 +54,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         print(categoryName)
         
-        //Get expenses of the category
-        expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
         
-        //Calculate total expenses of the category
-        for expense in expenses {
-            total += expense.price
-        }
-        
-        totalPriceLabel.text =  totalPriceLabel.text! + " $" + CoreDataController.shared.FloatToTwoDigitString(number: total)
         // Do any additional setup after loading the view.
     }
 
@@ -67,6 +69,10 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        
+        guard expenses.count != 0 else {
+            return cell!
+        }
         
         let expenseInCell = expenses[indexPath.row]
         cell?.textLabel?.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: expenseInCell.price)

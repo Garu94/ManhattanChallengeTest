@@ -151,7 +151,6 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
 //                print("[CDC] Error saving modified trip: error \(error)")
 //            }
             
-            
             //Animation Dismiss
             navigationController?.popViewController(animated: true)
             instanceOfCVC.tableView.reloadData()
