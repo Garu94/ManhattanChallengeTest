@@ -276,6 +276,15 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
         }
     }
     
+    @IBAction func keyboardAppear(_ sender: UITextField) {
+        self.view.frame.origin.y -= 70
+    }
+
+    @IBAction func keyboardDismiss(_ sender: UITextField) {
+        self.view.frame.origin.y += 70
+    }
+
+    
     
     
     /*
