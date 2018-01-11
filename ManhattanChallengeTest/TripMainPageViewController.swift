@@ -80,14 +80,7 @@ class TripMainPageViewController: UIViewController {
         
         progressBar.updateGradientLayer()
         
-        for button in categoryButtons {
-            button.layer.shadowColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
-             button.layer.shadowOffset.height = 7
-            button.layer.shadowOpacity = 25
-            button.layer.shadowRadius = 13
-            button.layer.masksToBounds = false
-            button.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }
+        
         
         self.navigationController?.navigationBar.tintAdjustmentMode = .normal
         self.navigationController?.navigationBar.tintAdjustmentMode = .automatic
@@ -98,6 +91,15 @@ class TripMainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for button in categoryButtons {
+            button.layer.shadowColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1).cgColor
+            button.layer.shadowOffset.height = 7
+            button.layer.shadowOpacity = 25
+            button.layer.shadowRadius = 13
+            button.layer.masksToBounds = false
+            button.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }
         
         CoreDataController.shared.currentTrip = CoreDataController.shared.loadCurrentTrip()
         
@@ -124,7 +126,7 @@ class TripMainPageViewController: UIViewController {
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
         
         categoryName = sender.restorationIdentifier!
-        animationbutton(button: sender)
+//        animationbutton(button: sender)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }

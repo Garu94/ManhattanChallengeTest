@@ -57,11 +57,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
             //Save first trip
             CoreDataController.shared.addTrip(location: location!, budget: budget!)
             
-            CoreDataController.shared.isTripAdded = true
-            
-            //Dismiss
-            navigationController?.popViewController(animated: false)
-            dismiss(animated: false, completion: nil)
+            navigationController?.popToRootViewController(animated: true)    
         }
     }
     
