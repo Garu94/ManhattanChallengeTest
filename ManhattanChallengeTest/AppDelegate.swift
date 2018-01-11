@@ -101,13 +101,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            return
 //        }
 //        UIApplication.shared.keyWindow!.rootViewController = UINavigationController
+        let sb = UIStoryboard(name: "Trip", bundle: nil)
+        let addExpense = sb.instantiateViewController(withIdentifier: "AddExpense") as! AddExpenseViewController
         
-        if let mainTripVC = self.window?.rootViewController
-            as? UINavigationController {
-            mainTripVC.topViewController!.performSegue(withIdentifier: "segueToAddExpenseView", sender: mainTripVC)
-        }
-       
+        let root = UIApplication.shared.keyWindow?.rootViewController
+//        root?.present(addExpense, animated: false, completion: nil)
+        root?.show(addExpense, sender: self)
+        
+//        if let mainTripVC = self.window?.rootViewController
+//            as? UINavigationController {
+//            mainTripVC.topViewController!.performSegue(withIdentifier: "segueToAddExpenseView", sender: mainTripVC)
+//        }
     }
+    
 }
 
         
