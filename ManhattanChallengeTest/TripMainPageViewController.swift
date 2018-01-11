@@ -36,9 +36,7 @@ class TripMainPageViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
                 
         allTrips = CoreDataController.shared.loadAllTheTrips()
-        
-        let currentTrip = CoreDataController.shared.currentTrip
-        
+                
         total = 0.0
         
         titleNavBar.title = CoreDataController.shared.currentTrip?.location ?? ""

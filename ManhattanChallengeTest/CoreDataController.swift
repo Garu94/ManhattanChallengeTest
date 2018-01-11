@@ -72,7 +72,7 @@ class CoreDataController {
         var trips: [Trip]?
         let tripFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Trip")
         do {
-            trips = try context.fetch(tripFetch) as! [Trip] }
+            trips = (try context.fetch(tripFetch) as! [Trip]) }
         catch let error {
             print("[CDC] Problem executing FetchRequest")
             print("  Print Error: \n \(error) \n")
