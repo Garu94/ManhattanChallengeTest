@@ -51,11 +51,18 @@ class ExpenseDetailViewController: UIViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if expenses[selectedIndex].image != nil {
-            scrollView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
-        } else {
-            scrollView.bottomAnchor.constraint(equalTo: noteField.bottomAnchor, constant: 100).isActive = true
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
         }
+        
+        statusBar.backgroundColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        
+//        if expenses[selectedIndex].image != nil {
+//            scrollView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+//        } else {
+//            scrollView.bottomAnchor.constraint(equalTo: noteField.bottomAnchor, constant: 100).isActive = true
+//        }
         
 //        scrollView.contentSize = CGSize(width: 375, height: 1000)
         
