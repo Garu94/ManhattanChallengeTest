@@ -126,7 +126,7 @@ class TripMainPageViewController: UIViewController {
     @IBAction func clickOnCategoryButton(_ sender: UIButton) {
         
         categoryName = sender.restorationIdentifier!
-        animationbutton(button: sender)
+//        animationbutton(button: sender)
         
         self.performSegue(withIdentifier: "segueToCategoryView", sender: self)
     }
