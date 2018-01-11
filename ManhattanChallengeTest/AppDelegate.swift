@@ -94,5 +94,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        
+//        guard let viewCotnroller = UIStoryboard(name: "Trip", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+//            return
+//        }
+//        UIApplication.shared.keyWindow!.rootViewController = UINavigationController
+        let sb = UIStoryboard(name: "Trip", bundle: nil)
+        let addExpense = sb.instantiateViewController(withIdentifier: "AddExpense") as! AddExpenseViewController
+        
+        let root = UIApplication.shared.keyWindow?.rootViewController
+//        root?.present(addExpense, animated: false, completion: nil)
+        root?.show(addExpense, sender: self)
+        
+//        if let mainTripVC = self.window?.rootViewController
+//            as? UINavigationController {
+//            mainTripVC.topViewController!.performSegue(withIdentifier: "segueToAddExpenseView", sender: mainTripVC)
+//        }
+    }
+    
 }
+
+        
+    
+    
+
+    
 
