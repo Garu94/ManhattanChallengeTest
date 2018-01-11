@@ -26,7 +26,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.reloadData()
         
          //Get expenses of the category
-        expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
+        
         total = 0.0
          //Calculate total expenses of the category
         for expense in expenses {
@@ -49,10 +49,6 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.title = categoryName
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
-        print(categoryName)
         
         
         // Do any additional setup after loading the view.
@@ -64,15 +60,12 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        expenses = CoreDataController.shared.loadExpensesOfCategoryGivenTrip(trip: trip, category: categoryName)
         return expenses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        
-        guard expenses.count != 0 else {
-            return cell!
-        }
         
         let expenseInCell = expenses[indexPath.row]
         cell?.textLabel?.text = "$" + CoreDataController.shared.FloatToTwoDigitString(number: expenseInCell.price)
