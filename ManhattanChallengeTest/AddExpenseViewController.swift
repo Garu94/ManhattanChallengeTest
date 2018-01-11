@@ -44,7 +44,7 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     var price: Float?
     var cathegory: String?
     var note: String?
-    var trip: Trip!
+    var trip = CoreDataController.shared.currentTrip!
     
     var categoryFlag = false
     var priceFlag = false

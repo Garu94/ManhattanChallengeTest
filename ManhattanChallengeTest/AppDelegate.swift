@@ -102,12 +102,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //        UIApplication.shared.keyWindow!.rootViewController = UINavigationController
         let sb = UIStoryboard(name: "Trip", bundle: nil)
+        let mainVC = sb.instantiateViewController(withIdentifier: "First") as! UINavigationController
         let addExpense = sb.instantiateViewController(withIdentifier: "AddExpense") as! AddExpenseViewController
-        
-        let root = UIApplication.shared.keyWindow?.rootViewController
-//        root?.present(addExpense, animated: false, completion: nil)
-        root?.show(addExpense, sender: self)
-        
+        window?.rootViewController = mainVC
+        self.window?.makeKeyAndVisible()
+        mainVC.pushViewController(addExpense, animated: false)
+
+//        let root = UIApplication.shared.keyWindow?.rootViewController
+//        root?.present(addExpense, animated: false, completion: {
+//            completionHandler(true)
+//        })
+
+ 
 //        if let mainTripVC = self.window?.rootViewController
 //            as? UINavigationController {
 //            mainTripVC.topViewController!.performSegue(withIdentifier: "segueToAddExpenseView", sender: mainTripVC)
