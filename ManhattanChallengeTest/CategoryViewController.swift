@@ -49,7 +49,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.title = categoryName
         
-        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
