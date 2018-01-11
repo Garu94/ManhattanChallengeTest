@@ -94,5 +94,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        
+        
+//        guard let viewCotnroller = UIStoryboard(name: "Trip", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+//            return
+//        }
+//        UIApplication.shared.keyWindow!.rootViewController = UINavigationController
+        
+        if let mainTripVC = self.window?.rootViewController
+            as? UINavigationController {
+            mainTripVC.topViewController!.performSegue(withIdentifier: "segueToAddExpenseView", sender: mainTripVC)
+        }
+       
+    }
 }
+
+        
+    
+    
+
+    
 
