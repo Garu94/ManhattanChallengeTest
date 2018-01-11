@@ -99,7 +99,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     }
     
     func isAlreadyPresent(location: String) -> Bool {
-        var trips = CoreDataController.shared.loadAllTheTrips()
+        let trips = CoreDataController.shared.loadAllTheTrips()
         
         for trip in trips {
             if trip.location == location {

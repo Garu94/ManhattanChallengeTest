@@ -1136,8 +1136,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" smartInsertDeleteType="no"/>
                                                 <connections>
+                                                    <action selector="keyboardAppear:" destination="Cny-52-nzM" eventType="editingDidBegin" id="3i8-Bz-ssH"/>
                                                     <action selector="keyboardAppear:" destination="PfV-m3-SdB" eventType="editingDidBegin" id="pEv-uN-sFo"/>
                                                     <action selector="keyboardDismiss:" destination="PfV-m3-SdB" eventType="editingDidEnd" id="rh9-9C-FJ2"/>
+                                                    <action selector="keyboardDismiss:" destination="Cny-52-nzM" eventType="editingDidEnd" id="sBd-Bj-jKW"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoL-VI-Wqw">
