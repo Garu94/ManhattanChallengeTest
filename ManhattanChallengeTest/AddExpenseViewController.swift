@@ -53,6 +53,16 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
     
     let p = UIImagePickerController()
     
+    override func viewWillAppear(_ animated: Bool) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+            return
+        }
+        
+        statusBar.backgroundColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .white
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        for button in buttonsCategory {
@@ -76,6 +86,9 @@ class AddExpenseViewController: UIViewController, UIImagePickerControllerDelegat
         statusBar.backgroundColor = .white
         self.navigationController?.navigationBar.backgroundColor = .white
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         
         //Pop up price keyboard as view appears
         
